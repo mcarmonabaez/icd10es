@@ -1,0 +1,30 @@
+"categoria","subcategoria","padecimiento","principal"
+"A00","A000","Cólera debido a Vibrio cholerae 01, biotipo cholerae",1
+"A00","A000","Cólera clásico",0
+"A00","A001","Cólera debido a Vibrio cholerae 01, biotipo El Tor",1
+"A00","A001","Cólera El Tor",0
+"A00","A009","Cólera, no especificado",1
+"A01","A010","FIEBRE TIFOIDEA",1
+"A01","A010","Infección debida a Salmonella typhi",0
+"A01","A011","FIEBRE PARATIFOIDEA A",1
+"A01","A012","FIEBRE PARATIFOIDEA B",1
+"A01","A013","FIEBRE PARATIFOIDEA C",1
+"A01","A014","FIEBRE PARATIFOIDEA, NO ESPECIFICADA",1
+"A01","A014","Infección debida a Salmonella paratyphi SAI",0
+"A02","A020","ENTERITIS DEBIDA A SALMONELLA",1
+"A02","A020","Salmonelosis",0
+"A02","A021","SEPSIS DEBIDA A SALMONELLA",1
+"A02","A022","INFECCIONES LOCALIZADAS DEBIDAS A SALMONELLA",1
+"A02","A028","OTRAS INFECCIONES ESPECIFICADAS COMO DEBIDAS A SALMONELLA",1
+"A02","A029","INFECCIÓN DEBIDA A SALMONELLA, NO ESPECIFICADA",1
+"A03","A030","SHIGELOSIS DEBIDA A SHIGELLA DYSENTERIAE",1
+"A03","A030","Shigelosis grupo A",0
+"A03","A030","disentería de Shiga-Kruse",0
+"A03","A031","SHIGELOSIS DEBIDA A SHIGELLA FLEXNERI",1
+"A03","A031","Shigelosis grupo B",0
+"A03","A032","SHIGELOSIS DEBIDA A SHIGELLA BOYDII",1
+"A03","A032","Shigelosis grupo C",0
+"A03","A033","SHIGELOSIS DEBIDA A SHIGELLA SONNEI",1
+"A03","A033","Shigelosis grupo D",0
+"A03","A038","OTRAS SHIGELOSIS",1
+"A03","A039","SHIGELOSIS DE TIPO NO ESPECIFICADO",1
