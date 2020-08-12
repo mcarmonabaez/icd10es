@@ -1,25 +1,11 @@
+#' Look up disease in ICD10 catalog
+#'
+#' @param pattern A string of the name of the disease to look up.
+#' @param nMatches A number indicating the number of matches to return in case of more than one coincidence.
+#'
+#' @return A data frame with the information about the matches found for the disease.
 
-
-ICDLookUp <- function(pattern, nMatches = 1){
-
-  pattern <- CleanString(pattern)
-
-  #Look for particular diseases
-  specialCases <- c('neumonia', 'diabetes', 'cancer', 'tumor',
-                    'sepsis', 'sindrome')
-  flagSpecialCase <- str_match(pattern, specialCases)
-  flagSpecialCase <- flagSpecialCase[!is.na(flagSpecialCase)]
-
-  if(length(flagSpecialCase) > 1) stop('Looks like your query has more than one disease listed. \n
-                                            Try refining your query.')
-  if(length(flagSpecialCase) == 1) {
-    matchICD <- switch(flagSpecialCase,
-           neumonia = 'holi',
-           diabetes = 'diabetis',
-           cancer = 'bai')
-
-    return(matchICD)
-  }
+catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
 
   #Look up exact match in disease catalog
   diseaseToPattern <- str_match(pattern, categories$padecimiento)
@@ -31,20 +17,34 @@ ICDLookUp <- function(pattern, nMatches = 1){
   }
 
   #Look up exact match in category catalog
-  if(flagMatch == 0) {
-    #buscar en el catalogo de categorias
-    # Hay categoria entonces regresamos el X009, si tiene subcategorias, sino regresar categoria (A09)
+
+  #number of coincidences where the pattern was longer than the disease
+  residualPattern <- isTRUE(sum(!is.na(diseaseToPattern), na.rm = T) > 0)
+  #number of coincidences where the disease was longer than the pattern
+  residualDisease <- isTRUE(sum(!is.na(patternToDisease), na.rm = T) > 0)
+
+
+  if(residualPattern == TRUE) {
+    diseaseToPattern <- diseaseToPattern[!is.na(diseaseToPattern)]
+    if(length(diseaseToPattern) == 1) return(diseaseToPattern) ## regresar la subcategoria
+    if(length(diseaseToPattern) > 0 ) return(diseaseToPattern) ## revisar si es una sola categoria o mas de una
   }
 
-}
+  if(residualDisease == TRUE) {
+    patternToDisease <- patternToDisease[!is.na(patternToDisease)]
+    if(length(patternToDisease) == 1) return(patternToDisease) ## regresar la subcategoria
+    if(length(patternToDisease) > 0 ) return(patternToDisease)
+  }
 
-CleanString <- function(pattern) {
-  #Remove noise from string
-  pattern <- tolower(pattern)
-  pattern <- stringi::stri_trans_general(pattern, "Latin-ASCII")
-  pattern <- str_remove_all(pattern, "[^a-z0-9 ]")
-  pattern <- gsub(' +',' ', pattern)
-  pattern <- str_trim(pattern)
-
-  return(pattern)
+  if(residualDisease + residualPattern == 0) {
+    jwMatch <- data.frame(padecimiento = catalog$padecimiento,
+                          metric = stringdist::stringsim(catalog$padecimiento,
+                                     pattern, method = 'jw', p = 0)) %>%
+      filter(metric >= jwBound)
+    if(nrow(jwMatch) >= 0) {
+      ## revisar si es una sola categoria o mas de una... como arribita
+    } else {
+      return(NULL)
+    }
+  }
 }
