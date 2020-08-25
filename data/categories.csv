@@ -1,30 +1,12 @@
-"categoria","subcategoria","padecimiento","principal"
-"A00","A000","Cólera debido a Vibrio cholerae 01, biotipo cholerae",1
-"A00","A000","Cólera clásico",0
-"A00","A001","Cólera debido a Vibrio cholerae 01, biotipo El Tor",1
-"A00","A001","Cólera El Tor",0
-"A00","A009","Cólera, no especificado",1
-"A01","A010","FIEBRE TIFOIDEA",1
-"A01","A010","Infección debida a Salmonella typhi",0
-"A01","A011","FIEBRE PARATIFOIDEA A",1
-"A01","A012","FIEBRE PARATIFOIDEA B",1
-"A01","A013","FIEBRE PARATIFOIDEA C",1
-"A01","A014","FIEBRE PARATIFOIDEA, NO ESPECIFICADA",1
-"A01","A014","Infección debida a Salmonella paratyphi SAI",0
-"A02","A020","ENTERITIS DEBIDA A SALMONELLA",1
-"A02","A020","Salmonelosis",0
-"A02","A021","SEPSIS DEBIDA A SALMONELLA",1
-"A02","A022","INFECCIONES LOCALIZADAS DEBIDAS A SALMONELLA",1
-"A02","A028","OTRAS INFECCIONES ESPECIFICADAS COMO DEBIDAS A SALMONELLA",1
-"A02","A029","INFECCIÓN DEBIDA A SALMONELLA, NO ESPECIFICADA",1
-"A03","A030","SHIGELOSIS DEBIDA A SHIGELLA DYSENTERIAE",1
-"A03","A030","Shigelosis grupo A",0
-"A03","A030","disentería de Shiga-Kruse",0
-"A03","A031","SHIGELOSIS DEBIDA A SHIGELLA FLEXNERI",1
-"A03","A031","Shigelosis grupo B",0
-"A03","A032","SHIGELOSIS DEBIDA A SHIGELLA BOYDII",1
-"A03","A032","Shigelosis grupo C",0
-"A03","A033","SHIGELOSIS DEBIDA A SHIGELLA SONNEI",1
-"A03","A033","Shigelosis grupo D",0
-"A03","A038","OTRAS SHIGELOSIS",1
-"A03","A039","SHIGELOSIS DE TIPO NO ESPECIFICADO",1
+titulo_capitulo,seccion,titulo_seccion,categoria,titulo_categoria,term
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P00,Feto y recién nacido afectados por condiciones de la madre no necesariamente relacionadas con el embarazo presente,Formal
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P01,Feto y recién nacido afectados por complicaciones maternas del embarazo,Formal
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P02,"Feto y recién nacido afectados por complicaciones de la placenta, del cordón umbilical y de las membranas",Formal
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P03,Feto y recién nacido afectados por otras complicaciones del trabajo de parto y del parto,Formal
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P04,Feto y recién nacido afectados por influencias nocivas transmitidas a través de la placenta o de la leche materna,Formal
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P04,Feto y recién nacido afectados por efectos no teratogénicos de sustancias transmitidas por vía placentaria,Inclusion
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P04,Feto y recién nacido afectados por ictericia neonatal debida a drogas o toxinas transmitidas por la madre (P58.4),Exclusion
+Ciertas afecciones originadas en el período perinatal,P00–P04,"Feto y recién nacido afectados por factores maternos y por complicaciones del embarazo, del trabajo de parto y del parto",P04,Feto y recién nacido afectados por malformaciones congénitas (Q00–Q99),Exclusion
+Ciertas afecciones originadas en el período perinatal,P05–P08,Trastornos relacionados con la duración de la gestación y el crecimiento fetal,P05,Retardo del crecimiento fetal y desnutrición fetal,Formal
+Ciertas afecciones originadas en el período perinatal,P05–P08,Trastornos relacionados con la duración de la gestación y el crecimiento fetal,P07,"Trastornos relacionados con duración corta de la gestación y con bajo peso al nacer, no clasificados en otra parte",Formal
+Ciertas afecciones originadas en el período perinatal,P05–P08,Trastornos relacionados con la duración de la gestación y el crecimiento fetal,P08,Trastornos relacionados con el embarazo prolongado y con sobrepeso al nacer,Formal
