@@ -8,12 +8,13 @@
 catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
 
   #Look up exact match in disease catalog
-  diseaseToPattern <- str_match(pattern, categories$padecimiento)
-  patternToDisease <- str_match(categories$padecimiento, pattern)
+  diseaseToPattern <- str_match(pattern, catalog$padecimiento)
+  patternToDisease <- str_match(catalog$padecimiento, pattern)
   flagMatch <- sum(diseaseToPattern == patternToDisease, na.rm = T)
 
   if(flagMatch == 1) {
-    #devolver subcategoria y clave y si es principal o alternativo
+    indCoincidence <- catalog$subcategoria[!is.na(diseaseToPattern)]
+    return(printInfo(indCoincidence))
   }
 
   #Look up exact match in category catalog
@@ -25,15 +26,21 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
 
 
   if(residualPattern == TRUE) {
-    diseaseToPattern <- diseaseToPattern[!is.na(diseaseToPattern)]
-    if(length(diseaseToPattern) == 1) return(diseaseToPattern) ## regresar la subcategoria
-    if(length(diseaseToPattern) > 0 ) return(diseaseToPattern) ## revisar si es una sola categoria o mas de una
+    dfDisease <- data.frame(match = diseaseToPattern,
+                            disease = catalog$padecimiento,
+                            subcategory = catalog$subcategoria,
+                            stringsAsFactors = FALSE)[!is.na(diseaseToPattern), ]
+    if(nrow(dfDisease) == 1) return(printInfo(dfDisease$subcategory)) ## regresar la subcategoria 'no especificado'
+    if(nrow(dfDisease) > 0 ) return(diseaseToPattern) ## revisar si es una sola categoria o mas de una
   }
 
   if(residualDisease == TRUE) {
-    patternToDisease <- patternToDisease[!is.na(patternToDisease)]
-    if(length(patternToDisease) == 1) return(patternToDisease) ## regresar la subcategoria
-    if(length(patternToDisease) > 0 ) return(patternToDisease)
+    dfDisease <- data.frame(match = patternToDisease,
+                            disease = catalog$padecimiento,
+                            subcategory = catalog$subcategoria,
+                            stringsAsFactors = FALSE)[!is.na(patternToDisease), ]
+    if(nrow(dfDisease) == 1) return(patternToDisease) ## regresar la subcategoria
+    if(nrow(dfDisease) > 0 ) return(residualMatch(dfDisease))
   }
 
   if(residualDisease + residualPattern == 0) {
@@ -47,4 +54,21 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
       return(NULL)
     }
   }
+}
+
+residualMatch <- function(dfDisease) {
+  #Check if there's more than one category
+  nCat <- sort(table(substr(dfDisease$subcategory, 1, 1)))
+  if(length(nCat) == 1) {
+    indNotSpecified <- which(substr(dfDisease$subcategory, 4, 4) == '9')
+    if(length(indNotSpecified) == 1) {
+      return(print(dfDisease$subcategory[indNotSpecified]))
+    } else {
+      indNotSpecified <- which(!is.na(str_match(dfDisease$disease, 'no especificad')))
+      return(printInfo(dfDisease$subcategory[indNotSpecified]))
+    }
+  } else {
+
+  }
+
 }
