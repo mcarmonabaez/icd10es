@@ -38,9 +38,10 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
     dfDisease <- data.frame(match = patternToDisease,
                             disease = catalog$padecimiento,
                             subcategory = catalog$subcategoria,
+                            principal = catalog$principal,
                             stringsAsFactors = FALSE)[!is.na(patternToDisease), ]
     if(nrow(dfDisease) == 1) return(patternToDisease) ## regresar la subcategoria
-    if(nrow(dfDisease) > 0 ) return(residualMatch(dfDisease))
+    if(nrow(dfDisease) > 0 ) return(residualMatch(pattern, dfDisease))
   }
 
   if(residualDisease + residualPattern == 0) {
@@ -48,26 +49,44 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
                           metric = stringdist::stringsim(catalog$padecimiento,
                                      pattern, method = 'jw', p = 0)) %>%
       filter(metric >= jwBound)
-    if(nrow(jwMatch) >= 0) {
-      ## revisar si es una sola categoria o mas de una... como arribita
+    if(nrow(jwMatch) > 0) {
+      return(print(jwMatch))
     } else {
       return(NULL)
     }
   }
 }
 
-residualMatch <- function(dfDisease) {
+residualMatch <- function(pattern, dfDisease) {
   #Check if there's more than one category
-  nCat <- sort(table(substr(dfDisease$subcategory, 1, 1)))
+  nCat <- sort(table(substr(dfDisease$subcategory[which(dfDisease$principal == 1)], 1, 3)))
+
   if(length(nCat) == 1) {
     indNotSpecified <- which(substr(dfDisease$subcategory, 4, 4) == '9')
     if(length(indNotSpecified) == 1) {
-      return(print(dfDisease$subcategory[indNotSpecified]))
+      return(printInfo(dfDisease$subcategory[indNotSpecified]))
     } else {
       indNotSpecified <- which(!is.na(str_match(dfDisease$disease, 'no especificad')))
       return(printInfo(dfDisease$subcategory[indNotSpecified]))
     }
   } else {
+    dfDisease$probs <- stringdist::stringsim(dfDisease$disease, paste0(pattern, ' no especificad'),
+                                   method = 'jw', p = 0)
+
+    dfMatches <- dfDisease[dfDisease$probs > jwBound, ]
+    if(nrow(dfMatches) > 0) {
+      print(dfMatches)
+    } else {
+      dfDisease$probs <- stringdist::stringsim(dfDisease$disease, paste0(pattern, ' sai'),
+                                               method = 'jw', p = 0)
+      dfMatches <- dfDisease[dfDisease$probs > jwBound, ]
+      if(nrow(dfMatches) > 0) {
+        print(dfMatches)
+      } else {
+        print('pues bai')
+      }
+    }
+
 
   }
 
