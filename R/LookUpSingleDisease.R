@@ -48,7 +48,8 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
     jwMatch <- data.frame(padecimiento = catalog$padecimiento,
                           metric = stringdist::stringsim(catalog$padecimiento,
                                      pattern, method = 'jw', p = 0)) %>%
-      filter(metric >= jwBound)
+      filter(metric >= 0.9) %>%
+      arrange(desc(metric))
     if(nrow(jwMatch) > 0) {
       return(print(jwMatch))
     } else {

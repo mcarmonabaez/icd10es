@@ -4,7 +4,7 @@
 #'
 #' @return A new version of the string in lowercase without noise.
 
-CleanString <- function(pattern) {
+cleanString <- function(pattern) {
   #Remove noise from string
   pattern <- tolower(pattern)
   pattern <- stringi::stri_trans_general(pattern, "Latin-ASCII")
