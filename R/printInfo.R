@@ -4,12 +4,12 @@ string <- 'A000'
 
 printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabular = 'full') {
 
-  if(stringr::str_detect(string, '^[A-Z]{1}[1-9]{2,3}$'))
-    stop('Looks like you did\'t enter a valid category or subcategory code. Categories should have one upppercase letter followed by two digits, and subcategories should have one upppercase letter followed by three digits.')
+  if(!stringr::str_detect(string, '^[A-Z]{1}[0-9]{2,3}$'))
+    stop('a Looks like you did\'t enter a valid category or subcategory code. Categories should have one upppercase letter followed by two digits, and subcategories should have one upppercase letter followed by three digits.')
 
   strLength <- stringr::str_length(string)
   if(!strLength %in% 3:4)
-    stop('Looks like you did\'t enter a valid category or subcategory code. Categories should have one upppercase letter followed by two digits, and subcategories should have one upppercase letter followed by three digits.')
+    stop('b Looks like you did\'t enter a valid category or subcategory code. Categories should have one upppercase letter followed by two digits, and subcategories should have one upppercase letter followed by three digits.')
 
   if(strLength == 3) { # categoría
     query <- categories %>% dplyr::filter(categoria == string)
@@ -37,7 +37,7 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
                           sep = '\n'),
                     string,
                     substr(string, 1, 3), # Código categoría
-                    filter(query, term == 'Formal')$titulo_categoria,
+                    filter(query, term == 'Canonical')$titulo_categoria,
                     string # Código subcategoría
     )
     return(invisible(query))
@@ -73,7 +73,7 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
                     substr(string, 1, 3), # Código categoría
                     # Nombre categoría
                     string, # Código subcategoría
-                    filter(query, term == 'Formal')$padecimiento)
+                    filter(query, term == 'Canonical')$padecimiento)
     return(invisible(query))
 
     if(tabular == 'simple') return(query)
@@ -83,7 +83,7 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
 
 }
 
-results <- printInfo('A000')
+results <- printInfo('R79')
 results
 
 results <- printInfo('A001')
