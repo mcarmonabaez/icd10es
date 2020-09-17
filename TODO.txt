@@ -1,0 +1,34 @@
+TO DO:
+
+- Analizar bien qué sucede con "no especificado" y "SAI"
+- Unir catálogos
+- Casos especiales: diabetes, cáncer, COVID, NAC
+- Mantener orden de los padecimientos
+- Tokenizar actas
+- Reportes (+ viñeta(s))
+- Shiny
+
+  * terminar catálogo
+  * flags del catálogo del IMSS
+  * términos de exclusión
+
+
+Estructura del reporte
+- Intro: Contexto, describir la organización
+- Problemática (en el dominio)
+- ¿Qué existe actualemente?
+- Describir baseline (lo que hicimos en junio)
+- Problemática (desde Ciencia de Datos)
+- Metas y objetivos (tener una herramienta estandarizada)
+  - Clasificación de padecimientos usando el CIE-10
+  - Utilizar las funciones básicas del paquete para desarrollar una herramienta
+    de consulta (shiny / R console)
+
+- Flujo de trabajo (catálogo, web scraping, metodología, SAI, casos especiales)
+  * Justificar que no se pudo hacer web scraping porque es un desmadre (ej: S13.5)
+- Resultados
+- Recomendaciones, conclusiones, trabajo futuro
+
+
+
+
