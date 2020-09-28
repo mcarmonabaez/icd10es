@@ -1,28 +1,45 @@
-
+#' Main function for looking up a given pattern.
+#'
+#' @param pattern A string of the name of the disease to look up.
+#' @param nMatches A number indicating the number of matches to return in case of more than one coincidence.
+#' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
+#'
+#' @return A data frame with the information about the matches found for the disease.
+#' @export
+#'
+#' @import stringr
+#' @import tibble
+#'
 ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9) {
 
   huerfanos <- c('exogeno') ## esto se va a ir a global variables
-  pattern <- CleanString(gsub(paste(huerfanos, collapse = '|'),
-                              replacement = '', x = CleanString(pattern)))
+  pattern <- cleanString(gsub(paste(huerfanos, collapse = '|'),
+                              replacement = '', x = cleanString(pattern)))
 
   #Look for particular diseases
-  specialCases <- c('neumonia', 'diabetes', 'cancer', 'tumor',
-                    'sepsis', 'sindrome') ## esto se va a ir a global variables
-  flagSpecialCase <- str_match(pattern, specialCases)
-  flagSpecialCase <- flagSpecialCase[!is.na(flagSpecialCase)]
+  specialCases <- tribble(~pattern, ~group,
+                          'neumonia', 'neumonia',
+                          'diabetes', 'diabetes',
+                          'diabetic', 'diabetes',
+                          'cetoacidosis', 'diabetes',
+                          'cancer', 'cancer',
+                          'tumor', 'cancer',
+                          'sepsis', 'sepsis',
+                          'sindrome', 'sindrome')## esto se va a ir a global variables
+  dfSpecialCase <- specialCases[!is.na(str_match(pattern, specialCases$pattern)),]
+  flagSpecialCase <- unique(dfSpecialCase$group)
 
-  if(length(flagSpecialCase) > 1) stop('Looks like your query has more than one disease listed. \n
-                                            Try refining your query.')
+  if(length(flagSpecialCase) > 1) stop('Looks like your query has more than one disease listed. \nTry refining your query.')
   if(length(flagSpecialCase) == 1) {
     matchICD <- switch(flagSpecialCase,
                        neumonia = 'holi',
-                       diabetes = 'diabetis',
+                       diabetes = catalogLookUp(pattern, nMatches, jwBound, diabetes_subcategories),
                        cancer = 'bai')
 
     return(matchICD)
   }
 
-  if(flagSpecialCase == 0) {
+  if(length(flagSpecialCase) == 0) {
     subCoincidence <- catalogLookUp(pattern, nMatches, jwBound, subcategories)
     if(!is.null(subCoincidence)) {
       return(subCoincidence)

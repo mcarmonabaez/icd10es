@@ -1,0 +1,574 @@
+categoria;subcategoria;padecimiento;term
+E10;E100;Diabetes mellitus insulinodependiente con coma;Canonical
+E10;E100;Diabetes mellitus insulinodependiente con coma diabético;Inclusion
+E10;E100;Diabetes mellitus insulinodependiente con coma diabético con o sin cetoacidosis;Inclusion
+E10;E100;Diabetes mellitus insulinodependiente con coma diabético hiperosmolar;Inclusion
+E10;E100;Diabetes mellitus insulinodependiente con coma diabético hipoglicémico;Inclusion
+E10;E100;Diabetes mellitus insulinodependiente con coma diabético hiperglicémico SAI;Inclusion
+E10;E101;Diabetes mellitus insulinodependiente con cetoacidosis;Canonical
+E10;E101;Diabetes mellitus insulinodependiente con acidosis diabética, sin mención de coma;Inclusion
+E10;E101;Diabetes mellitus insulinodependiente con cetoacidosis diabética, sin mención de coma;Inclusion
+E10;E102;Diabetes mellitus insulinodependiente con complicaciones renales;Canonical
+E10;E102;Diabetes mellitus insulinodependiente con glomerulonefrosis intracapilar;Inclusion
+E10;E102;Diabetes mellitus insulinodependiente con nefropatía diabética;Inclusion
+E10;E102;Diabetes mellitus insulinodependiente con Síndrome de Kimmelstiel–Wilson;Inclusion
+E10;E103;Diabetes mellitus insulinodependiente con complicaciones oftálmicas;Canonical
+E10;E103;Diabetes mellitus insulinodependiente con catarata diabética;Inclusion
+E10;E103;Diabetes mellitus insulinodependiente con retinopatía diabética;Inclusion
+E10;E104;Diabetes mellitus insulinodependiente con complicaciones neurológicas;Canonical
+E10;E104;Diabetes mellitus insulinodependiente con amiotrofia diabética;Inclusion
+E10;E104;Diabetes mellitus insulinodependiente con mononeuropatía diabética;Inclusion
+E10;E104;Diabetes mellitus insulinodependiente con neuropatía autonómica diabética;Inclusion
+E10;E104;Diabetes mellitus insulinodependiente con polineuropatía diabética;Inclusion
+E10;E104;Diabetes mellitus insulinodependiente con Polineuropatía autonómica diabética;Inclusion
+E10;E105;Diabetes mellitus insulinodependiente con complicaciones circulatorias periféricas;Canonical
+E10;E105;Diabetes mellitus insulinodependiente con angiopatía periférica diabética;Inclusion
+E10;E105;Diabetes mellitus insulinodependiente con Gangrena diabética;Inclusion
+E10;E105;Diabetes mellitus insulinodependiente con Úlcera diabética;Inclusion
+E10;E106;Diabetes mellitus insulinodependiente con otras complicaciones especificadas;Canonical
+E10;E106;Diabetes mellitus insulinodependiente con Artropatía diabética;Inclusion
+E10;E106;Diabetes mellitus insulinodependiente con Artropatía diabética neuropática;Inclusion
+E10;E107;Diabetes mellitus insulinodependiente con complicaciones múltiples;Canonical
+E10;E108;Diabetes mellitus insulinodependiente con complicaciones no especificadas;Canonical
+E10;E109;Diabetes mellitus insulinodependiente sin mención de complicación;Canonical
+E11;E110;Diabetes mellitus no insulinodependiente con coma;Canonical
+E11;E110;Diabetes mellitus no insulinodependiente con coma diabético;Inclusion
+E11;E110;Diabetes mellitus no insulinodependiente con coma diabético con o sin cetoacidosis;Inclusion
+E11;E110;Diabetes mellitus no insulinodependiente con coma diabético hiperosmolar;Inclusion
+E11;E110;Diabetes mellitus no insulinodependiente con coma diabético hipoglicémico;Inclusion
+E11;E110;Diabetes mellitus no insulinodependiente con coma diabético hiperglicémico SAI;Inclusion
+E11;E111;Diabetes mellitus no insulinodependiente con cetoacidosis;Canonical
+E11;E111;Diabetes mellitus no insulinodependiente con acidosis diabética, sin mención de coma;Inclusion
+E11;E111;Diabetes mellitus no insulinodependiente con cetoacidosis diabética, sin mención de coma;Inclusion
+E11;E112;Diabetes mellitus no insulinodependiente con complicaciones renales;Canonical
+E11;E112;Diabetes mellitus no insulinodependiente con glomerulonefrosis intracapilar;Inclusion
+E11;E112;Diabetes mellitus no insulinodependiente con nefropatía diabética;Inclusion
+E11;E112;Diabetes mellitus no insulinodependiente con Síndrome de Kimmelstiel–Wilson;Inclusion
+E11;E113;Diabetes mellitus no insulinodependiente con complicaciones oftálmicas;Canonical
+E11;E113;Diabetes mellitus no insulinodependiente con catarata diabética;Inclusion
+E11;E113;Diabetes mellitus no insulinodependiente con retinopatía diabética;Inclusion
+E11;E114;Diabetes mellitus no insulinodependiente con complicaciones neurológicas;Canonical
+E11;E114;Diabetes mellitus no insulinodependiente con amiotrofia diabética;Inclusion
+E11;E114;Diabetes mellitus no insulinodependiente con mononeuropatía diabética;Inclusion
+E11;E114;Diabetes mellitus no insulinodependiente con neuropatía autonómica diabética;Inclusion
+E11;E114;Diabetes mellitus no insulinodependiente con polineuropatía diabética;Inclusion
+E11;E114;Diabetes mellitus no insulinodependiente con Polineuropatía autonómica diabética;Inclusion
+E11;E115;Diabetes mellitus no insulinodependiente con complicaciones circulatorias periféricas;Canonical
+E11;E115;Diabetes mellitus no insulinodependiente con angiopatía periférica diabética;Inclusion
+E11;E115;Diabetes mellitus no insulinodependiente con Gangrena diabética;Inclusion
+E11;E115;Diabetes mellitus no insulinodependiente con Úlcera diabética;Inclusion
+E11;E116;Diabetes mellitus no insulinodependiente con otras complicaciones especificadas;Canonical
+E11;E116;Diabetes mellitus no insulinodependiente con Artropatía diabética;Inclusion
+E11;E116;Diabetes mellitus no insulinodependiente con Artropatía diabética neuropática;Inclusion
+E11;E117;Diabetes mellitus no insulinodependiente con complicaciones múltiples;Canonical
+E11;E118;Diabetes mellitus no insulinodependiente con complicaciones no especificadas;Canonical
+E11;E119;Diabetes mellitus no insulinodependiente sin mención de complicación;Canonical
+E12;E120;Diabetes mellitus asociada con desnutrición con coma;Canonical
+E12;E120;Diabetes mellitus asociada con desnutrición con coma diabético;Inclusion
+E12;E120;Diabetes mellitus asociada con desnutrición con coma diabético con o sin cetoacidosis;Inclusion
+E12;E120;Diabetes mellitus asociada con desnutrición con coma diabético hiperosmolar;Inclusion
+E12;E120;Diabetes mellitus asociada con desnutrición con coma diabético hipoglicémico;Inclusion
+E12;E120;Diabetes mellitus asociada con desnutrición con coma diabético hiperglicémico SAI;Inclusion
+E12;E121;Diabetes mellitus asociada con desnutrición con cetoacidosis;Canonical
+E12;E121;Diabetes mellitus asociada con desnutrición con acidosis diabética, sin mención de coma;Inclusion
+E12;E121;Diabetes mellitus asociada con desnutrición con cetoacidosis diabética, sin mención de coma;Inclusion
+E12;E122;Diabetes mellitus asociada con desnutrición con complicaciones renales;Canonical
+E12;E122;Diabetes mellitus asociada con desnutrición con glomerulonefrosis intracapilar;Inclusion
+E12;E122;Diabetes mellitus asociada con desnutrición con nefropatía diabética;Inclusion
+E12;E122;Diabetes mellitus asociada con desnutrición con Síndrome de Kimmelstiel–Wilson;Inclusion
+E12;E123;Diabetes mellitus asociada con desnutrición con complicaciones oftálmicas;Canonical
+E12;E123;Diabetes mellitus asociada con desnutrición con catarata diabética;Inclusion
+E12;E123;Diabetes mellitus asociada con desnutrición con retinopatía diabética;Inclusion
+E12;E124;Diabetes mellitus asociada con desnutrición con complicaciones neurológicas;Canonical
+E12;E124;Diabetes mellitus asociada con desnutrición con amiotrofia diabética;Inclusion
+E12;E124;Diabetes mellitus asociada con desnutrición con mononeuropatía diabética;Inclusion
+E12;E124;Diabetes mellitus asociada con desnutrición con neuropatía autonómica diabética;Inclusion
+E12;E124;Diabetes mellitus asociada con desnutrición con polineuropatía diabética;Inclusion
+E12;E124;Diabetes mellitus asociada con desnutrición con Polineuropatía autonómica diabética;Inclusion
+E12;E125;Diabetes mellitus asociada con desnutrición con complicaciones circulatorias periféricas;Canonical
+E12;E125;Diabetes mellitus asociada con desnutrición con angiopatía periférica diabética;Inclusion
+E12;E125;Diabetes mellitus asociada con desnutrición con Gangrena diabética;Inclusion
+E12;E125;Diabetes mellitus asociada con desnutrición con Úlcera diabética;Inclusion
+E12;E126;Diabetes mellitus asociada con desnutrición con otras complicaciones especificadas;Canonical
+E12;E126;Diabetes mellitus asociada con desnutrición con Artropatía diabética;Inclusion
+E12;E126;Diabetes mellitus asociada con desnutrición con Artropatía diabética neuropática;Inclusion
+E12;E127;Diabetes mellitus asociada con desnutrición con complicaciones múltiples;Canonical
+E12;E128;Diabetes mellitus asociada con desnutrición con complicaciones no especificadas;Canonical
+E12;E129;Diabetes mellitus asociada con desnutrición sin mención de complicación;Canonical
+E13;E130;Otras diabetes mellitus especificadas con coma;Canonical
+E13;E130;Otras diabetes mellitus especificadas con coma diabético;Inclusion
+E13;E130;Otras diabetes mellitus especificadas con coma diabético con o sin cetoacidosis;Inclusion
+E13;E130;Otras diabetes mellitus especificadas con coma diabético hiperosmolar;Inclusion
+E13;E130;Otras diabetes mellitus especificadas con coma diabético hipoglicémico;Inclusion
+E13;E130;Otras diabetes mellitus especificadas con coma diabético hiperglicémico SAI;Inclusion
+E13;E131;Otras diabetes mellitus especificadas con desnutrición con cetoacidosis;Canonical
+E13;E131;Otras diabetes mellitus especificadas con acidosis diabética, sin mención de coma;Inclusion
+E13;E131;Otras diabetes mellitus especificadas con cetoacidosis diabética, sin mención de coma;Inclusion
+E13;E132;Otras diabetes mellitus especificadas con complicaciones renales;Canonical
+E13;E132;Otras diabetes mellitus especificadas con glomerulonefrosis intracapilar;Inclusion
+E13;E132;Otras diabetes mellitus especificadas con nefropatía diabética;Inclusion
+E13;E132;Otras diabetes mellitus especificadas con Síndrome de Kimmelstiel–Wilson;Inclusion
+E13;E133;Otras diabetes mellitus especificadas con complicaciones oftálmicas;Canonical
+E13;E133;Otras diabetes mellitus especificadas con catarata diabética;Inclusion
+E13;E133;Otras diabetes mellitus especificadas con retinopatía diabética;Inclusion
+E13;E134;Otras diabetes mellitus especificadas con complicaciones neurológicas;Canonical
+E13;E134;Otras diabetes mellitus especificadas con amiotrofia diabética;Inclusion
+E13;E134;Otras diabetes mellitus especificadas con mononeuropatía diabética;Inclusion
+E13;E134;Otras diabetes mellitus especificadas con neuropatía autonómica diabética;Inclusion
+E13;E134;Otras diabetes mellitus especificadas con polineuropatía diabética;Inclusion
+E13;E134;Otras diabetes mellitus especificadas con Polineuropatía autonómica diabética;Inclusion
+E13;E135;Otras diabetes mellitus especificadas con complicaciones circulatorias periféricas;Canonical
+E13;E135;Otras diabetes mellitus especificadas con angiopatía periférica diabética;Inclusion
+E13;E135;Otras diabetes mellitus especificadas con Gangrena diabética;Inclusion
+E13;E135;Otras diabetes mellitus especificadas con Úlcera diabética;Inclusion
+E13;E136;Otras diabetes mellitus especificadas con otras complicaciones especificadas;Canonical
+E13;E136;Otras diabetes mellitus especificadas con Artropatía diabética;Inclusion
+E13;E136;Otras diabetes mellitus especificadas con Artropatía diabética neuropática;Inclusion
+E13;E137;Otras diabetes mellitus especificadas con complicaciones múltiples;Canonical
+E13;E138;Otras diabetes mellitus especificadas con complicaciones no especificadas;Canonical
+E13;E139;Otras diabetes mellitus especificadas sin mención de complicación;Canonical
+E14;E140;Diabetes mellitus, no especificada con coma;Canonical
+E14;E140;Diabetes mellitus, no especificada con coma diabético;Inclusion
+E14;E140;Diabetes mellitus, no especificada con coma diabético con o sin cetoacidosis;Inclusion
+E14;E140;Diabetes mellitus, no especificada con coma diabético hiperosmolar;Inclusion
+E14;E140;Diabetes mellitus, no especificada con coma diabético hipoglicémico;Inclusion
+E14;E140;Diabetes mellitus, no especificada con coma diabético hiperglicémico SAI;Inclusion
+E14;E141;Diabetes mellitus, no especificada con cetoacidosis;Canonical
+E14;E141;Diabetes mellitus, no especificada con acidosis diabética, sin mención de coma;Inclusion
+E14;E141;Diabetes mellitus, no especificada con cetoacidosis diabética, sin mención de coma;Inclusion
+E14;E142;Diabetes mellitus, no especificada con complicaciones renales;Canonical
+E14;E142;Diabetes mellitus, no especificada con glomerulonefrosis intracapilar;Inclusion
+E14;E142;Diabetes mellitus, no especificada con nefropatía diabética;Inclusion
+E14;E142;Diabetes mellitus, no especificada con Síndrome de Kimmelstiel–Wilson;Inclusion
+E14;E143;Diabetes mellitus, no especificada con complicaciones oftálmicas;Canonical
+E14;E143;Diabetes mellitus, no especificada con catarata diabética;Inclusion
+E14;E143;Diabetes mellitus, no especificada con retinopatía diabética;Inclusion
+E14;E144;Diabetes mellitus, no especificada con complicaciones neurológicas;Canonical
+E14;E144;Diabetes mellitus, no especificada con amiotrofia diabética;Inclusion
+E14;E144;Diabetes mellitus, no especificada con mononeuropatía diabética;Inclusion
+E14;E144;Diabetes mellitus, no especificada con neuropatía autonómica diabética;Inclusion
+E14;E144;Diabetes mellitus, no especificada con polineuropatía diabética;Inclusion
+E14;E144;Diabetes mellitus, no especificada con Polineuropatía autonómica diabética;Inclusion
+E14;E145;Diabetes mellitus, no especificada con complicaciones circulatorias periféricas;Canonical
+E14;E145;Diabetes mellitus, no especificada con angiopatía periférica diabética;Inclusion
+E14;E145;Diabetes mellitus, no especificada con Gangrena diabética;Inclusion
+E14;E145;Diabetes mellitus, no especificada con Úlcera diabética;Inclusion
+E14;E146;Diabetes mellitus, no especificada con otras complicaciones especificadas;Canonical
+E14;E146;Diabetes mellitus, no especificada con Artropatía diabética;Inclusion
+E14;E146;Diabetes mellitus, no especificada con Artropatía diabética neuropática;Inclusion
+E14;E147;Diabetes mellitus, no especificada con complicaciones múltiples;Canonical
+E14;E148;Diabetes mellitus, no especificada con complicaciones no especificadas;Canonical
+E14;E149;Diabetes mellitus, no especificada sin mención de complicación;Canonical
+E10;E100;Diabetes mellitus tipo i con coma;Auxiliar
+E10;E100;Diabetes mellitus tipo i con coma diabético;Auxiliar
+E10;E100;Diabetes mellitus tipo i con coma diabético con o sin cetoacidosis;Auxiliar
+E10;E100;Diabetes mellitus tipo i con coma diabético hiperosmolar;Auxiliar
+E10;E100;Diabetes mellitus tipo i con coma diabético hipoglicémico;Auxiliar
+E10;E100;Diabetes mellitus tipo i con coma diabético hiperglicémico SAI;Auxiliar
+E10;E101;Diabetes mellitus tipo i con cetoacidosis;Auxiliar
+E10;E101;Diabetes mellitus tipo i con acidosis diabética, sin mención de coma;Auxiliar
+E10;E101;Diabetes mellitus tipo i con cetoacidosis diabética, sin mención de coma;Auxiliar
+E10;E102;Diabetes mellitus tipo i con complicaciones renales;Auxiliar
+E10;E102;Diabetes mellitus tipo i con glomerulonefrosis intracapilar;Auxiliar
+E10;E102;Diabetes mellitus tipo i con nefropatía diabética;Auxiliar
+E10;E102;Diabetes mellitus tipo i con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E10;E103;Diabetes mellitus tipo i con complicaciones oftálmicas;Auxiliar
+E10;E103;Diabetes mellitus tipo i con catarata diabética;Auxiliar
+E10;E103;Diabetes mellitus tipo i con retinopatía diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo i con complicaciones neurológicas;Auxiliar
+E10;E104;Diabetes mellitus tipo i con amiotrofia diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo i con mononeuropatía diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo i con neuropatía autonómica diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo i con polineuropatía diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo i con Polineuropatía autonómica diabética;Auxiliar
+E10;E105;Diabetes mellitus tipo i con complicaciones circulatorias periféricas;Auxiliar
+E10;E105;Diabetes mellitus tipo i con angiopatía periférica diabética;Auxiliar
+E10;E105;Diabetes mellitus tipo i con Gangrena diabética;Auxiliar
+E10;E105;Diabetes mellitus tipo i con Úlcera diabética;Auxiliar
+E10;E106;Diabetes mellitus tipo i con otras complicaciones especificadas;Auxiliar
+E10;E106;Diabetes mellitus tipo i con Artropatía diabética;Auxiliar
+E10;E106;Diabetes mellitus tipo i con Artropatía diabética neuropática;Auxiliar
+E10;E107;Diabetes mellitus tipo i con complicaciones múltiples;Auxiliar
+E10;E108;Diabetes mellitus tipo i con complicaciones no especificadas;Auxiliar
+E10;E109;Diabetes mellitus tipo i sin mención de complicación;Auxiliar
+E10;E100;Diabetes mellitus tipo 1 con coma;Auxiliar
+E10;E100;Diabetes mellitus tipo 1 con coma diabético;Auxiliar
+E10;E100;Diabetes mellitus tipo 1 con coma diabético con o sin cetoacidosis;Auxiliar
+E10;E100;Diabetes mellitus tipo 1 con coma diabético hiperosmolar;Auxiliar
+E10;E100;Diabetes mellitus tipo 1 con coma diabético hipoglicémico;Auxiliar
+E10;E100;Diabetes mellitus tipo 1 con coma diabético hiperglicémico SAI;Auxiliar
+E10;E101;Diabetes mellitus tipo 1 con cetoacidosis;Auxiliar
+E10;E101;Diabetes mellitus tipo 1 con acidosis diabética, sin mención de coma;Auxiliar
+E10;E101;Diabetes mellitus tipo 1 con cetoacidosis diabética, sin mención de coma;Auxiliar
+E10;E102;Diabetes mellitus tipo 1 con complicaciones renales;Auxiliar
+E10;E102;Diabetes mellitus tipo 1 con glomerulonefrosis intracapilar;Auxiliar
+E10;E102;Diabetes mellitus tipo 1 con nefropatía diabética;Auxiliar
+E10;E102;Diabetes mellitus tipo 1 con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E10;E103;Diabetes mellitus tipo 1 con complicaciones oftálmicas;Auxiliar
+E10;E103;Diabetes mellitus tipo 1 con catarata diabética;Auxiliar
+E10;E103;Diabetes mellitus tipo 1 con retinopatía diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo 1 con complicaciones neurológicas;Auxiliar
+E10;E104;Diabetes mellitus tipo 1 con amiotrofia diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo 1 con mononeuropatía diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo 1 con neuropatía autonómica diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo 1 con polineuropatía diabética;Auxiliar
+E10;E104;Diabetes mellitus tipo 1 con Polineuropatía autonómica diabética;Auxiliar
+E10;E105;Diabetes mellitus tipo 1 con complicaciones circulatorias periféricas;Auxiliar
+E10;E105;Diabetes mellitus tipo 1 con angiopatía periférica diabética;Auxiliar
+E10;E105;Diabetes mellitus tipo 1 con Gangrena diabética;Auxiliar
+E10;E105;Diabetes mellitus tipo 1 con Úlcera diabética;Auxiliar
+E10;E106;Diabetes mellitus tipo 1 con otras complicaciones especificadas;Auxiliar
+E10;E106;Diabetes mellitus tipo 1 con Artropatía diabética;Auxiliar
+E10;E106;Diabetes mellitus tipo 1 con Artropatía diabética neuropática;Auxiliar
+E10;E107;Diabetes mellitus tipo 1 con complicaciones múltiples;Auxiliar
+E10;E108;Diabetes mellitus tipo 1 con complicaciones no especificadas;Auxiliar
+E10;E109;Diabetes mellitus tipo 1 sin mención de complicación;Auxiliar
+E10;E100;Diabetes tipo i con coma;Auxiliar
+E10;E100;Diabetes tipo i con coma diabético;Auxiliar
+E10;E100;Diabetes tipo i con coma diabético con o sin cetoacidosis;Auxiliar
+E10;E100;Diabetes tipo i con coma diabético hiperosmolar;Auxiliar
+E10;E100;Diabetes tipo i con coma diabético hipoglicémico;Auxiliar
+E10;E100;Diabetes tipo i con coma diabético hiperglicémico SAI;Auxiliar
+E10;E101;Diabetes tipo i con cetoacidosis;Auxiliar
+E10;E101;Diabetes tipo i con acidosis diabética, sin mención de coma;Auxiliar
+E10;E101;Diabetes tipo i con cetoacidosis diabética, sin mención de coma;Auxiliar
+E10;E102;Diabetes tipo i con complicaciones renales;Auxiliar
+E10;E102;Diabetes tipo i con glomerulonefrosis intracapilar;Auxiliar
+E10;E102;Diabetes tipo i con nefropatía diabética;Auxiliar
+E10;E102;Diabetes tipo i con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E10;E103;Diabetes tipo i con complicaciones oftálmicas;Auxiliar
+E10;E103;Diabetes tipo i con catarata diabética;Auxiliar
+E10;E103;Diabetes tipo i con retinopatía diabética;Auxiliar
+E10;E104;Diabetes tipo i con complicaciones neurológicas;Auxiliar
+E10;E104;Diabetes tipo i con amiotrofia diabética;Auxiliar
+E10;E104;Diabetes tipo i con mononeuropatía diabética;Auxiliar
+E10;E104;Diabetes tipo i con neuropatía autonómica diabética;Auxiliar
+E10;E104;Diabetes tipo i con polineuropatía diabética;Auxiliar
+E10;E104;Diabetes tipo i con Polineuropatía autonómica diabética;Auxiliar
+E10;E105;Diabetes tipo i con complicaciones circulatorias periféricas;Auxiliar
+E10;E105;Diabetes tipo i con angiopatía periférica diabética;Auxiliar
+E10;E105;Diabetes tipo i con Gangrena diabética;Auxiliar
+E10;E105;Diabetes tipo i con Úlcera diabética;Auxiliar
+E10;E106;Diabetes tipo i con otras complicaciones especificadas;Auxiliar
+E10;E106;Diabetes tipo i con Artropatía diabética;Auxiliar
+E10;E106;Diabetes tipo i con Artropatía diabética neuropática;Auxiliar
+E10;E107;Diabetes tipo i con complicaciones múltiples;Auxiliar
+E10;E108;Diabetes tipo i con complicaciones no especificadas;Auxiliar
+E10;E109;Diabetes tipo i sin mención de complicación;Auxiliar
+E10;E100;Diabetes tipo 1 con coma;Auxiliar
+E10;E100;Diabetes tipo 1 con coma diabético;Auxiliar
+E10;E100;Diabetes tipo 1 con coma diabético con o sin cetoacidosis;Auxiliar
+E10;E100;Diabetes tipo 1 con coma diabético hiperosmolar;Auxiliar
+E10;E100;Diabetes tipo 1 con coma diabético hipoglicémico;Auxiliar
+E10;E100;Diabetes tipo 1 con coma diabético hiperglicémico SAI;Auxiliar
+E10;E101;Diabetes tipo 1 con cetoacidosis;Auxiliar
+E10;E101;Diabetes tipo 1 con acidosis diabética, sin mención de coma;Auxiliar
+E10;E101;Diabetes tipo 1 con cetoacidosis diabética, sin mención de coma;Auxiliar
+E10;E102;Diabetes tipo 1 con complicaciones renales;Auxiliar
+E10;E102;Diabetes tipo 1 con glomerulonefrosis intracapilar;Auxiliar
+E10;E102;Diabetes tipo 1 con nefropatía diabética;Auxiliar
+E10;E102;Diabetes tipo 1 con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E10;E103;Diabetes tipo 1 con complicaciones oftálmicas;Auxiliar
+E10;E103;Diabetes tipo 1 con catarata diabética;Auxiliar
+E10;E103;Diabetes tipo 1 con retinopatía diabética;Auxiliar
+E10;E104;Diabetes tipo 1 con complicaciones neurológicas;Auxiliar
+E10;E104;Diabetes tipo 1 con amiotrofia diabética;Auxiliar
+E10;E104;Diabetes tipo 1 con mononeuropatía diabética;Auxiliar
+E10;E104;Diabetes tipo 1 con neuropatía autonómica diabética;Auxiliar
+E10;E104;Diabetes tipo 1 con polineuropatía diabética;Auxiliar
+E10;E104;Diabetes tipo 1 con Polineuropatía autonómica diabética;Auxiliar
+E10;E105;Diabetes tipo 1 con complicaciones circulatorias periféricas;Auxiliar
+E10;E105;Diabetes tipo 1 con angiopatía periférica diabética;Auxiliar
+E10;E105;Diabetes tipo 1 con Gangrena diabética;Auxiliar
+E10;E105;Diabetes tipo 1 con Úlcera diabética;Auxiliar
+E10;E106;Diabetes tipo 1 con otras complicaciones especificadas;Auxiliar
+E10;E106;Diabetes tipo 1 con Artropatía diabética;Auxiliar
+E10;E106;Diabetes tipo 1 con Artropatía diabética neuropática;Auxiliar
+E10;E107;Diabetes tipo 1 con complicaciones múltiples;Auxiliar
+E10;E108;Diabetes tipo 1 con complicaciones no especificadas;Auxiliar
+E10;E109;Diabetes tipo 1 sin mención de complicación;Auxiliar
+E11;E110;Diabetes mellitus tipo ii con coma;Auxiliar
+E11;E110;Diabetes mellitus tipo ii con coma diabético;Auxiliar
+E11;E110;Diabetes mellitus tipo ii con coma diabético con o sin cetoacidosis;Auxiliar
+E11;E110;Diabetes mellitus tipo ii con coma diabético hiperosmolar;Auxiliar
+E11;E110;Diabetes mellitus tipo ii con coma diabético hipoglicémico;Auxiliar
+E11;E110;Diabetes mellitus tipo ii con coma diabético hiperglicémico SAI;Auxiliar
+E11;E111;Diabetes mellitus tipo ii con cetoacidosis;Auxiliar
+E11;E111;Diabetes mellitus tipo ii con acidosis diabética, sin mención de coma;Auxiliar
+E11;E111;Diabetes mellitus tipo ii con cetoacidosis diabética, sin mención de coma;Auxiliar
+E11;E112;Diabetes mellitus tipo ii con complicaciones renales;Auxiliar
+E11;E112;Diabetes mellitus tipo ii con glomerulonefrosis intracapilar;Auxiliar
+E11;E112;Diabetes mellitus tipo ii con nefropatía diabética;Auxiliar
+E11;E112;Diabetes mellitus tipo ii con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E11;E113;Diabetes mellitus tipo ii con complicaciones oftálmicas;Auxiliar
+E11;E113;Diabetes mellitus tipo ii con catarata diabética;Auxiliar
+E11;E113;Diabetes mellitus tipo ii con retinopatía diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo ii con complicaciones neurológicas;Auxiliar
+E11;E114;Diabetes mellitus tipo ii con amiotrofia diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo ii con mononeuropatía diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo ii con neuropatía autonómica diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo ii con polineuropatía diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo ii con Polineuropatía autonómica diabética;Auxiliar
+E11;E115;Diabetes mellitus tipo ii con complicaciones circulatorias periféricas;Auxiliar
+E11;E115;Diabetes mellitus tipo ii con angiopatía periférica diabética;Auxiliar
+E11;E115;Diabetes mellitus tipo ii con Gangrena diabética;Auxiliar
+E11;E115;Diabetes mellitus tipo ii con Úlcera diabética;Auxiliar
+E11;E116;Diabetes mellitus tipo ii con otras complicaciones especificadas;Auxiliar
+E11;E116;Diabetes mellitus tipo ii con Artropatía diabética;Auxiliar
+E11;E116;Diabetes mellitus tipo ii con Artropatía diabética neuropática;Auxiliar
+E11;E117;Diabetes mellitus tipo ii con complicaciones múltiples;Auxiliar
+E11;E118;Diabetes mellitus tipo ii con complicaciones no especificadas;Auxiliar
+E11;E119;Diabetes mellitus tipo ii sin mención de complicación;Auxiliar
+E11;E110;Diabetes mellitus tipo 2 con coma;Auxiliar
+E11;E110;Diabetes mellitus tipo 2 con coma diabético;Auxiliar
+E11;E110;Diabetes mellitus tipo 2 con coma diabético con o sin cetoacidosis;Auxiliar
+E11;E110;Diabetes mellitus tipo 2 con coma diabético hiperosmolar;Auxiliar
+E11;E110;Diabetes mellitus tipo 2 con coma diabético hipoglicémico;Auxiliar
+E11;E110;Diabetes mellitus tipo 2 con coma diabético hiperglicémico SAI;Auxiliar
+E11;E111;Diabetes mellitus tipo 2 con cetoacidosis;Auxiliar
+E11;E111;Diabetes mellitus tipo 2 con acidosis diabética, sin mención de coma;Auxiliar
+E11;E111;Diabetes mellitus tipo 2 con cetoacidosis diabética, sin mención de coma;Auxiliar
+E11;E112;Diabetes mellitus tipo 2 con complicaciones renales;Auxiliar
+E11;E112;Diabetes mellitus tipo 2 con glomerulonefrosis intracapilar;Auxiliar
+E11;E112;Diabetes mellitus tipo 2 con nefropatía diabética;Auxiliar
+E11;E112;Diabetes mellitus tipo 2 con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E11;E113;Diabetes mellitus tipo 2 con complicaciones oftálmicas;Auxiliar
+E11;E113;Diabetes mellitus tipo 2 con catarata diabética;Auxiliar
+E11;E113;Diabetes mellitus tipo 2 con retinopatía diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo 2 con complicaciones neurológicas;Auxiliar
+E11;E114;Diabetes mellitus tipo 2 con amiotrofia diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo 2 con mononeuropatía diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo 2 con neuropatía autonómica diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo 2 con polineuropatía diabética;Auxiliar
+E11;E114;Diabetes mellitus tipo 2 con Polineuropatía autonómica diabética;Auxiliar
+E11;E115;Diabetes mellitus tipo 2 con complicaciones circulatorias periféricas;Auxiliar
+E11;E115;Diabetes mellitus tipo 2 con angiopatía periférica diabética;Auxiliar
+E11;E115;Diabetes mellitus tipo 2 con Gangrena diabética;Auxiliar
+E11;E115;Diabetes mellitus tipo 2 con Úlcera diabética;Auxiliar
+E11;E116;Diabetes mellitus tipo 2 con otras complicaciones especificadas;Auxiliar
+E11;E116;Diabetes mellitus tipo 2 con Artropatía diabética;Auxiliar
+E11;E116;Diabetes mellitus tipo 2 con Artropatía diabética neuropática;Auxiliar
+E11;E117;Diabetes mellitus tipo 2 con complicaciones múltiples;Auxiliar
+E11;E118;Diabetes mellitus tipo 2 con complicaciones no especificadas;Auxiliar
+E11;E119;Diabetes mellitus tipo 2 sin mención de complicación;Auxiliar
+E11;E110;Diabetes tipo ii con coma;Auxiliar
+E11;E110;Diabetes tipo ii con coma diabético;Auxiliar
+E11;E110;Diabetes tipo ii con coma diabético con o sin cetoacidosis;Auxiliar
+E11;E110;Diabetes tipo ii con coma diabético hiperosmolar;Auxiliar
+E11;E110;Diabetes tipo ii con coma diabético hipoglicémico;Auxiliar
+E11;E110;Diabetes tipo ii con coma diabético hiperglicémico SAI;Auxiliar
+E11;E111;Diabetes tipo ii con cetoacidosis;Auxiliar
+E11;E111;Diabetes tipo ii con acidosis diabética, sin mención de coma;Auxiliar
+E11;E111;Diabetes tipo ii con cetoacidosis diabética, sin mención de coma;Auxiliar
+E11;E112;Diabetes tipo ii con complicaciones renales;Auxiliar
+E11;E112;Diabetes tipo ii con glomerulonefrosis intracapilar;Auxiliar
+E11;E112;Diabetes tipo ii con nefropatía diabética;Auxiliar
+E11;E112;Diabetes tipo ii con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E11;E113;Diabetes tipo ii con complicaciones oftálmicas;Auxiliar
+E11;E113;Diabetes tipo ii con catarata diabética;Auxiliar
+E11;E113;Diabetes tipo ii con retinopatía diabética;Auxiliar
+E11;E114;Diabetes tipo ii con complicaciones neurológicas;Auxiliar
+E11;E114;Diabetes tipo ii con amiotrofia diabética;Auxiliar
+E11;E114;Diabetes tipo ii con mononeuropatía diabética;Auxiliar
+E11;E114;Diabetes tipo ii con neuropatía autonómica diabética;Auxiliar
+E11;E114;Diabetes tipo ii con polineuropatía diabética;Auxiliar
+E11;E114;Diabetes tipo ii con Polineuropatía autonómica diabética;Auxiliar
+E11;E115;Diabetes tipo ii con complicaciones circulatorias periféricas;Auxiliar
+E11;E115;Diabetes tipo ii con angiopatía periférica diabética;Auxiliar
+E11;E115;Diabetes tipo ii con Gangrena diabética;Auxiliar
+E11;E115;Diabetes tipo ii con Úlcera diabética;Auxiliar
+E11;E116;Diabetes tipo ii con otras complicaciones especificadas;Auxiliar
+E11;E116;Diabetes tipo ii con Artropatía diabética;Auxiliar
+E11;E116;Diabetes tipo ii con Artropatía diabética neuropática;Auxiliar
+E11;E117;Diabetes tipo ii con complicaciones múltiples;Auxiliar
+E11;E118;Diabetes tipo ii con complicaciones no especificadas;Auxiliar
+E11;E119;Diabetes tipo ii sin mención de complicación;Auxiliar
+E11;E110;Diabetes tipo 2 con coma;Auxiliar
+E11;E110;Diabetes tipo 2 con coma diabético;Auxiliar
+E11;E110;Diabetes tipo 2 con coma diabético con o sin cetoacidosis;Auxiliar
+E11;E110;Diabetes tipo 2 con coma diabético hiperosmolar;Auxiliar
+E11;E110;Diabetes tipo 2 con coma diabético hipoglicémico;Auxiliar
+E11;E110;Diabetes tipo 2 con coma diabético hiperglicémico SAI;Auxiliar
+E11;E111;Diabetes tipo 2 con cetoacidosis;Auxiliar
+E11;E111;Diabetes tipo 2 con acidosis diabética, sin mención de coma;Auxiliar
+E11;E111;Diabetes tipo 2 con cetoacidosis diabética, sin mención de coma;Auxiliar
+E11;E112;Diabetes tipo 2 con complicaciones renales;Auxiliar
+E11;E112;Diabetes tipo 2 con glomerulonefrosis intracapilar;Auxiliar
+E11;E112;Diabetes tipo 2 con nefropatía diabética;Auxiliar
+E11;E112;Diabetes tipo 2 con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E11;E113;Diabetes tipo 2 con complicaciones oftálmicas;Auxiliar
+E11;E113;Diabetes tipo 2 con catarata diabética;Auxiliar
+E11;E113;Diabetes tipo 2 con retinopatía diabética;Auxiliar
+E11;E114;Diabetes tipo 2 con complicaciones neurológicas;Auxiliar
+E11;E114;Diabetes tipo 2 con amiotrofia diabética;Auxiliar
+E11;E114;Diabetes tipo 2 con mononeuropatía diabética;Auxiliar
+E11;E114;Diabetes tipo 2 con neuropatía autonómica diabética;Auxiliar
+E11;E114;Diabetes tipo 2 con polineuropatía diabética;Auxiliar
+E11;E114;Diabetes tipo 2 con Polineuropatía autonómica diabética;Auxiliar
+E11;E115;Diabetes tipo 2 con complicaciones circulatorias periféricas;Auxiliar
+E11;E115;Diabetes tipo 2 con angiopatía periférica diabética;Auxiliar
+E11;E115;Diabetes tipo 2 con Gangrena diabética;Auxiliar
+E11;E115;Diabetes tipo 2 con Úlcera diabética;Auxiliar
+E11;E116;Diabetes tipo 2 con otras complicaciones especificadas;Auxiliar
+E11;E116;Diabetes tipo 2 con Artropatía diabética;Auxiliar
+E11;E116;Diabetes tipo 2 con Artropatía diabética neuropática;Auxiliar
+E11;E117;Diabetes tipo 2 con complicaciones múltiples;Auxiliar
+E11;E118;Diabetes tipo 2 con complicaciones no especificadas;Auxiliar
+E11;E119;Diabetes tipo 2 sin mención de complicación;Auxiliar
+E12;E120;Diabetes asociada con desnutrición con coma;Auxiliar
+E12;E120;Diabetes asociada con desnutrición con coma diabético;Auxiliar
+E12;E120;Diabetes asociada con desnutrición con coma diabético con o sin cetoacidosis;Auxiliar
+E12;E120;Diabetes asociada con desnutrición con coma diabético hiperosmolar;Auxiliar
+E12;E120;Diabetes asociada con desnutrición con coma diabético hipoglicémico;Auxiliar
+E12;E120;Diabetes asociada con desnutrición con coma diabético hiperglicémico SAI;Auxiliar
+E12;E121;Diabetes asociada con desnutrición con cetoacidosis;Auxiliar
+E12;E121;Diabetes asociada con desnutrición con acidosis diabética, sin mención de coma;Auxiliar
+E12;E121;Diabetes asociada con desnutrición con cetoacidosis diabética, sin mención de coma;Auxiliar
+E12;E122;Diabetes asociada con desnutrición con complicaciones renales;Auxiliar
+E12;E122;Diabetes asociada con desnutrición con glomerulonefrosis intracapilar;Auxiliar
+E12;E122;Diabetes asociada con desnutrición con nefropatía diabética;Auxiliar
+E12;E122;Diabetes asociada con desnutrición con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E12;E123;Diabetes asociada con desnutrición con complicaciones oftálmicas;Auxiliar
+E12;E123;Diabetes asociada con desnutrición con catarata diabética;Auxiliar
+E12;E123;Diabetes asociada con desnutrición con retinopatía diabética;Auxiliar
+E12;E124;Diabetes asociada con desnutrición con complicaciones neurológicas;Auxiliar
+E12;E124;Diabetes asociada con desnutrición con amiotrofia diabética;Auxiliar
+E12;E124;Diabetes asociada con desnutrición con mononeuropatía diabética;Auxiliar
+E12;E124;Diabetes asociada con desnutrición con neuropatía autonómica diabética;Auxiliar
+E12;E124;Diabetes asociada con desnutrición con polineuropatía diabética;Auxiliar
+E12;E124;Diabetes asociada con desnutrición con Polineuropatía autonómica diabética;Auxiliar
+E12;E125;Diabetes asociada con desnutrición con complicaciones circulatorias periféricas;Auxiliar
+E12;E125;Diabetes asociada con desnutrición con angiopatía periférica diabética;Auxiliar
+E12;E125;Diabetes asociada con desnutrición con Gangrena diabética;Auxiliar
+E12;E125;Diabetes asociada con desnutrición con Úlcera diabética;Auxiliar
+E12;E126;Diabetes asociada con desnutrición con otras complicaciones especificadas;Auxiliar
+E12;E126;Diabetes asociada con desnutrición con Artropatía diabética;Auxiliar
+E12;E126;Diabetes asociada con desnutrición con Artropatía diabética neuropática;Auxiliar
+E12;E127;Diabetes asociada con desnutrición con complicaciones múltiples;Auxiliar
+E12;E128;Diabetes asociada con desnutrición con complicaciones no especificadas;Auxiliar
+E12;E129;Diabetes asociada con desnutrición sin mención de complicación;Auxiliar
+E13;E130;Otras diabetes especificadas con coma;Auxiliar
+E13;E130;Otras diabetes especificadas con coma diabético;Auxiliar
+E13;E130;Otras diabetes especificadas con coma diabético con o sin cetoacidosis;Auxiliar
+E13;E130;Otras diabetes especificadas con coma diabético hiperosmolar;Auxiliar
+E13;E130;Otras diabetes especificadas con coma diabético hipoglicémico;Auxiliar
+E13;E130;Otras diabetes especificadas con coma diabético hiperglicémico SAI;Auxiliar
+E13;E131;Otras diabetes especificadas con desnutrición con cetoacidosis;Auxiliar
+E13;E131;Otras diabetes especificadas con acidosis diabética, sin mención de coma;Auxiliar
+E13;E131;Otras diabetes especificadas con cetoacidosis diabética, sin mención de coma;Auxiliar
+E13;E132;Otras diabetes especificadas con complicaciones renales;Auxiliar
+E13;E132;Otras diabetes especificadas con glomerulonefrosis intracapilar;Auxiliar
+E13;E132;Otras diabetes especificadas con nefropatía diabética;Auxiliar
+E13;E132;Otras diabetes especificadas con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E13;E133;Otras diabetes especificadas con complicaciones oftálmicas;Auxiliar
+E13;E133;Otras diabetes especificadas con catarata diabética;Auxiliar
+E13;E133;Otras diabetes especificadas con retinopatía diabética;Auxiliar
+E13;E134;Otras diabetes especificadas con complicaciones neurológicas;Auxiliar
+E13;E134;Otras diabetes especificadas con amiotrofia diabética;Auxiliar
+E13;E134;Otras diabetes especificadas con mononeuropatía diabética;Auxiliar
+E13;E134;Otras diabetes especificadas con neuropatía autonómica diabética;Auxiliar
+E13;E134;Otras diabetes especificadas con polineuropatía diabética;Auxiliar
+E13;E134;Otras diabetes especificadas con Polineuropatía autonómica diabética;Auxiliar
+E13;E135;Otras diabetes especificadas con complicaciones circulatorias periféricas;Auxiliar
+E13;E135;Otras diabetes especificadas con angiopatía periférica diabética;Auxiliar
+E13;E135;Otras diabetes especificadas con Gangrena diabética;Auxiliar
+E13;E135;Otras diabetes especificadas con Úlcera diabética;Auxiliar
+E13;E136;Otras diabetes especificadas con otras complicaciones especificadas;Auxiliar
+E13;E136;Otras diabetes especificadas con Artropatía diabética;Auxiliar
+E13;E136;Otras diabetes especificadas con Artropatía diabética neuropática;Auxiliar
+E13;E137;Otras diabetes especificadas con complicaciones múltiples;Auxiliar
+E13;E138;Otras diabetes especificadas con complicaciones no especificadas;Auxiliar
+E13;E139;Otras diabetes especificadas sin mención de complicación;Auxiliar
+E14;E140;Diabetes, no especificada con coma;Auxiliar
+E14;E140;Diabetes, no especificada con coma diabético;Auxiliar
+E14;E140;Diabetes, no especificada con coma diabético con o sin cetoacidosis;Auxiliar
+E14;E140;Diabetes, no especificada con coma diabético hiperosmolar;Auxiliar
+E14;E140;Diabetes, no especificada con coma diabético hipoglicémico;Auxiliar
+E14;E140;Diabetes, no especificada con coma diabético hiperglicémico SAI;Auxiliar
+E14;E141;Diabetes, no especificada con cetoacidosis;Auxiliar
+E14;E141;Diabetes, no especificada con acidosis diabética, sin mención de coma;Auxiliar
+E14;E141;Diabetes, no especificada con cetoacidosis diabética, sin mención de coma;Auxiliar
+E14;E142;Diabetes, no especificada con complicaciones renales;Auxiliar
+E14;E142;Diabetes, no especificada con glomerulonefrosis intracapilar;Auxiliar
+E14;E142;Diabetes, no especificada con nefropatía diabética;Auxiliar
+E14;E142;Diabetes, no especificada con Síndrome de Kimmelstiel–Wilson;Auxiliar
+E14;E143;Diabetes, no especificada con complicaciones oftálmicas;Auxiliar
+E14;E143;Diabetes, no especificada con catarata diabética;Auxiliar
+E14;E143;Diabetes, no especificada con retinopatía diabética;Auxiliar
+E14;E144;Diabetes, no especificada con complicaciones neurológicas;Auxiliar
+E14;E144;Diabetes, no especificada con amiotrofia diabética;Auxiliar
+E14;E144;Diabetes, no especificada con mononeuropatía diabética;Auxiliar
+E14;E144;Diabetes, no especificada con neuropatía autonómica diabética;Auxiliar
+E14;E144;Diabetes, no especificada con polineuropatía diabética;Auxiliar
+E14;E144;Diabetes, no especificada con Polineuropatía autonómica diabética;Auxiliar
+E14;E145;Diabetes, no especificada con complicaciones circulatorias periféricas;Auxiliar
+E14;E145;Diabetes, no especificada con angiopatía periférica diabética;Auxiliar
+E14;E145;Diabetes, no especificada con Gangrena diabética;Auxiliar
+E14;E145;Diabetes, no especificada con Úlcera diabética;Auxiliar
+E14;E146;Diabetes, no especificada con otras complicaciones especificadas;Auxiliar
+E14;E146;Diabetes, no especificada con Artropatía diabética;Auxiliar
+E14;E146;Diabetes, no especificada con Artropatía diabética neuropática;Auxiliar
+E14;E147;Diabetes, no especificada con complicaciones múltiples;Auxiliar
+E14;E148;Diabetes, no especificada con complicaciones no especificadas;Auxiliar
+E14;E149;Diabetes, no especificada sin mención de complicación;Auxiliar
+E10;E10;Diabetes mellitus insulinodependiente;Canonical
+E10;E10;Diabetes mellitus tipo 1;Auxiliar
+E10;E10;Diabetes mellitus tipo i;Auxiliar
+E10;E10;Diabetes insulinodependiente;Auxiliar
+E10;E10;Diabetes tipo 1;Auxiliar
+E10;E10;Diabetes tipo i;Auxiliar
+E10;E10;Diabetes juvenil;Auxiliar
+E10;E10;Diabetes lábil;Auxiliar
+E10;E10;Diabetes con propensión a la cetosis;Auxiliar
+E10;E10;Diabetes mellitus juvenil;Auxiliar
+E10;E10;Diabetes mellitus lábil;Auxiliar
+E10;E10;Diabetes mellitus con propensión a la cetosis;Auxiliar
+E11;E11;Diabetes mellitus no insulinodependiente;Canonical
+E11;E11;Diabetes mellitus tipo ii;Auxiliar
+E11;E11;Diabetes mellitus tipo 2;Auxiliar
+E11;E11;Diabetes mellitus sin obesidad de comienzo en el adulto;Auxiliar
+E11;E11;Diabetes mellitus sin obesidad de comienzo en la madurez del adulto;Auxiliar
+E11;E11;Diabetes mellitus sin obesidad estable;Auxiliar
+E11;E11;Diabetes mellitus sin obesidad no cetósica;Auxiliar
+E11;E11;Diabetes mellitus sin obesidad tipo II;Auxiliar
+E11;E11;Diabetes mellitus sin obesidad tipo 2;Auxiliar
+E11;E11;Diabetes mellitus con obesidad de comienzo en el adulto;Auxiliar
+E11;E11;Diabetes mellitus con obesidad de comienzo en la madurez del adulto;Auxiliar
+E11;E11;Diabetes mellitus con obesidad estable;Auxiliar
+E11;E11;Diabetes mellitus con obesidad no cetósica;Auxiliar
+E11;E11;Diabetes mellitus con obesidad tipo II;Auxiliar
+E11;E11;Diabetes mellitus con obesidad tipo 2;Auxiliar
+E11;E11;Diabetes no insulinodependiente;Auxiliar
+E11;E11;Diabetes tipo ii;Auxiliar
+E11;E11;Diabetes tipo 2;Auxiliar
+E11;E11;Diabetes sin obesidad de comienzo en el adulto;Auxiliar
+E11;E11;Diabetes sin obesidad de comienzo en la madurez del adulto;Auxiliar
+E11;E11;Diabetes sin obesidad estable;Auxiliar
+E11;E11;Diabetes sin obesidad no cetósica;Auxiliar
+E11;E11;Diabetes sin obesidad tipo II;Auxiliar
+E11;E11;Diabetes sin obesidad tipo 2;Auxiliar
+E11;E11;Diabetes con obesidad de comienzo en el adulto;Auxiliar
+E11;E11;Diabetes con obesidad de comienzo en la madurez del adulto;Auxiliar
+E11;E11;Diabetes con obesidad estable;Auxiliar
+E11;E11;Diabetes con obesidad no cetósica;Auxiliar
+E11;E11;Diabetes con obesidad tipo II;Auxiliar
+E11;E11;Diabetes con obesidad tipo 2;Auxiliar
+E12;E12;Diabetes mellitus asociada con desnutrición;Canonical
+E12;E12;Desnutrición relacionada con diabetes mellitus insulinodependiente;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes mellitus tipo i;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes mellitus tipo 1;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes mellitus no insulinodependiente.;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes mellitus tipo ii;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes mellitus tipo 2;Auxiliar
+E13;E13;Otras diabetes mellitus especificadas;Canonical
+E14;E14;Diabetes mellitus, no especificada;Canonical
+E12;E12;Diabetes asociada con desnutrición;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes insulinodependiente;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes tipo i;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes tipo 1;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes no insulinodependiente.;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes tipo ii;Auxiliar
+E12;E12;Desnutrición relacionada con diabetes tipo 2;Auxiliar
+E13;E13;Otras diabetes especificadas;Auxiliar
+E14;E14;Diabetes, no especificada;Auxiliar
+E14;E14;Diabetes SAI;Auxiliar

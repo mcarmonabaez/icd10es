@@ -1,18 +1,27 @@
-library(tidyr)
-library(dplyr)
-string <- 'A000'
+#' Print information in ICD-10 associated with a specified entry.
+#'
+#' @param string A string containing the ICD-10  three or four-digit code from which to print info.
+#' @param inclusionTerms A logical that tells whether to print inclusion terms or not
+#' @param exclusionTerms A logical that tells whether to print exclusion terms or not
+#' @param tabular A string that can take values 'full' or 'simple'.
+#'
+#' @return A data frame with the information about the matches found for the disease.
+#'
+#' @export
+#' @import stringr
+#' @importFrom pracma fprintf
 
 printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabular = 'full') {
 
-  if(!stringr::str_detect(string, '^[A-Z]{1}[0-9]{2,3}$'))
+  if(!str_detect(string, '^[A-Z]{1}[0-9]{2,3}$'))
     stop('a Looks like you did\'t enter a valid category or subcategory code. Categories should have one upppercase letter followed by two digits, and subcategories should have one upppercase letter followed by three digits.')
 
-  strLength <- stringr::str_length(string)
+  strLength <- str_length(string)
   if(!strLength %in% 3:4)
     stop('b Looks like you did\'t enter a valid category or subcategory code. Categories should have one upppercase letter followed by two digits, and subcategories should have one upppercase letter followed by three digits.')
 
   if(strLength == 3) { # categoría
-    query <- categories %>% dplyr::filter(categoria == string)
+    query <- categories %>% filter(categoria == string)
 
     ### Check if query includes inclusion or exclusion terms
     hasInclusion <- sum(grepl('Inclusion', query$term))
@@ -23,7 +32,7 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
     if(hasInclusion) inclusions <- query %>% filter(term == 'Inclusion') %>% pull(titulo_categoria)
     if(hasInclusion) exclusions <- query %>% filter(term == 'Exclusion') %>% pull(titulo_categoria)
 
-    pracma::sprintf(paste('-----------------------------------------------------------------------------',
+    fprintf(paste('-----------------------------------------------------------------------------',
                           'Query entered: \t\t %s',
                           'Cateogry:\t\t %s \t %s',
                           # ¿Queremos imprimir la lista de subcategorías?
@@ -46,7 +55,7 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
     else if(tabular == 'full') return(query) # left join con los datos que decía Keo
 
   } else { # subcategoría
-    query <- subcategories %>% dplyr::filter(subcategoria == string)
+    query <- subcategories %>% filter(subcategoria == string)
 
     ### Check if query includes inclusion or exclusion terms
     hasInclusion <- sum(grepl('Inclusion', query$term))
@@ -57,7 +66,7 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
     if(hasInclusion) inclusions <- query %>% filter(term == 'Inclusion') %>% pull(padecimiento)
     if(hasInclusion) exclusions <- query %>% filter(term == 'Exclusion') %>% pull(padecimiento)
 
-    pracma::fprintf(paste('-----------------------------------------------------------------------------',
+    fprintf(paste('-----------------------------------------------------------------------------',
                           'Query entered: \t\t %s',
                           'Cateogry:\t %s \t Nombre de la categoría',
                           'Subcateogry: \t %s \t %s',
@@ -82,22 +91,4 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
   }
 
 }
-
-results <- printInfo('R79')
-results
-
-results <- printInfo('A001')
-results
-
-results <- printInfo('A011')
-results
-
-results <- printInfo('P00')
-results
-
-results <- printInfo('P04')
-results
-
-results <- printInfo('P0423')
-
 
