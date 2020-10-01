@@ -18,3 +18,22 @@ cleanString <- function(pattern) {
 
   return(pattern)
 }
+
+#' Clean cancer pattern
+#'
+#' @param pattern The string whose stopwords and cancer stuff will be removed
+#'
+#' @return A new version of the string in lowercase without noise.
+#' @importFrom stringi stri_trans_general
+#' @import stringr
+#'
+#' @export
+
+cleanCancer <- function(pattern) {
+
+  pattern <- str_remove(pattern, 'tumor maligno |tumores malignos |cancer ')
+  pattern <- str_replace_all(pattern, stopwords_regex, '')
+  pattern <- cleanString(pattern)
+
+  return(pattern)
+}

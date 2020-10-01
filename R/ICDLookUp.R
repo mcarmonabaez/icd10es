@@ -23,9 +23,12 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9) {
                           'diabetic', 'diabetes',
                           'cetoacidosis', 'diabetes',
                           'cancer', 'cancer',
-                          'tumor', 'cancer',
+                          'tumor maligno', 'cancer',
+                          'tumores malignos', 'cancer',
+                          'leucemia', 'cancer',
+                          'melanoma', 'cancer',
                           'sepsis', 'sepsis',
-                          'sindrome', 'sindrome')## esto se va a ir a global variables
+                          'sindrome', 'sindrome')## esto se va a ir a data interna
   dfSpecialCase <- specialCases[!is.na(str_match(pattern, specialCases$pattern)),]
   flagSpecialCase <- unique(dfSpecialCase$group)
 
@@ -34,7 +37,7 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9) {
     matchICD <- switch(flagSpecialCase,
                        neumonia = 'holi',
                        diabetes = catalogLookUp(pattern, nMatches, jwBound, diabetes_subcategories),
-                       cancer = 'bai')
+                       cancer = catalogLookUp(cleanCancer(pattern), nMatches, jwBound, cancer_subcategories))
 
     return(matchICD)
   }

@@ -7,7 +7,11 @@ TO DO:
 
 - Casos especiales:
    * diabetes: revisar detalles
-   * cáncer
+   * cáncer: 
+      - revisar en catalogo C119, C180, C942, C433
+      - revisar vejiga urinaria (print cuando solo hay un match)
+      - tumores benignos y melanomas in situ
+      - tumores secundarios/metastasis **aun no
    * COVID
    * NAC
 - Tokenizar actas / Mantener orden de los padecimientos
