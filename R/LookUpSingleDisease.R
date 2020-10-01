@@ -45,7 +45,7 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
                             subcategory = catalog$subcategoria,
                             term = catalog$term,
                             stringsAsFactors = FALSE)[!is.na(patternToDisease), ]
-    if(nrow(dfDisease) == 1) return(patternToDisease) ## regresar la subcategoria
+    if(nrow(dfDisease) == 1) return(printInfo(dfDisease$subcategory)) ## regresar la subcategoria
     if(nrow(dfDisease) > 1 ) return(residualMatch(pattern, dfDisease))
   }
 
