@@ -10,10 +10,11 @@ TO DO:
    * diabetes: :
       ° Cetoacidosis diabética / pie diabético
       ° Si sólo hay una categoría, devolver ésa
-      ° revisar en catalogo C119, C180, C942, C433, C260
       ° revisar vejiga urinaria (print cuando solo hay un match)
       ° tumores benignos y melanomas in situ
       ° tumores secundarios/metastasis **aun no
+    * cancer:
+      ° revisar en catalogo C119, C180, C942, C433, C260: check
    * COVID
    * NAC
 - Tokenizar actas / Mantener orden de los padecimientos
