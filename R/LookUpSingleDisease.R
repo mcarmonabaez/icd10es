@@ -4,22 +4,49 @@
 #' @param nMatches A number indicating the number of matches to return in case of more than one coincidence.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
 #' @param catalog A data frame containing the catalog where the search will be made.
+#' @param searchVar A string containing the variable within the catalog where the search will be made.
 #'
 #' @return A data frame with the information about the matches found for the disease.
 #'
 #' @import stringr dplyr tidyr
 #' @importFrom stringdist stringsim
+#' @importFrom rlang quo_expr
+#' @importFrom rlang !!
 
-catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
+catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
+                          catalog, searchVar = 'disease') {
+
+  if(!searchVar %in% names(catalog)) {
+    stop('The variable name you entered does not exist within the catalog.')
+  }
+
+  if(searchVar != 'disease') {
+    searchVar <- quo_expr(searchVar)
+    catalog <- catalog %>%
+      rename(disease = !!searchVar)
+  }
 
   #Look up exact match in disease catalog
-  diseaseToPattern <- str_match(pattern, catalog$padecimiento)
-  patternToDisease <- str_match(catalog$padecimiento, pattern)
+  diseaseToPattern <- str_match(pattern, catalog$disease)
+  patternToDisease <- str_match(catalog$disease, pattern)
   flagMatch <- sum(diseaseToPattern == patternToDisease, na.rm = T)
 
   if(flagMatch == 1) {
-    indCoincidence <- catalog$subcategoria[!is.na(diseaseToPattern)]
-    return(printInfo(indCoincidence))
+
+    indCoincidence <- catalog[!is.na(patternToDisease),]
+
+    if(nrow(indCoincidence) == 1)
+      return(printInfo(indCoincidence$subcategory))
+    else {
+      identical <- indCoincidence %>%
+        filter(disease == pattern)
+      if(nrow(identical) == 1)
+        return(printInfo(identical$subcategory))
+      else
+        flagMatch <- 0
+    }
+
+
   }
 
   #Look up exact match in category catalog
@@ -32,8 +59,8 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
 
   if(residualPattern == TRUE) {
     dfDisease <- data.frame(match = diseaseToPattern,
-                            disease = catalog$padecimiento,
-                            subcategory = catalog$subcategoria,
+                            disease = catalog$disease,
+                            subcategory = catalog$subcategory,
                             stringsAsFactors = FALSE)[!is.na(diseaseToPattern), ]
     if(nrow(dfDisease) == 1) return(printInfo(dfDisease$subcategory)) ## regresar la subcategoria 'no especificado'
     if(nrow(dfDisease) > 0 ) return(diseaseToPattern) ## revisar si es una sola categoria o mas de una
@@ -41,25 +68,28 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, catalog) {
 
   if(residualDisease == TRUE) {
     dfDisease <- data.frame(match = unique(patternToDisease[!is.na(patternToDisease)]),
-                            disease = catalog$padecimiento,
-                            subcategory = catalog$subcategoria,
+                            disease = catalog$disease,
+                            subcategory = catalog$subcategory,
                             term = catalog$term,
                             stringsAsFactors = FALSE)[!is.na(patternToDisease), ]
-    if(nrow(dfDisease) == 1) return(printInfo(dfDisease$subcategory)) ## regresar la subcategoria
-    if(nrow(dfDisease) > 1 ) return(residualMatch(pattern, dfDisease))
+
+    if(length(unique(dfDisease$subcategory)) == 1) return(printInfo(unique(dfDisease$subcategory))) ## regresar la subcategoria
+    if(length(unique(dfDisease$subcategory)) > 1) return(residualMatch(pattern, dfDisease))
   }
 
   if(residualDisease + residualPattern == 0) {
-    jwMatch <- data.frame(padecimiento = catalog$padecimiento,
-                          metric = stringsim(catalog$padecimiento,
-                                     pattern, method = 'jw', p = 0)) %>%
-      filter(metric >= 0.9) %>%
+    jwMatch <- catalog %>%
+      mutate(metric = stringsim(catalog$disease,
+                                pattern, method = 'jw', p = 0)) %>%
+      filter(metric >= jwBound) %>%
       arrange(desc(metric))
+
     if(nrow(jwMatch) > 0) {
-      return(print(jwMatch))
+      return(printInfo(jwMatch[1,]$subcategory))
     } else {
-      return(NULL)
+      return(data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_))
     }
+
   }
 }
 
@@ -79,27 +109,33 @@ residualMatch <- function(pattern, dfDisease, jwBound = 0.9) {
 
   if(length(nCat) == 1) {
     indNotSpecified <- which(substr(dfDisease$subcategory, 4, 4) == '9')
-    if(length(indNotSpecified) == 1) {
-      return(printInfo(dfDisease$subcategory[indNotSpecified]))
+    if(length(indNotSpecified) >= 1) {
+      return(printInfo(dfDisease$subcategory[indNotSpecified[1]]))
     } else {
       indNotSpecified <- which(!is.na(str_match(dfDisease$disease, 'no especificad')))
       return(printInfo(dfDisease$subcategory[indNotSpecified]))
     }
   } else {
-    dfDisease$probs <- stringsim(dfDisease$disease, paste0(pattern, ' no especificad'),
+    dfDisease$metric <- stringsim(dfDisease$disease, paste0(pattern, ' sai'),
                                    method = 'jw', p = 0)
 
-    dfMatches <- dfDisease[dfDisease$probs > jwBound, ]
-    if(nrow(dfMatches) > 0) {
-      print(dfMatches)
+    jwMatch <- dfDisease[dfDisease$metric > jwBound, ] %>%
+      arrange(desc(metric))
+
+    if(nrow(jwMatch) > 0) {
+      return(printInfo(jwMatch[1,]$subcategory))
     } else {
-      dfDisease$probs <- stringsim(dfDisease$disease, paste0(pattern, ' sai'),
+
+      dfDisease$metric <- stringsim(dfDisease$disease, paste0(pattern, ' no especific'),
                                                method = 'jw', p = 0)
-      dfMatches <- dfDisease[dfDisease$probs > jwBound, ]
-      if(nrow(dfMatches) > 0) {
-        print(dfMatches)
+
+      jwMatch <- dfDisease[dfDisease$metric > jwBound, ] %>%
+        arrange(desc(metric))
+
+      if(nrow(jwMatch) > 0) {
+        return(printInfo(jwMatch[1,]$subcategory))
       } else {
-        print('pues bai')
+        return(data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_))
       }
     }
 

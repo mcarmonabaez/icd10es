@@ -1,4 +1,4 @@
-categoria;subcategoria;padecimiento;term
+category;subcategory;disease;term
 A00;A000;Cólera clásico;Inclusion
 A00;A000;Cólera debido a Vibrio cholerae O1, biotipo cholerae;Canonical
 A00;A001;Cólera debido a Vibrio cholerae O1, biotipo El Tor;Canonical
@@ -294,8 +294,8 @@ A24;A241;Melioidosis neumónica;Inclusion
 A24;A241;Melioidosis septicémica;Inclusion
 A24;A242;Melioidosis subaguda y crónica;Canonical
 A24;A243;Otras melioidosis;Canonical
-A24;A244;
-Infección debida a Pseudomonas pseudomallei SAI;Inclusion
+A24;A244;;
+Infección debida a Pseudomonas pseudomallei SAI;Inclusion;;
 A24;A244;Enfermedad de Whitmore;Inclusion
 A24;A244;Melioidosis, no especificada;Canonical
 A25;A250;Espirilosis;Canonical
@@ -10877,7 +10877,7 @@ W29;W29;CONTACTO TRAUMÁTICO CON OTRAS HERRAMIENTAS MANUALES Y ARTEFACTOS DEL HO
 W29;W29;abrelatas con motor;Inclusion
 W29;W29;cuchillo con motor;Inclusion
 W29;W29;herramientas de jardín con motor;Inclusion
-W29;W29;herramientas tipo "hágalo usted mismo" con motor;Inclusion
+W29;W29;"herramientas tipo ""hágalo usted mismo"" con motor";Inclusion
 W29;W29;máquina de coser con motor;Inclusion
 W29;W29;motosierra con motor;Inclusion
 W29;W29;podadora de césped con motor;Inclusion
@@ -13639,7 +13639,7 @@ Y54;Y541;EFECTOS ADVERSOS DE LOS BLOQUEADORES DE MINERALOCORTICOIDES [ANTAGONIST
 Y54;Y542;EFECTOS ADVERSOS DE LOS INHIBIDORES DE LA ANHIDRASA CARBÓNICA;Canonical
 Y54;Y542;Acetazolamida;Inclusion
 Y54;Y543;EFECTOS ADVERSOS DE LOS DERIVADOS DE LA BENZOTIADIAZINA;Canonical
-Y54;Y544;EFECTOS ADVERSOS DE DIURÉTICOS DE ASA ["HIGH-CEILING"];Canonical
+Y54;Y544;"EFECTOS ADVERSOS DE DIURÉTICOS DE ASA [""HIGH-CEILING""]";Canonical
 Y54;Y545;EFECTOS ADVERSOS DE OTROS DIURÉTICOS;Canonical
 Y54;Y546;EFECTOS ADVERSOS DE AGENTES ELECTROLÍTICOS, CALÓRICOS Y DEL EQUILIBRIO HÍDRICO;Canonical
 Y54;Y546;Sales de rehidratación oral;Inclusion
@@ -14481,7 +14481,7 @@ Z61;Z611;Ingreso a un hogar adoptivo o a un hospital u otra institución, que ca
 Z61;Z612;PROBLEMAS RELACIONADOS CON ALTERACIÓN EN EL PATRÓN DE LA RELACIÓN FAMILIAR EN LA INFANCIA;Canonical
 Z61;Z612;Ingreso de una nueva persona en la familia que produce cambios adversos en las relaciones del niño. Puede incluir nuevo casamiento de uno de los padres o nacimiento de un hermano;Inclusion
 Z61;Z613;PROBLEMAS RELACIONADOS CON EVENTOS QUE LLEVARON A LA PÉRDIDA DE LA AUTOESTIMA EN LA INFANCIA;Canonical
-Z61;Z613;Eventos resultantes en una autoevaluación negativa por el niño, tales como fracaso en tareas con gran dedicación personal; revelaciones o descubrimiento de hechos personales o familiares avergonzantes, y otras experiencias humillantes;Inclusion
+Z61;Z613;Eventos resultantes en una autoevaluación negativa por el niño, tales como fracaso en tareas con gran dedicación personal; revelaciones o descubrimiento de hechos personales o familiares avergonzantes, y otras experiencias humillantes
 Z61;Z614;PROBLEMAS RELACIONADOS CON EL ABUSO SEXUAL DEL NIÑO POR PERSONA DENTRO DEL GRUPO DE APOYO PRIMARIO;Canonical
 Z61;Z614;Problemas relacionados con cualquier forma de contacto o exposición entre un miembro adulto del hogar y el niño, que haya producido estímulo sexual, haya sido o no voluntaria la participación del niño en el acto sexual (por ejemplo: cualquier contacto genital, manipulación o exposición deliberada de pechos o genitales);Inclusion
 Z61;Z615;PROBLEMAS RELACIONADOS CON EL ABUSO SEXUAL DEL NIÑO POR PERSONA AJENA AL GRUPO DE APOYO PRIMARIO;Canonical
@@ -14494,7 +14494,7 @@ Z61;Z618;PROBLEMAS RELACIONADOS CON OTRAS EXPERIENCIAS NEGATIVAS EN LA INFANCIA;
 Z61;Z619;PROBLEMAS RELACIONADOS CON EXPERIENCIA NEGATIVA NO ESPECIFICADA EN LA INFANCIA;Canonical
 Z62;Z62;OTROS PROBLEMAS RELACIONADOS CON LA CRIANZA DEL NIÑO;Canonical
 Z62;Z620;PROBLEMAS RELACIONADOS CON LA SUPERVISIÓN O EL CONTROL INADECUADOS DE LOS PADRES;Canonical
-Z62;Z620;Falta de conocimiento por parte de los padres de lo que hace el niño o donde está; escaso control; falta de interés o de intento de intervención cuando el niño está en situaciones de riesgo;Inclusion
+Z62;Z620;Falta de conocimiento por parte de los padres de lo que hace el niño o donde está; escaso control
 Z62;Z621;PROBLEMAS RELACIONADOS CON LA SOBREPROTECCIÓN DE LOS PADRES;Canonical
 Z62;Z621;Patrón de crianza que resulta en infantilización y prevención de comportamiento independiente;Inclusion
 Z62;Z622;PROBLEMAS RELACIONADOS CON LA CRIANZA EN INSTITUCIÓN;Canonical

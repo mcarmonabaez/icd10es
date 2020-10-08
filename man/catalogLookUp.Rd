@@ -4,7 +4,13 @@
 \alias{catalogLookUp}
 \title{Look up disease in ICD10 catalog}
 \usage{
-catalogLookUp(pattern, nMatches = 1, jwBound = 0.9, catalog)
+catalogLookUp(
+  pattern,
+  nMatches = 1,
+  jwBound = 0.9,
+  catalog,
+  searchVar = "disease"
+)
 }
 \arguments{
 \item{pattern}{A string of the name of the disease to look up.}
@@ -14,6 +20,8 @@ catalogLookUp(pattern, nMatches = 1, jwBound = 0.9, catalog)
 \item{jwBound}{A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.}
 
 \item{catalog}{A data frame containing the catalog where the search will be made.}
+
+\item{searchVar}{A string containing the variable within the catalog where the search will be made.}
 }
 \value{
 A data frame with the information about the matches found for the disease.

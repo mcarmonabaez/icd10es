@@ -3,6 +3,9 @@
 #' @param pattern A string of the name of the disease to look up.
 #' @param nMatches A number indicating the number of matches to return in case of more than one coincidence.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
+#' @param useExternal A logical that is TRUE when the user inputs their own catalog to search in.
+#' @param externalCatalog An optional data frame containing the external catalog where the search will be made.
+#' @param searchVar A string containing the variable within the catalog where the search will be made.
 #'
 #' @return A data frame with the information about the matches found for the disease.
 #' @export
@@ -10,11 +13,14 @@
 #' @import stringr
 #' @import tibble
 #'
-ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9) {
+ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
+                      useExternal = FALSE, externalCatalog = NULL, searchVar = 'disease') {
 
-  huerfanos <- c('exogeno') ## esto se va a ir a global variables
-  pattern <- cleanString(gsub(paste(huerfanos, collapse = '|'),
-                              replacement = '', x = cleanString(pattern)))
+  pattern <- cleanString(pattern)
+
+  if(useExternal) {
+    return(catalogLookUp(pattern, nMatches, jwBound, externalCatalog, searchVar))
+  }
 
   #Look for particular diseases
   specialCases <- tribble(~pattern, ~group,
@@ -29,6 +35,7 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9) {
                           'melanoma', 'cancer',
                           'sepsis', 'sepsis',
                           'sindrome', 'sindrome')## esto se va a ir a data interna
+
   dfSpecialCase <- specialCases[!is.na(str_match(pattern, specialCases$pattern)),]
   flagSpecialCase <- unique(dfSpecialCase$group)
 
@@ -47,7 +54,7 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9) {
     if(!is.null(subCoincidence)) {
       return(subCoincidence)
     } else {
-      mainCoincidence <- catalogLookUp(pattern, nMatches, jwBound, categories)
+      mainCoincidence <- catalogLookUp(pattern, nMatches, jwBound, categories, 'categoryTitle')
       return(mainCoincidence)
     }
 

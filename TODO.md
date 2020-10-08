@@ -1,24 +1,28 @@
 TO DO:
 
-- Primer build: check
-- Analizar bien qué sucede con "no especificado" y "SAI"
-- Unir catálogos: check
-- Corregir printInfo
+- Unir catálogo categorías
+- Cáncer: checar categorías sin subcategorías y agregarlas al catálogo
+- Unir categorías y subcategorías en una sola tabla y completar catálogo
+- ~~Primer build~~
+- ~~Analizar bien qué sucede con "no especificado" y "SAI"~~
+- ~~Unir catálogo subcategorías~~
+- ~~Corregir printInfo~~
+- ~~Subcategorías con puntito~~
 
 - Casos especiales:
    * diabetes: revisar detalles
    * diabetes: :
-      ° Cetoacidosis diabética / pie diabético
       ° Si sólo hay una categoría, devolver ésa
-      ° revisar vejiga urinaria (print cuando solo hay un match)
+    * cancer:
+      ° ~~revisar vejiga urinaria (print cuando solo hay un match)~~
+      ° revisar en catalogo C119, C180, C942, C433, C260
       ° tumores benignos y melanomas in situ
       ° tumores secundarios/metastasis **aun no
-    * cancer:
-      ° revisar en catalogo C119, C180, C942, C433, C260: check
    * COVID
    * NAC
 - Tokenizar actas / Mantener orden de los padecimientos
 
+- Hacer la _roxygenización_
 - Reportes (+ viñeta(s))
 - Shiny
 
@@ -30,6 +34,7 @@ TO DO:
 
 
 Estructura del reporte
+
 - Intro: Contexto, describir la organización
 - Problemática (en el dominio)
 - ¿Qué existe actualemente?
@@ -46,5 +51,7 @@ Estructura del reporte
 - Recomendaciones, conclusiones, trabajo futuro
 
 
-
+Preguntas:
+- Cetoacidosis diabética / pie diabético
+- Cáncer cervicouterino
 

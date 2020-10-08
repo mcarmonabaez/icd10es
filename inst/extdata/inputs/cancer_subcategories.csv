@@ -1,0 +1,643 @@
+category;subcategory;disease;term
+C00;C000;labio superior cara externa;Canonical
+C00;C000;labio superior sai;Inclusion
+C00;C000;labio superior borde libre;Inclusion
+C00;C000;labio superior parte externa roja;Inclusion
+C00;C001;labio inferior cara externa;Canonical
+C00;C001;labio inferior sai;Inclusion
+C00;C001;labio inferior borde libre;Inclusion
+C00;C001;labio inferior parte externa roja;Inclusion
+C00;C002;labio cara externa especificacion;Canonical
+C00;C002;parte externa roja sai;Inclusion
+C00;C003;labio superior cara interna;Canonical
+C00;C003;labio superior frenillo;Inclusion
+C00;C003;labio superior mucosa;Inclusion
+C00;C003;labio superior parte bucal;Inclusion
+C00;C003;labio superior parte oral;Inclusion
+C00;C004;labio inferior cara interna;Canonical
+C00;C004;labio inferior frenillo;Inclusion
+C00;C004;labio inferior mucosa;Inclusion
+C00;C004;labio inferior parte bucal;Inclusion
+C00;C004;labio inferior parte oral;Inclusion
+C00;C005;labio cara interna especificacion;Canonical
+C00;C005;labio especificacion superior inferior frenillo;Inclusion
+C00;C005;labio especificacion superior inferior mucosa;Inclusion
+C00;C005;labio especificacion superior inferior parte bucal;Inclusion
+C00;C005;labio especificacion superior inferior parte oral;Inclusion
+C00;C006;comisura labial;Canonical
+C00;C008;lesion sitios contiguos labio;Canonical
+C00;C009;labio parte no especificada;Canonical
+C02;C020;cara dorsal lengua;Canonical
+C02;C020;dos tercios anteriores lengua cara dorsal;Inclusion
+C02;C021;borde lengua;Canonical
+C02;C021;punta lengua;Inclusion
+C02;C022;cara ventral lengua;Canonical
+C02;C022;dos tercios anteriores lengua cara ventral;Inclusion
+C02;C022;frenillo lengua;Inclusion
+C02;C023;dos tercios anteriores lengua parte no especificada;Canonical
+C02;C023;parte movil lengua sai;Inclusion
+C02;C023;tercio medio lengua sai;Inclusion
+C02;C024;amigdala lingual;Canonical
+C02;C028;lesion sitios contiguos lengua;Canonical
+C02;C028;lengua cuyos puntos origen no pueden ser clasificados ninguna categorias c01c024;Inclusion
+C02;C029;lengua parte no especificada;Canonical
+C03;C030;encia superior;Canonical
+C03;C031;encia inferior;Canonical
+C03;C039;encia parte no especificada;Canonical
+C04;C040;parte anterior piso boca;Canonical
+C04;C040;parte anterior union caninopremolar;Inclusion
+C04;C041;parte lateral piso boca;Canonical
+C04;C048;lesion sitios contiguos piso boca;Canonical
+C04;C049;piso boca parte no especificada;Canonical
+C05;C050;paladar duro;Canonical
+C05;C051;paladar blando;Canonical
+C05;C052;uvula;Canonical
+C05;C058;lesion sitios contiguos paladar;Canonical
+C05;C059;paladar parte no especificada;Canonical
+C05;C059;techo boca;Inclusion
+C06;C060;mucosa mejilla;Canonical
+C06;C060;cara interna mejilla;Inclusion
+C06;C060;mucosa bucal sai;Inclusion
+C06;C061;vestibulo boca;Canonical
+C06;C061;surco bucal superior;Inclusion
+C06;C061;surco bucal inferior;Inclusion
+C06;C061;surco labial superior;Inclusion
+C06;C061;surco labial inferior;Inclusion
+C06;C062;area retromolar;Canonical
+C06;C068;lesion sitios contiguos partes no especificadas boca;Canonical
+C06;C069;boca parte no especificada;Canonical
+C06;C069;cavidad bucal sai;Inclusion
+C06;C069;glandula salival menor sitio no especificado;Inclusion
+C08;C080;glandula submaxilar;Canonical
+C08;C080;glandula submandibular;Inclusion
+C08;C081;glandula sublingual;Canonical
+C08;C088;lesion sitios contiguos glandulas salivales mayores;Canonical
+C08;C088;glandulas salivales mayores cuyos puntos origen no pueden ser clasificados ninguna categorias c07c081;Inclusion
+C08;C089;glandula salival mayor no especificada;Canonical
+C08;C089;glandula salival mayor sai;Inclusion
+C08;C089;glandula salival sai;Inclusion
+C09;C090;fosa amigdalina;Canonical
+C09;C091;pilar amigdalino anterior;Canonical
+C09;C091;pilar amigdalino posterior;Canonical
+C09;C098;lesion sitios contiguos amigdala;Canonical
+C09;C099;amigdala parte no especificada;Canonical
+C09;C099;amigdala sai;Inclusion
+C09;C099;amigdala faucal;Inclusion
+C09;C099;amigdala palatina;Inclusion
+C10;C100;valecula;Canonical
+C10;C101;cara anterior epiglotis;Canonical
+C10;C101;epiglotis borde libre;Inclusion
+C10;C101;pliegue glosoepiglotico;Inclusion
+C10;C101;pliegues glosoepigloticos;Inclusion
+C10;C102;pared lateral orofaringe;Canonical
+C10;C103;pared posterior orofaringe;Canonical
+C10;C104;hendidura branquial;Canonical
+C10;C104;quiste branquial;Inclusion
+C10;C108;lesion sitios contiguos orofaringe;Canonical
+C10;C108;istmo fauces;Inclusion
+C10;C109;orofaringe parte no especificada;Canonical
+C11;C110;pared superior nasofaringe;Canonical
+C11;C110;techo nasofaringe;Inclusion
+C11;C111;pared posterior nasofaringe;Canonical
+C11;C111;adenoide;Inclusion
+C11;C111;amigdala faringea;Inclusion
+C11;C112;pared lateral nasofaringe;Canonical
+C11;C112;fosa rosenmuller;Inclusion
+C11;C112;orificio faringeo trompa eustaquio;Inclusion
+C11;C112;receso faringeo;Inclusion
+C11;C113;pared anterior nasofaringe;Canonical
+C11;C113;borde posterior tabique nasal coana;Inclusion
+C11;C113;borde posterior tabique nasal septum;Inclusion
+C11;C113;cara nasofaringea paladar blando anterior;Inclusion
+C11;C113;cara nasofaringea paladar blando posterior;Inclusion
+C11;C113;piso nasofaringe;Inclusion
+C11;C118;lesion sitios contiguos nasofaringe;Canonical
+C11;C119;nasofaringe parte no especificada;Canonical
+C11;C119;pared nasofaringea sai;Inclusion
+C13;C130;region postcricoidea;Canonical
+C13;C131;pliegue aritenoepiglotico cara hipofaringea;Canonical
+C13;C131;pliegue aritenoepiglotico sai;Inclusion
+C13;C131;pliegue aritenoepiglotico zona marginal;Inclusion
+C13;C132;pared posterior hipofaringe;Canonical
+C13;C138;lesion sitios contiguos hipofaringe;Canonical
+C13;C139;hipofaringe parte no especificada;Canonical
+C13;C139;pared hipofaringea sai;Inclusion
+C14;C140;faringe parte no especificada;Canonical
+C14;C142;anillo waldeyer;Canonical
+C14;C148;lesion sitios contiguos labio cavidad bucal faringe;Canonical
+C14;C148;labio cavidad bucal faringe cuyo punto origen no puede ser clasificado ninguna categorias c00c142;Inclusion
+C15;C150;esofago porcion cervical;Canonical
+C15;C151;esofago porcion toracica;Canonical
+C15;C152;esofago porcion abdominal;Canonical
+C15;C153;tercio superior esofago;Canonical
+C15;C154;tercio medio esofago;Canonical
+C15;C155;tercio inferior esofago;Canonical
+C15;C158;lesion sitios contiguos esofago;Canonical
+C15;C159;esofago parte no especificada;Canonical
+C16;C160;cardias;Canonical
+C16;C160;esofago estomago;Inclusion
+C16;C160;orificio cardias;Inclusion
+C16;C160;union cardioesofagica;Inclusion
+C16;C160;union gastroesofagica;Inclusion
+C16;C161;fundus gastrico;Canonical
+C16;C162;cuerpo estomago;Canonical
+C16;C163;antro pilorico;Canonical
+C16;C163;antro gastrico;Inclusion
+C16;C164;piloro;Canonical
+C16;C164;conducto pilorico;Inclusion
+C16;C164;prepiloro;Inclusion
+C16;C165;curvatura menor estomago especificacion;Canonical
+C16;C165;curvatura menor estomago no clasificable c161c164;Inclusion
+C16;C166;curvatura mayor estomago especificacion;Canonical
+C16;C166;curvatura mayor estomago no clasificable c160c164;Inclusion
+C16;C168;lesion sitios contiguos estomago;Canonical
+C16;C169;estomago parte no especificada;Canonical
+C16;C169;cancer gastrico sai;Inclusion
+C17;C170;duodeno;Canonical
+C17;C171;yeyuno;Canonical
+C17;C172;ileon;Canonical
+C17;C173;diverticulo meckel;Canonical
+C17;C178;lesion sitios contiguos intestino delgado;Canonical
+C17;C179;intestino delgado parte no especificada;Canonical
+C18;C180;ciego;Canonical
+C18;C180;valvula ileocecal;Inclusion
+C18;C181;apendice;Canonical
+C18;C182;colon ascendente;Canonical
+C18;C183;angulo hepatico;Canonical
+C18;C184;colon transverso;Canonical
+C18;C185;angulo esplenico;Canonical
+C18;C186;colon descendente;Canonical
+C18;C187;colon sigmoide;Canonical
+C18;C187;asa sigmoidea;Inclusion
+C18;C188;lesion sitios contiguos colon;Canonical
+C18;C189;colon parte no especificada;Canonical
+C18;C189;intestino grueso sai;Inclusion
+C21;C210;ano parte no especificada;Canonical
+C21;C211;conducto anal;Canonical
+C21;C211;esfinter anal;Inclusion
+C21;C212;zona cloacogenica;Canonical
+C21;C218;lesion sitios contiguos ano conducto anal recto;Canonical
+C21;C218;anorrecto;Inclusion
+C21;C218;ano conducto anal recto cuyo punto origen no puede ser clasificado ninguna categorias c20c212;Inclusion
+C21;C218;union anorrectal;Inclusion
+C22;C220;carcinoma celulas hepaticas;Canonical
+C22;C220;carcinoma hepatocelular;Inclusion
+C22;C220;hepatoma;Inclusion
+C22;C221;carcinoma vias biliares intrahepaticas;Canonical
+C22;C221;colangiocarcinoma;Inclusion
+C22;C222;hepatoblastoma;Canonical
+C22;C223;angiosarcoma higado;Canonical
+C22;C223;sarcoma celulas kupffer;Inclusion
+C22;C224;sarcomas higado;Canonical
+C22;C227;carcinomas especificados higado;Canonical
+C22;C229;higado no especificado;Canonical
+C24;C240;vias biliares extrahepaticas;Canonical
+C24;C240;conducto cistico;Inclusion
+C24;C240;conducto hepatico;Inclusion
+C24;C240;via biliar comun;Inclusion
+C24;C240;via biliar conducto biliar sai;Inclusion
+C24;C241;ampolla vater;Canonical
+C24;C248;lesion sitios contiguos vias biliares;Canonical
+C24;C248;conductos biliares intra extrahepaticos;Inclusion
+C24;C248;vias biliares cuyo punto origen no puede ser clasificado ninguna categorias c220c241;Inclusion
+C24;C249;vias biliares parte no especificada;Canonical
+C25;C250;cabeza pancreas;Canonical
+C25;C251;cuerpo pancreas;Canonical
+C25;C252;cola pancreas;Canonical
+C25;C253;conducto pancreatico;Canonical
+C25;C254;pancreas endocrino;Canonical
+C25;C254;islotes langerhans;Inclusion
+C25;C257;partes especificadas pancreas;Canonical
+C25;C257;cuello pancreas;Inclusion
+C25;C258;lesion sitios contiguos pancreas;Canonical
+C25;C259;pancreas parte no especificada;Canonical
+C26;C260;intestino parte no especificada;Canonical
+C26;C260;intestino sai;Inclusion
+C26;C261;bazo;Canonical
+C26;C268;lesion sitios contiguos organos digestivos;Canonical
+C26;C268;organos digestivos cuyo punto origen no puede ser clasificado ninguna categorias c15c261;Inclusion
+C26;C269;sitios mal definidos organos digestivos;Canonical
+C26;C269;tracto alimentario sai;Inclusion
+C26;C269;tracto gastrointestinal sai;Inclusion
+C30;C300;fosa nasal;Canonical
+C30;C300;cartilago nasal;Inclusion
+C30;C300;cornete nasal;Inclusion
+C30;C300;mucosa nasal;Inclusion
+C30;C300;pituitaria;Inclusion
+C30;C300;parte interna nariz;Inclusion
+C30;C300;tabique nasal;Inclusion
+C30;C300;vestibulo nariz;Inclusion
+C30;C301;oido medio;Canonical
+C30;C301;antro mastoideo;Inclusion
+C30;C301;oido interno;Inclusion
+C30;C301;trompa eustaquio;Inclusion
+C31;C310;seno maxilar;Canonical
+C31;C310;antro maxilar;Inclusion
+C31;C310;antro highmore;Inclusion
+C31;C311;seno etmoidal;Canonical
+C31;C312;seno frontal;Canonical
+C31;C313;seno esfenoidal;Canonical
+C31;C318;lesion sitios contiguos senos paranasales;Canonical
+C31;C319;seno paranasal no especificado;Canonical
+C32;C320;glotis;Canonical
+C32;C320;cuerda vocal verdadera sai;Inclusion
+C32;C320;cuerda vocal sai;Inclusion
+C32;C320;laringe intrinseca;Inclusion
+C32;C321;region supraglotica;Canonical
+C32;C321;bandas ventriculares;Inclusion
+C32;C321;cara posterior epiglotis laringe;Inclusion
+C32;C321;cara posterior epiglotis;Inclusion
+C32;C321;epiglotis porcion suprahioidea sai;Inclusion
+C32;C321;wpiglotis sai;Inclusion
+C32;C321;falsa cuerda vocal;Inclusion
+C32;C321;laringe extrinseca;Inclusion
+C32;C321;pliegue aritenoepiglotico cara laringea;Inclusion
+C32;C322;region subglotica;Canonical
+C32;C323;cartilago laringeo;Canonical
+C32;C328;lesion sitios contiguos laringe;Canonical
+C32;C329;laringe parte no especificada;Canonical
+C34;C340;bronquio principal;Canonical
+C34;C340;carina;Inclusion
+C34;C340;hilio pulmonar;Inclusion
+C34;C341;lobulo superior bronquio pulmon;Canonical
+C34;C342;lobulo medio bronquio pulmon;Canonical
+C34;C343;lobulo inferior bronquio pulmon;Canonical
+C34;C348;lesion sitios contiguos bronquios pulmon;Canonical
+C34;C349;bronquios pulmon parte no especificada;Canonical
+C38;C380;corazon;Canonical
+C38;C380;pericardio;Inclusion
+C38;C381;mediastino anterior;Canonical
+C38;C382;mediastino posterior;Canonical
+C38;C383;mediastino parte no especificada;Canonical
+C38;C384;pleura;Canonical
+C38;C388;lesion sitios contiguos corazon mediastino pleura;Canonical
+C39;C390;vias respiratorias superiores parte no especificada;Canonical
+C39;C398;lesion sitios contiguos organos respiratorios intratoracicos;Canonical
+C39;C398;organos respiratorios intratoracicos cuyo punto origen no puede ser clasificado ninguna categorias c30c390;Inclusion
+C39;C399;sitios mal definidos sistema respiratorio;Canonical
+C39;C399;vias respiratorias sai;Inclusion
+C40;C400;omoplato huesos largos miembro superior;Canonical
+C40;C401;huesos cortos miembro superior;Canonical
+C40;C402;huesos largos miembro inferior;Canonical
+C40;C403;huesos cortos miembro inferior;Canonical
+C40;C408;lesion sitios contiguos huesos cartilagos articulares miembros;Canonical
+C40;C409;huesos cartilagos articulares miembros especificacion;Canonical
+C41;C410;huesos craneo cara;Canonical
+C41;C410;maxilar superior;Inclusion
+C41;C410;maxilar;Inclusion
+C41;C410;huesos orbita;Inclusion
+C41;C411;hueso maxilar inferior;Canonical
+C41;C411;hueso mandibula inferior;Inclusion
+C41;C412;columna vertebral;Canonical
+C41;C413;costilla esternon clavicula;Canonical
+C41;C414;huesos pelvis sacro coccix;Canonical
+C41;C418;lesion sitios contiguos hueso cartilago articular;Canonical
+C41;C418;hueso cartilago articular cuyo punto origen no puede ser clasificado ninguna categorias c40c414;Inclusion
+C41;C419;hueso cartilago articular no especificado;Canonical
+C43;C430;melanoma maligno labio;Canonical
+C43;C431;melanoma maligno parpado incluida comisura palpebral;Canonical
+C43;C432;melanoma maligno oreja conducto auditivo externo;Canonical
+C43;C433;melanoma maligno partes no especificadas cara;Canonical
+C43;C434;melanoma maligno cuero cabelludo cuello;Canonical
+C43;C435;melanoma maligno tronco;Canonical
+C43;C435;melanoma margen ano;Inclusion
+C43;C435;melanoma piel ano;Inclusion
+C43;C435;melanoma piel mama;Inclusion
+C43;C435;melanoma piel perianal;Inclusion
+C43;C436;melanoma maligno miembro superior incluido hombro;Canonical
+C43;C437;melanoma maligno miembro inferior incluida cadera;Canonical
+C43;C438;melanoma maligno sitios contiguos piel;Canonical
+C43;C439;melanoma maligno piel sitio no especificado;Canonical
+C43;C439;melanoma maligno sai;Inclusion
+C43;C439;melanoma sai;Inclusion
+C44;C440;piel labio;Canonical
+C44;C440;carcinoma celulas basales labio;Inclusion
+C44;C441;piel parpado incluida comisura palpebral;Canonical
+C44;C442;piel oreja conducto auditivo externo;Canonical
+C44;C443;piel partes no especificadas cara;Canonical
+C44;C444;piel cuero cabelludo cuello;Canonical
+C44;C445;piel tronco;Canonical
+C44;C445;margen ano;Inclusion
+C44;C445;piel ano;Inclusion
+C44;C445;piel mama;Inclusion
+C44;C445;piel perianal;Inclusion
+C44;C446;piel miembro superior incluido hombro;Canonical
+C44;C447;piel miembro inferior incluida cadera;Canonical
+C44;C448;lesion sitios contiguos piel;Canonical
+C44;C449;piel sitio no especificado;Canonical
+C45;C450;mesotelioma pleura;Canonical
+C45;C451;mesotelioma peritoneo;Canonical
+C45;C451;mesotelioma epiplon;Inclusion
+C45;C451;mesotelioma mesenterio;Inclusion
+C45;C451;mesotelioma mesocolon;Inclusion
+C45;C451;mesotelioma peritoneo parietal;Inclusion
+C45;C451;mesotelioma peritoneo pelvico;Inclusion
+C45;C452;mesotelioma pericardio;Canonical
+C45;C457;mesotelioma sitios especificados;Canonical
+C45;C459;mesotelioma sitio no especificado;Canonical
+C46;C460;sarcoma kaposi piel;Canonical
+C46;C461;sarcoma kaposi tejido blando;Canonical
+C46;C462;sarcoma kaposi paladar;Canonical
+C46;C463;sarcoma kaposi ganglios linfaticos;Canonical
+C46;C467;sarcoma kaposi sitios especificados;Canonical
+C46;C468;sarcoma kaposi multiples organos;Canonical
+C46;C469;sarcoma kaposi sitio no especificado;Canonical
+C47;C470;nervios perifericos cabeza cara cuello;Canonical
+C47;C471;nervios perifericos miembro superior incluido hombro;Canonical
+C47;C472;nervios perifericos miembro inferior incluida cadera;Canonical
+C47;C473;nervios perifericos torax;Canonical
+C47;C474;nervios perifericos abdomen;Canonical
+C47;C475;nervios perifericos pelvis;Canonical
+C47;C476;nervios perifericos tronco especificacion;Canonical
+C47;C478;lesion sitios contiguos nervios perifericos sistema nervioso autonomo;Canonical
+C47;C479;nervios perifericos sistema nervioso autonomo parte no especificada;Canonical
+C48;C480;retroperitoneo;Canonical
+C48;C481;parte especificada peritoneo;Canonical
+C48;C481;epiplon;Inclusion
+C48;C481;mesenterio;Inclusion
+C48;C481;mesocolon;Inclusion
+C48;C481;peritoneo parietal;Inclusion
+C48;C481;peritoneo pelvico;Inclusion
+C48;C482;peritoneo especificacion;Canonical
+C48;C488;lesion sitios contiguos peritoneo retroperitoneo;Canonical
+C49;C490;tejido conjuntivo tejido blando cabeza cara cuello;Canonical
+C49;C490;tejido conjuntivo oreja;Inclusion
+C49;C490;tejido conjuntivo parpado;Inclusion
+C49;C491;tejido conjuntivo tejido blando miembro superior incluido hombro;Canonical
+C49;C492;tejido conjuntivo tejido blando miembro inferior incluida cadera;Canonical
+C49;C493;tejido conjuntivo tejido blando torax;Canonical
+C49;C493;axila;Inclusion
+C49;C493;diafragma;Inclusion
+C49;C493;randes vasos;Inclusion
+C49;C494;tejido conjuntivo tejido blando abdomen;Canonical
+C49;C494;hipocondrio;Inclusion
+C49;C494;pared abdominal;Inclusion
+C49;C495;tejido conjuntivo tejido blando pelvis;Canonical
+C49;C495;ingle;Inclusion
+C49;C495;nalga;Inclusion
+C49;C495;perine;Inclusion
+C49;C496;tejido conjuntivo tejido blando tronco especificacion;Canonical
+C49;C496;espalda sai;Inclusion
+C49;C498;lesion sitios contiguos tejido conjuntivo tejido blando;Canonical
+C49;C498;tejido conjuntivo tejido blando cuyos puntos origen no pueden ser clasificados ninguna categorias c47c496;Inclusion
+C49;C499;tejido conjuntivo tejido blando sitio no especificado;Canonical
+C50;C500;pezon areola mamaria;Canonical
+C50;C501;porcion central mama;Canonical
+C50;C502;cuadrante superior interno mama;Canonical
+C50;C503;cuadrante inferior interno mama;Canonical
+C50;C504;cuadrante superior externo mama;Canonical
+C50;C505;cuadrante inferior externo mama;Canonical
+C50;C506;prolongacion axilar mama;Canonical
+C50;C508;lesion sitios contiguos mama;Canonical
+C50;C509;mama parte no especificada;Canonical
+C51;C510;labio mayor;Canonical
+C51;C510;glandula bartolin;Inclusion
+C51;C510;vestibular mayor;Inclusion
+C51;C511;labio menor;Canonical
+C51;C512;clitoris;Canonical
+C51;C518;lesion sitios contiguos vulva;Canonical
+C51;C519;vulva parte no especificada;Canonical
+C51;C519;genitales externos femeninos sai;Inclusion
+C51;C519;region pudenda;Inclusion
+C53;C530;endocervix;Canonical
+C53;C531;exocervix;Canonical
+C53;C538;lesion sitios contiguos cuello utero;Canonical
+C53;C539;cuello utero especificacion;Canonical
+C54;C540;istmo uterino;Canonical
+C54;C540;segmento inferior utero;Inclusion
+C54;C541;endometrio;Canonical
+C54;C542;miometrio;Canonical
+C54;C543;fondo utero;Canonical
+C54;C548;lesion sitios contiguos cuerpo utero;Canonical
+C54;C549;cuerpo utero parte no especificada;Canonical
+C57;C570;trompa falopio;Canonical
+C57;C570;oviducto;Inclusion
+C57;C570;trompa uterina;Inclusion
+C57;C571;ligamento ancho;Canonical
+C57;C572;ligamento redondo;Canonical
+C57;C573;parametrio;Canonical
+C57;C573;ligamento uterino sai;Inclusion
+C57;C574;anexos uterinos especificacion;Canonical
+C57;C577;partes especificadas organos genitales femeninos;Canonical
+C57;C577;cuerpo conducto wolff;Inclusion
+C57;C578;lesion sitios contiguos organos genitales femeninos;Canonical
+C57;C578;organos genitales femeninos cuyo punto origen no puede ser clasificado ninguna categorias c51c577 c58;Inclusion
+C57;C578;tuboovarico;Inclusion
+C57;C578;uteroovarico;Inclusion
+C57;C579;organo genital femenino parte no especificada;Canonical
+C57;C579;tracto genitourinario femenino sai;Inclusion
+C60;C600;prepucio;Canonical
+C60;C600;piel prepucio;Inclusion
+C60;C601;glande;Canonical
+C60;C602;cuerpo pene;Canonical
+C60;C602;cuerpo cavernoso;Inclusion
+C60;C608;lesion sitios contiguos pene;Canonical
+C60;C609;pene parte no especificada;Canonical
+C60;C609;piel pene sai;Inclusion
+C62;C620;testiculo no descendido;Canonical
+C62;C620;testiculo ectopico;Inclusion
+C62;C620;testiculo retenido;Inclusion
+C62;C621;testiculo descendido;Canonical
+C62;C621;testiculo escrotal;Inclusion
+C62;C629;testiculo no especificado;Canonical
+C63;C630;epididimo;Canonical
+C63;C631;cordon espermatico;Canonical
+C63;C632;escroto;Canonical
+C63;C632;piel escroto;Inclusion
+C63;C637;partes especificadas organos genitales masculinos;Canonical
+C63;C637;tunica vaginal;Inclusion
+C63;C637;vesicula seminal;Inclusion
+C63;C638;lesion sitios contiguos organos genitales masculinos;Canonical
+C63;C638;organos genitales masculinos cuyo punto origen no puede ser clasificado ninguna categorias c60c637;Inclusion
+C63;C639;organo genital masculino parte no especificada;Canonical
+C63;C639;tracto genitourinario masculino sai;Inclusion
+C67;C670;trigono vesical;Canonical
+C67;C671;cupula vesical;Canonical
+C67;C672;pared lateral vejiga;Canonical
+C67;C673;pared anterior vejiga;Canonical
+C67;C674;pared posterior vejiga;Canonical
+C67;C675;cuello vejiga;Canonical
+C67;C675;orificio uretral interno;Inclusion
+C67;C676;orificio ureteral;Canonical
+C67;C677;uraco;Canonical
+C67;C678;lesion sitios contiguos vejiga;Canonical
+C67;C679;vejiga urinaria parte no especificada;Canonical
+C68;C680;uretra;Canonical
+C68;C681;glandulas parauretrales;Canonical
+C68;C688;lesion sitios contiguos organos urinarios;Canonical
+C68;C688;organos urinarios cuyo punto origen no puede ser clasificado ninguna categorias c64c681;Inclusion
+C68;C689;organo urinario no especificado;Canonical
+C68;C689;sistema urinario sai;Inclusion
+C69;C690;conjuntiva;Canonical
+C69;C691;cornea;Canonical
+C69;C692;retina;Canonical
+C69;C693;coroides;Canonical
+C69;C694;cuerpo ciliar;Canonical
+C69;C694;globo ocular;Inclusion
+C69;C695;glandula conducto lagrimales;Canonical
+C69;C695;conducto nasolagrimal;Inclusion
+C69;C695;saco lagrimal;Inclusion
+C69;C696;orbita;Canonical
+C69;C696;musculo extraocular;Inclusion
+C69;C696;nervios perifericos orbita;Inclusion
+C69;C696;tejido conjuntivo orbita;Inclusion
+C69;C696;tejido retrobulbar;Inclusion
+C69;C696;tejido retroocular;Inclusion
+C69;C698;lesion sitios contiguos ojo anexos;Canonical
+C69;C699;ojo parte no especificada;Canonical
+C70;C700;meninges cerebrales;Canonical
+C70;C701;meninges raquideas;Canonical
+C70;C709;meninges parte no especificada;Canonical
+C71;C710;cerebro excepto lobulos ventriculos;Canonical
+C71;C710;supratentorial sai;Inclusion
+C71;C711;lobulo frontal;Canonical
+C71;C712;lobulo temporal;Canonical
+C71;C713;lobulo parietal;Canonical
+C71;C714;lobulo occipital;Canonical
+C71;C715;ventriculo cerebral;Canonical
+C71;C716;cerebelo;Canonical
+C71;C717;pedunculo cerebral;Canonical
+C71;C717;cuarto ventriculo;Inclusion
+C71;C717;infratentorial sai;Inclusion
+C71;C718;lesion sitios contiguos encefalo;Canonical
+C71;C718;cuerpo calloso;Inclusion
+C71;C719;encefalo parte no especificada;Canonical
+C72;C720;medula espinal;Canonical
+C72;C721;cola caballo;Canonical
+C72;C722;nervio olfatorio;Canonical
+C72;C722;bulbo olfatorio;Inclusion
+C72;C723;nervio optico;Canonical
+C72;C724;nervio acustico;Canonical
+C72;C725;nervios craneales no especificados;Canonical
+C72;C725;nervio craneal sai;Inclusion
+C72;C728;lesion sitios contiguos encefalo partes sistema nervioso central;Canonical
+C72;C728;encefalo partes sistema nervioso central cuyo punto origen no puede ser clasificado ninguna categorias c70c725;Inclusion
+C72;C729;sistema nervioso central especificacion;Canonical
+C72;C729;sistema nervioso sai;Inclusion
+C74;C740;corteza glandula suprarrenal;Canonical
+C74;C741;medula glandula suprarrenal;Canonical
+C74;C749;glandula suprarrenal parte no especificada;Canonical
+C75;C750;glandula paratiroides;Canonical
+C75;C751;hipofisis;Canonical
+C75;C752;conducto craneofaringeo;Canonical
+C75;C753;glandula pineal;Canonical
+C75;C754;cuerpo carotideo;Canonical
+C75;C755;cuerpo aortico cuerpos cromafines;Canonical
+C75;C758;pluriglandular no especificado;Canonical
+C75;C759;glandula endocrina no especificada;Canonical
+C81;C810;enfermedad hodgkin predominio linfocitico;Canonical
+C81;C810;predominio linfocitico histiocitico;Inclusion
+C81;C811;enfermedad hodgkin esclerosis nodular;Canonical
+C81;C812;enfermedad hodgkin celularidad mixta;Canonical
+C81;C813;enfermedad hodgkin deplecion linfocitica;Canonical
+C81;C817;tipos enfermedad hodgkin;Canonical
+C81;C819;enfermedad hodgkin no especificada;Canonical
+C82;C820;linfoma no hodgkin celulas pequenas hendidas folicular;Canonical
+C82;C821;linfoma no hodkin mixto pequenas celulas hendidas grandes celulas folicular;Canonical
+C82;C822;linfoma no hodgkin celulas grandes folicular;Canonical
+C82;C827;tipos especificados linfoma no hodgkin folicular;Canonical
+C82;C829;linfoma no hodgkin folicular especificacion;Canonical
+C82;C829;linfoma no hodgkin nodular sai;Inclusion
+C83;C830;linfoma no hodgkin celulas pequenas difuso;Canonical
+C83;C831;linfoma no hodgkin celulas pequenas hendidas difuso;Canonical
+C83;C832;linfoma no hodgkin mixto celulas pequenas grandes difuso;Canonical
+C83;C833;linfoma no hodgkin celulas grandes difuso;Canonical
+C83;C833;reticulosarcoma;Inclusion
+C83;C834;linfoma no hodgkin inmunoblastico difuso;Canonical
+C83;C835;linfoma no hodgkin linfoblastico difuso;Canonical
+C83;C836;linfoma no hodgkin indiferenciado difuso;Canonical
+C83;C837;tumor burkitt;Canonical
+C83;C838;tipos especificados linfoma no hodgkin difuso;Canonical
+C83;C839;linfoma no hodgkin difuso especificacion;Canonical
+C84;C840;micosis fungoide;Canonical
+C84;C841;enfermedad sezary;Canonical
+C84;C842;linfoma zona t;Canonical
+C84;C843;linfoma linfoepitelioide;Canonical
+C84;C843;linfoma lennert;Inclusion
+C84;C844;linfoma celulas t periferico;Canonical
+C84;C845;linfomas celulas t no especificados;Canonical
+C85;C850;linfosarcoma;Canonical
+C85;C851;linfoma celulas b especificacion;Canonical
+C85;C857;tipos especificados linfoma no hodgkin;Canonical
+C85;C857;microglioma;Inclusion
+C85;C857;reticuloendoteliosis maligna;Inclusion
+C85;C857;reticulosis maligna;Inclusion
+C85;C859;linfoma no hodgkin no especificado;Canonical
+C85;C859;linfoma sai;Inclusion
+C85;C859;linfoma maligno sai;Inclusion
+C85;C859;linfoma no hodgkin tipo no especificado;Inclusion
+C88;C880;macroglobulinemia waldenstrom;Canonical
+C88;C881;enfermedad cadena pesada alfa;Canonical
+C88;C882;enfermedad cadena pesada gamma;Canonical
+C88;C882;enfermedad franklin;Inclusion
+C88;C883;enfermedad inmunoproliferativa intestino delgado;Canonical
+C88;C883;linfoma mediterraneo;Inclusion
+C88;C887;enfermedades inmunoproliferativas malignas;Canonical
+C88;C889;enfermedad inmunoproliferativa maligna especificacion;Canonical
+C88;C889;enfermedad inmunoproliferativa sai;Inclusion
+C90;C900;mieloma multiple;Canonical
+C90;C900;enfermedad kahler;Inclusion
+C90;C900;mielomatosis;Inclusion
+C90;C901;leucemia celulas plasmaticas;Canonical
+C90;C902;plasmocitoma extramedular;Canonical
+C90;C902;mieloma solitario;Inclusion
+C90;C902;plasmocitoma sai;Inclusion
+C90;C902;celulas plasmaticas sai;Inclusion
+C91;C910;leucemia linfoblastica aguda;Canonical
+C91;C911;leucemia linfocitica cronica;Canonical
+C91;C912;leucemia linfocitica subaguda;Canonical
+C91;C913;leucemia prolinfocitica;Canonical
+C91;C914;leucemia celulas vellosas;Canonical
+C91;C914;reticuloendoteliosis leucemica;Inclusion
+C91;C915;leucemia celulas t adultas;Canonical
+C91;C917;leucemias linfoides;Canonical
+C91;C919;leucemia linfoide especificacion;Canonical
+C92;C920;leucemia mieloide aguda;Canonical
+C92;C921;leucemia mieloide cronica;Canonical
+C92;C922;leucemia mieloide subaguda;Canonical
+C92;C923;sarcoma mieloide;Canonical
+C92;C923;cloroma;Inclusion
+C92;C923;sarcoma granulocitico;Inclusion
+C92;C924;leucemia promielocitica aguda;Canonical
+C92;C925;leucemia mielomonocitica aguda;Canonical
+C92;C927;leucemias mieloides;Canonical
+C92;C929;leucemia mieloide especificacion;Canonical
+C93;C930;leucemia monocitica aguda;Canonical
+C93;C931;leucemia monocitica cronica;Canonical
+C93;C932;leucemia monocitica subaguda;Canonical
+C93;C937;leucemias monociticas;Canonical
+C93;C939;leucemia monocitica especificacion;Canonical
+C94;C940;eritremia aguda eritroleucemia;Canonical
+C94;C940;enfermedad di guglielmo;Inclusion
+C94;C940;mielosis eritremica aguda;Inclusion
+C94;C941;eritremia cronica;Canonical
+C94;C941;enfermedad heilmeyerschoner;Inclusion
+C94;C942;leucemia megacarioblastica aguda;Canonical
+C94;C942;leucemia megacarioblastica;Inclusion
+C94;C942;leucemia megacarioblastica aguda;Inclusion
+C94;C942;leucemia megacariocitica;Inclusion
+C94;C942;leucemia megacariocitica aguda;Inclusion
+C94;C943;leucemia mastocitos;Canonical
+C94;C944;panmielosis aguda;Canonical
+C94;C945;mielofibrosis aguda;Canonical
+C94;C947;leucemias especificadas;Canonical
+C94;C947;leucemia celulas linfosarcomatosas;Inclusion
+C95;C950;leucemia aguda celulas tipo no especificado;Canonical
+C95;C950;leucemia blastica;Inclusion
+C95;C950;leucemia hemocitoblastos;Inclusion
+C95;C951;leucemia cronica celulas tipo no especificado;Canonical
+C95;C952;leucemia subaguda celulas tipo no especificado;Canonical
+C95;C957;leucemias celulas tipo no especificado;Canonical
+C95;C959;leucemia no especificada;Canonical
+C96;C960;enfermedad letterersiwe;Canonical
+C96;C960;reticuloendoteliosis no lipidica;Inclusion
+C96;C960;reticulosis no lipidica;Inclusion
+C96;C961;histiocitosis maligna;Canonical
+C96;C961;reticulosis histiocitica medular;Inclusion
+C96;C962;mastocitos;Canonical
+C96;C962;mastocitoma maligno;Inclusion
+C96;C962;mastocitosis maligna;Inclusion
+C96;C962;sarcoma mastocitos;Inclusion
+C96;C963;linfoma histiocitico verdadero;Canonical
+C96;C967;especificados tejido linfatico hematopoyetico tejidos afines;Canonical
+C96;C969;tejido linfatico hematopoyetico tejidos afines especificacion;Canonical

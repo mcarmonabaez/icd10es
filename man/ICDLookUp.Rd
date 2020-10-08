@@ -4,7 +4,14 @@
 \alias{ICDLookUp}
 \title{Main function for looking up a given pattern.}
 \usage{
-ICDLookUp(pattern, nMatches = 1, jwBound = 0.9)
+ICDLookUp(
+  pattern,
+  nMatches = 1,
+  jwBound = 0.9,
+  useExternal = FALSE,
+  externalCatalog = NULL,
+  searchVar = "disease"
+)
 }
 \arguments{
 \item{pattern}{A string of the name of the disease to look up.}
@@ -12,6 +19,12 @@ ICDLookUp(pattern, nMatches = 1, jwBound = 0.9)
 \item{nMatches}{A number indicating the number of matches to return in case of more than one coincidence.}
 
 \item{jwBound}{A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.}
+
+\item{useExternal}{A logical that is TRUE when the user inputs their own catalog to search in.}
+
+\item{externalCatalog}{An optional data frame containing the external catalog where the search will be made.}
+
+\item{searchVar}{A string containing the variable within the catalog where the search will be made.}
 }
 \value{
 A data frame with the information about the matches found for the disease.

@@ -8,17 +8,17 @@ printInfo(
   string,
   inclusionTerms = TRUE,
   exclusionTerms = TRUE,
-  tabular = "full"
+  tabular = "single"
 )
 }
 \arguments{
 \item{string}{A string containing the ICD-10  three or four-digit code from which to print info.}
 
-\item{inclusionTerms}{A logical that tells whether to print inclusion terms or not}
+\item{inclusionTerms}{A logical that tells whether to print inclusion terms or not.}
 
-\item{exclusionTerms}{A logical that tells whether to print exclusion terms or not}
+\item{exclusionTerms}{A logical that tells whether to print exclusion terms or not.}
 
-\item{tabular}{A string that can take values 'full' or 'simple'.}
+\item{tabular}{A string that can take values 'single', 'simple', or full'.}
 }
 \value{
 A data frame with the information about the matches found for the disease.
