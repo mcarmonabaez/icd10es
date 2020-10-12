@@ -4,7 +4,7 @@
 \alias{residualMatch}
 \title{Look up unspecified and SAI entries in catalog.}
 \usage{
-residualMatch(pattern, dfDisease, jwBound = 0.9)
+residualMatch(pattern, dfDisease, jwBound, tabular)
 }
 \arguments{
 \item{pattern}{A string of the name of the disease to look up.}
@@ -12,6 +12,8 @@ residualMatch(pattern, dfDisease, jwBound = 0.9)
 \item{dfDisease}{A data frame containing all the matched diseases.}
 
 \item{jwBound}{A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.}
+
+\item{tabular}{A string that can take values 'single', 'simple', or full'.}
 }
 \value{
 A data frame with the information about the matches found for the disease.

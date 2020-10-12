@@ -8,6 +8,7 @@ ICDLookUp(
   pattern,
   nMatches = 1,
   jwBound = 0.9,
+  tabular = "single",
   useExternal = FALSE,
   externalCatalog = NULL,
   searchVar = "disease"
@@ -19,6 +20,8 @@ ICDLookUp(
 \item{nMatches}{A number indicating the number of matches to return in case of more than one coincidence.}
 
 \item{jwBound}{A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.}
+
+\item{tabular}{A string that can take values 'single', 'simple', or full'.}
 
 \item{useExternal}{A logical that is TRUE when the user inputs their own catalog to search in.}
 

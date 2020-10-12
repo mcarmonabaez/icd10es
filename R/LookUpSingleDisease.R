@@ -3,6 +3,7 @@
 #' @param pattern A string of the name of the disease to look up.
 #' @param nMatches A number indicating the number of matches to return in case of more than one coincidence.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
+#' @param tabular A string that can take values 'single', 'simple', or full'.
 #' @param catalog A data frame containing the catalog where the search will be made.
 #' @param searchVar A string containing the variable within the catalog where the search will be made.
 #'
@@ -13,7 +14,7 @@
 #' @importFrom rlang quo_expr
 #' @importFrom rlang !!
 
-catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
+catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular,
                           catalog, searchVar = 'disease') {
 
   if(!searchVar %in% names(catalog)) {
@@ -36,12 +37,14 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
     indCoincidence <- catalog[!is.na(patternToDisease),]
 
     if(nrow(indCoincidence) == 1)
-      return(printInfo(checkUnspecified(pattern, indCoincidence$subcategory, catalog)))
+      return(printInfo(checkUnspecified(pattern, indCoincidence$subcategory, catalog),
+                       tabular = tabular))
     else {
       identical <- indCoincidence %>%
         filter(disease == pattern)
       if(nrow(identical) == 1)
-        return(printInfo(checkUnspecified(pattern, identical$subcategory, catalog)))
+        return(printInfo(checkUnspecified(pattern, identical$subcategory, catalog),
+                         tabular = tabular))
       else
         flagMatch <- 0
     }
@@ -62,7 +65,7 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
                             disease = catalog$disease,
                             subcategory = catalog$subcategory,
                             stringsAsFactors = FALSE)[!is.na(diseaseToPattern), ]
-    if(nrow(dfDisease) == 1) return(printInfo(dfDisease$subcategory)) ## regresar la subcategoria 'no especificado'
+    if(nrow(dfDisease) == 1) return(printInfo(dfDisease$subcategory, tabular = tabular)) ## regresar la subcategoria 'no especificado'
     if(nrow(dfDisease) > 0 ) return(diseaseToPattern) ## revisar si es una sola categoria o mas de una
   }
 
@@ -73,8 +76,8 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
                             term = catalog$term,
                             stringsAsFactors = FALSE)[!is.na(patternToDisease), ]
 
-    if(length(unique(dfDisease$subcategory)) == 1) return(printInfo(unique(dfDisease$subcategory))) ## regresar la subcategoria
-    if(length(unique(dfDisease$subcategory)) > 1) return(residualMatch(pattern, dfDisease))
+    if(length(unique(dfDisease$subcategory)) == 1) return(printInfo(unique(dfDisease$subcategory), tabular = tabular)) ## regresar la subcategoria
+    if(length(unique(dfDisease$subcategory)) > 1) return(residualMatch(pattern, dfDisease, jwBound, tabular = tabular))
   }
 
   if(residualDisease + residualPattern == 0) {
@@ -85,7 +88,7 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
       arrange(desc(metric))
 
     if(nrow(jwMatch) > 0) {
-      return(printInfo(jwMatch[1,]$subcategory))
+      return(printInfo(jwMatch[1,]$subcategory, tabular = tabular))
     } else {
       return(data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_))
     }
@@ -98,22 +101,23 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
 #' @param pattern A string of the name of the disease to look up.
 #' @param dfDisease A data frame containing all the matched diseases.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
+#' @param tabular A string that can take values 'single', 'simple', or full'.
 #'
 #' @return A data frame with the information about the matches found for the disease.
 #'
 #' @importFrom stringdist stringsim
 #'
-residualMatch <- function(pattern, dfDisease, jwBound = 0.9) {
+residualMatch <- function(pattern, dfDisease, jwBound, tabular) {
   #Check if there's more than one category
   nCat <- sort(table(substr(dfDisease$subcategory[which(dfDisease$term == 'Canonical')], 1, 3)))
 
   if(length(nCat) == 1) {
     indNotSpecified <- which(substr(dfDisease$subcategory, 4, 4) == '9')
     if(length(indNotSpecified) >= 1) {
-      return(printInfo(dfDisease$subcategory[indNotSpecified[1]]))
+      return(printInfo(dfDisease$subcategory[indNotSpecified[1]], tabular = tabular))
     } else {
       indNotSpecified <- which(!is.na(str_match(dfDisease$disease, 'no especificad')))
-      return(printInfo(dfDisease$subcategory[indNotSpecified]))
+      return(printInfo(dfDisease$subcategory[indNotSpecified], tabular = tabular))
     }
   } else {
     dfDisease$metric <- stringsim(dfDisease$disease, paste0(pattern, ' sai'),
@@ -123,7 +127,7 @@ residualMatch <- function(pattern, dfDisease, jwBound = 0.9) {
       arrange(desc(metric))
 
     if(nrow(jwMatch) > 0) {
-      return(printInfo(jwMatch[1,]$subcategory))
+      return(printInfo(jwMatch[1,]$subcategory, tabular = tabular))
     } else {
 
       dfDisease$metric <- stringsim(dfDisease$disease, paste0(pattern, ' no especific'),
@@ -133,7 +137,7 @@ residualMatch <- function(pattern, dfDisease, jwBound = 0.9) {
         arrange(desc(metric))
 
       if(nrow(jwMatch) > 0) {
-        return(printInfo(jwMatch[1,]$subcategory))
+        return(printInfo(jwMatch[1,]$subcategory, tabular = tabular))
       } else {
         return(data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_))
       }
