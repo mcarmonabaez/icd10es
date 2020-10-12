@@ -6,6 +6,7 @@ TO DO:
     - Eliminar cancer y diabetes de subcategorias
     - Terminar catalogo
     - Agregar categorias a catalogo de cancer
+    - Revisar que todas las entradas tengan 'Canonical'
 - ~~Si se hace match con categoria, revisar si + SAI está presente antes de asignarle categoria (ejemplo: I21)~~
 - ~~Primer build~~
 - ~~Analizar bien qué sucede con "no especificado" y "SAI"~~

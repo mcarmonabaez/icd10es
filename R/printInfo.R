@@ -13,8 +13,13 @@
 
 printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabular = 'single') {
 
+  print(string)
+
+  if(is.na(string))
+    return(data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_))
+
   originalString <- string
-  string <- str_remove(string, '\\.')
+  string <- str_remove(str_trim(string), '\\.')
 
   if(!str_detect(string, '^[A-Z]{1}[0-9]{2,3}$'))
     stop('Looks like you did\'t enter a valid category or subcategory code. Categories should have one upppercase letter followed by two digits, and subcategories should have one upppercase letter followed by three digits.')
@@ -88,7 +93,8 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
       return(invisible(query))
     }
 
-    queryCategory <- subcategories %>% filter(category == str_sub(string, 1, 3)) %>%
+    queryCategory <- subcategories %>%
+      filter(category == str_sub(string, 1, 3) & subcategory == str_sub(string, 1, 3)) %>%
       filter(term == 'Canonical') %>% pull(disease)
 
     if(tabular == 'single') {

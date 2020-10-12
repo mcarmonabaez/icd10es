@@ -20,7 +20,7 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular = 'single',
   pattern <- cleanString(pattern)
 
   if(useExternal) {
-    return(catalogLookUp(pattern, nMatches, jwBound, tabular, externalCatalog, searchVar))
+    return(printInfo(catalogLookUp(pattern, nMatches, jwBound, externalCatalog, searchVar), tabular = tabular))
   }
 
   #Look for particular diseases
@@ -45,13 +45,16 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular = 'single',
     matchICD <- switch(flagSpecialCase,
                        neumonia = 'holi',
                        diabetes = catalogLookUp(pattern, nMatches, jwBound, diabetes_subcategories),
-                       cancer = catalogLookUp(cleanCancer(pattern), nMatches, jwBound, tabular, cancer_subcategories))
+                       cancer = catalogLookUp(cleanCancer(pattern), nMatches, jwBound, cancer_subcategories))
 
-    return(matchICD)
+    return(printInfo(matchICD, tabular = tabular))
   }
 
-  if(length(flagSpecialCase) == 0) subCoincidence <- catalogLookUp(pattern, nMatches, jwBound, tabular, subcategories)
+  if(length(flagSpecialCase) == 0) subCoincidence <- catalogLookUp(pattern, nMatches, jwBound, subcategories)
 
-  return(subCoincidence)
+  # if(tabular == 'full')
+  #   return(invisible(subCoincidence))
+
+  return(printInfo(subCoincidence, tabular = tabular))
 
 }

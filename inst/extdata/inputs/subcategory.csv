@@ -15641,7 +15641,7 @@ I60	I607	Ruptura de aneurisma congénito SAI	Inclusion
 I60	I608	Otras hemorragias subaracnoideas	Canonical
 I60	I608	Hemorragia meníngea	Inclusion
 I60	I608	Ruptura de malformación arteriovenosa cerebral	Inclusion
-I60	I609	Hemorragia subaracnoidea, no especificada	Inclusion
+I60	I609	Hemorragia subaracnoidea, no especificada	Canonical
 I60	I609	Ruptura de aneurisma cerebral SAI	Inclusion
 I60	I609	Ruptura de aneurisma cerebral congénito SAI	Inclusion
 I61	I61	Hemorragia intraencefálica	Canonical
