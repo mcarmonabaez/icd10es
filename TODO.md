@@ -3,6 +3,7 @@ TO DO:
 - Unir catálogo categorías
 - Cáncer: checar categorías sin subcategorías y agregarlas al catálogo
 - Unir categorías y subcategorías en una sola tabla y completar catálogo
+- Si se hace match con categoria, revisar si + SAI está presente antes de asignarle categoria (ejemplo: I21)
 - ~~Primer build~~
 - ~~Analizar bien qué sucede con "no especificado" y "SAI"~~
 - ~~Unir catálogo subcategorías~~
