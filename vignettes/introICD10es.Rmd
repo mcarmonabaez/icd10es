@@ -1,0 +1,23 @@
+---
+title: "Introduction to icd10es"
+output: rmarkdown::html_vignette
+description: >
+  How to use icd10es R package? This vignette describes the main features of this
+  package and shows...
+vignette: >
+  %\VignetteIndexEntry{Introduction to icd10es}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+options(tibble.print_min = 4, tibble.print_max = 4)
+```
+
+This vignette compares dplyr functions to their base R equivalents. This helps those familiar with base R understand better what dplyr does, and shows dplyr users how you might express the same ideas in base R code. We'll start with a rough overview of the major differences, then discuss the one table verbs in more detail, followed by the two table verbs.
+
+# Overview
+
+1.  The code dplyr verbs input and output data frames. This contrasts with base 
+    R functions which more frequently work with individual vectors.

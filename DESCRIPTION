@@ -2,11 +2,14 @@ Package: icd10es
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    c(person(given = "Juan Bernardo",
+           family = "Martinez Parente-Castaneda",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "jbmpc@outlook.com"),
+      person(given = "Mariana",
+           family = "Carmona-Baez",
+           role = c("aut"),
+           email = "mcarmonabaez@gmail.com"))
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
@@ -17,3 +20,5 @@ RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
 Imports: magrittr, tidyr, dplyr, stringr, stringi, stringdist, pracma, rlang
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr

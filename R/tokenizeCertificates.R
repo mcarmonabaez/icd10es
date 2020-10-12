@@ -1,6 +1,12 @@
-library(tidyverse)
-actas <- read.csv('temp/ejemplo_actas.csv', stringsAsFactors = FALSE, sep = ';')
-# df <- actas
+#' Tokenize file containing death certificates
+#'
+#' @param df A data fram with the information from the death certificates
+#'
+#' @return A tokenized version of the causes of death.
+#' @export
+#'
+#' @importFrom tidytext unnest_tokens
+
 tokenizeCertificates <- function(df) {
 
   # casos <- c('no espec', 'severa', 'severo', 'grave', 'aguda')
@@ -18,26 +24,3 @@ tokenizeCertificates <- function(df) {
 
 }
 
-muestra <- tokenizeCertificates(actas[1:10,])
-
-resultados <- lapply(unique(muestra$id),
-                     function(x) {
-                       print(x)
-                       subset <- filter(muestra, id == x)
-                       lapply(subset$cause, ICDLookUp)
-                     })
-
-resultados2 <- resultados %>%
-  bind_rows(.id = 'id') %>%
-  mutate(id = as.numeric(id)) %>%
-  arrange(id) %>%
-  group_by(id) %>%
-  mutate(order = row_number()) %>%
-  ungroup()
-
-muestra$res <- resultados2$disease
-
-
-muestra %>%
-  # unnest(res) %>%
-  print(n=100)

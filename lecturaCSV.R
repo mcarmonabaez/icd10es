@@ -1,7 +1,7 @@
 library(tidyverse)
 
 subcategories <- read.csv('inst/extdata/inputs/subcategory.csv',
-                          stringsAsFactors = F, sep = ';') %>%
+                          stringsAsFactors = F, sep = '\t') %>%
   mutate(disease = cleanString(disease))
 colSums(is.na(subcategories))
 
@@ -30,3 +30,32 @@ usethis::use_data(categories, subcategories, diabetes_subcategories, cancer_subc
 
 
 roxygen2::roxygenise()
+
+
+## tokenizar actas
+library(tidyverse)
+actas <- read.csv('temp/ejemplo_actas.csv', stringsAsFactors = FALSE, sep = ';')
+muestra <- tokenizeCertificates(actas[1:10,])
+
+resultados <- lapply(unique(muestra$id),
+                     function(x) {
+                       print(x)
+                       subset <- filter(muestra, id == x)
+                       lapply(subset$cause, ICDLookUp)
+                     })
+
+resultados2 <- resultados %>%
+  bind_rows(.id = 'id') %>%
+  mutate(id = as.numeric(id)) %>%
+  arrange(id) %>%
+  group_by(id) %>%
+  mutate(order = row_number()) %>%
+  ungroup()
+
+muestra$res <- resultados2$disease
+
+
+muestra %>%
+  # unnest(res) %>%
+  print(n=100)
+

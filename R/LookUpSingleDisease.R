@@ -36,12 +36,12 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
     indCoincidence <- catalog[!is.na(patternToDisease),]
 
     if(nrow(indCoincidence) == 1)
-      return(printInfo(indCoincidence$subcategory))
+      return(printInfo(checkUnspecified(pattern, indCoincidence$subcategory, catalog)))
     else {
       identical <- indCoincidence %>%
         filter(disease == pattern)
       if(nrow(identical) == 1)
-        return(printInfo(identical$subcategory))
+        return(printInfo(checkUnspecified(pattern, identical$subcategory, catalog)))
       else
         flagMatch <- 0
     }
@@ -139,7 +139,39 @@ residualMatch <- function(pattern, dfDisease, jwBound = 0.9) {
       }
     }
 
+  }
 
+}
+
+
+#' Check category coincidence
+#'
+#' @param pattern A string of the name of the disease to look up.
+#' @param cat A string indicating the category
+#' @param catalog A data frame containing the catalog where the search will be made.
+#'
+#' @return A string with the category or subcategory to print
+#'
+#' @importFrom stringdist stringsim
+#'
+checkUnspecified <- function(pattern, cat, catalog) {
+
+  subCatalog <-  catalog %>%
+    filter(category == cat)
+
+  if(sum(subCatalog$category == subCatalog$subcategory) == nrow(subCatalog))
+    return(cat)
+
+  vecUnspecified <- paste0(pattern, c(' sin especificacion', ' sai',
+                                      ' sin otra especificacion', ' no especificad'), collapse = '|')
+  subCatalog <- subCatalog %>%
+    filter(str_detect(disease, vecUnspecified))
+
+  subcat <- unique(subCatalog$subcategory)
+  if(length(subcat) == 1) {
+    return(subcat)
+  } else {
+    return(cat)
   }
 
 }

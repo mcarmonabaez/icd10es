@@ -49,15 +49,8 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
     return(matchICD)
   }
 
-  if(length(flagSpecialCase) == 0) {
-    subCoincidence <- catalogLookUp(pattern, nMatches, jwBound, subcategories)
-    if(!is.null(subCoincidence)) {
-      return(subCoincidence)
-    } else {
-      mainCoincidence <- catalogLookUp(pattern, nMatches, jwBound, categories, 'categoryTitle')
-      return(mainCoincidence)
-    }
+  if(length(flagSpecialCase) == 0) subCoincidence <- catalogLookUp(pattern, nMatches, jwBound, subcategories)
 
-  }
+  return(subCoincidence)
 
 }

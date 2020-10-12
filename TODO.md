@@ -1,9 +1,12 @@
 TO DO:
 
-- Unir catálogo categorías
-- Cáncer: checar categorías sin subcategorías y agregarlas al catálogo
-- Unir categorías y subcategorías en una sola tabla y completar catálogo
-- Si se hace match con categoria, revisar si + SAI está presente antes de asignarle categoria (ejemplo: I21)
+- Tener catalogo al pedo
+    - Juntar categorias y subcategorias
+    - Catalogo para impresion
+    - Eliminar cancer y diabetes de subcategorias
+    - Terminar catalogo
+    - Agregar categorias a catalogo de cancer
+- ~~Si se hace match con categoria, revisar si + SAI está presente antes de asignarle categoria (ejemplo: I21)~~
 - ~~Primer build~~
 - ~~Analizar bien qué sucede con "no especificado" y "SAI"~~
 - ~~Unir catálogo subcategorías~~
@@ -22,6 +25,7 @@ TO DO:
    * COVID
    * NAC
 - Tokenizar actas / Mantener orden de los padecimientos
+- Probar quitando stopwords desde el inicio
 
 - Hacer la _roxygenización_
 - Reportes (+ viñeta(s))
