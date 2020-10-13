@@ -25,7 +25,7 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular = 'single',
 
   #Look for particular diseases
   specialCases <- tribble(~pattern, ~group,
-                          'neumonia', 'neumonia',
+                          # 'neumonia', 'neumonia',
                           'diabetes', 'diabetes',
                           'diabetic', 'diabetes',
                           'cetoacidosis', 'diabetes',
@@ -33,9 +33,10 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular = 'single',
                           'tumor maligno', 'cancer',
                           'tumores malignos', 'cancer',
                           'leucemia', 'cancer',
-                          'melanoma', 'cancer',
-                          'sepsis', 'sepsis',
-                          'sindrome', 'sindrome')## esto se va a ir a data interna
+                          'melanoma', 'cancer'
+                          # 'sepsis', 'sepsis',
+                          # 'sindrome', 'sindrome'
+                          )## esto se va a ir a data interna
 
   dfSpecialCase <- specialCases[!is.na(str_match(pattern, specialCases$pattern)),]
   flagSpecialCase <- unique(dfSpecialCase$group)
@@ -43,7 +44,7 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular = 'single',
   if(length(flagSpecialCase) > 1) stop('Looks like your query has more than one disease listed. \nTry refining your query.')
   if(length(flagSpecialCase) == 1) {
     matchICD <- switch(flagSpecialCase,
-                       neumonia = 'holi',
+                       # neumonia = 'holi',
                        diabetes = catalogLookUp(pattern, nMatches, jwBound, diabetes_subcategories),
                        cancer = catalogLookUp(cleanCancer(pattern), nMatches, jwBound, cancer_subcategories))
 
