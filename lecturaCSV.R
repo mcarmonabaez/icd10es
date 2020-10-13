@@ -3,6 +3,16 @@ library(tidyverse)
 subcategories <- read.csv('inst/extdata/inputs/subcategory.csv',
                           stringsAsFactors = F, sep = '\t') %>%
   mutate(disease = cleanString(disease))
+
+catJuan <- readxl::read_excel('inst/extdata/cie10_completo JUAN.xlsx', sheet = 2) %>%
+    mutate(category = ifelse(category == '', NA, category),
+           subcategory = ifelse(subcategory == '', NA, subcategory),
+           category = zoo::na.locf(category),
+           subcategory = zoo::na.locf(subcategory),
+           disease = cleanString(disease))
+
+subcategories <- bind_rows(subcategories, catJuan) %>% unique() %>% arrange(category, subcategory)
+
 colSums(is.na(subcategories))
 
 # subcategories <- subcategories %>%
