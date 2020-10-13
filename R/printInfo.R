@@ -13,7 +13,7 @@
 
 printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabular = 'single') {
 
-  print(string)
+  # print(string)
 
   if(is.na(string))
     return(data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_))

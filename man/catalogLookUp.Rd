@@ -8,7 +8,6 @@ catalogLookUp(
   pattern,
   nMatches = 1,
   jwBound = 0.9,
-  tabular,
   catalog,
   searchVar = "disease"
 )
@@ -20,11 +19,11 @@ catalogLookUp(
 
 \item{jwBound}{A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.}
 
-\item{tabular}{A string that can take values 'single', 'simple', or full'.}
-
 \item{catalog}{A data frame containing the catalog where the search will be made.}
 
 \item{searchVar}{A string containing the variable within the catalog where the search will be made.}
+
+\item{tabular}{A string that can take values 'single', 'simple', or full'.}
 }
 \value{
 A data frame with the information about the matches found for the disease.

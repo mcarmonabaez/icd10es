@@ -1,2 +1,4 @@
 ^icd10es\.Rproj$
 ^\.Rproj\.user$
+^doc$
+^Meta$
