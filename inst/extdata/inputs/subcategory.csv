@@ -294,10 +294,9 @@ A24	A241	Melioidosis neumónica	Inclusion
 A24	A241	Melioidosis septicémica	Inclusion
 A24	A242	Melioidosis subaguda y crónica	Canonical
 A24	A243	Otras melioidosis	Canonical
-A24	A244		
-Infección debida a Pseudomonas pseudomallei SAI	Inclusion		
-A24	A244	Enfermedad de Whitmore	Inclusion
 A24	A244	Melioidosis, no especificada	Canonical
+A24	A244	Enfermedad de Whitmore	Inclusion
+A24	A244	Infección debida a Pseudomonas pseudomallei SAI	Inclusion
 A25	A250	Espirilosis	Canonical
 A25	A250	Sodoku	Inclusion
 A25	A251	Estreptobacilosis	Canonical
@@ -325,18 +324,22 @@ A30	A300	Lepra I	Inclusion
 A30	A301	Lepra tuberculoide	Canonical
 A30	A301	Lepra TT	Inclusion
 A30	A302	Lepra tuberculoide limítrofe	Canonical
-A30	A302	Lepra BT [tuberculoide, “borderline”]	Inclusion
+A30	A302	Lepra tuberculoide, “borderline”	Inclusion
+A30	A302	Lepra BT	Inclusion
 A30	A303	Lepra limítrofe	Canonical
-A30	A303	Lepra BB [“borderline”]	Inclusion
+A30	A303	Lepra “borderline”	Inclusion
+A30	A303	Lepra BB	Inclusion
 A30	A304	Lepra lepromatosa limítrofe	Canonical
-A30	A304	Lepra BL [lepromatosa, “borderline”]	Inclusion
+A30	A304	Lepra BL	Inclusion
+A30	A304	Lepra BL lepromatosa, “borderline”	Inclusion
 A30	A305	Lepra lepromatosa	Canonical
 A30	A305	Lepra LL	Inclusion
 A30	A308	Otras formas de lepra	Canonical
 A30	A309	Lepra, no especificada	Canonical
 A31	A310	Infecciones por micobacterias pulmonares	Canonical
 A31	A310	Infección debida a Mycobacterium avium	Inclusion
-A31	A310	Infección debida a Mycobacterium intracellulare (bacilo de Battey)	Inclusion
+A31	A310	Infección debida a Mycobacterium intracellulare	Inclusion
+A31	A310	Infección debida a bacilo de Battey	Inclusion
 A31	A310	Infección debida a Mycobacterium kansasii	Inclusion
 A31	A311	Infección cutánea por micobacterias	Canonical
 A31	A311	Infección debida a Mycobacterium marinum	Inclusion
@@ -427,7 +430,8 @@ A48	A480	Gangrena gaseosa	Canonical
 A48	A480	Celulitis debida a Clostridium	Inclusion
 A48	A480	Mionecrosis debida a Clostridium	Inclusion
 A48	A481	Enfermedad de los legionarios	Canonical
-A48	A482	Enfermedad de los legionarios no neumónica [fiebre de Pontiac]	Canonical
+A48	A482	Enfermedad de los legionarios no neumónica	Canonical
+A48	A482	fiebre de Pontiac	Inclusion
 A48	A483	Síndrome del choque tóxico	Canonical
 A48	A484	Fiebre purpúrica brasileña	Canonical
 A48	A488	Infección sistémica debida a Haemophilus aegyptius	Inclusion
@@ -611,7 +615,8 @@ A59	A590	Leucorrea debida a Trichomonas vaginalis	Inclusion
 A59	A590	Prostatitis debida a Trichomonas	Inclusion
 A59	A598	Tricomoniasis de otros sitios	Canonical
 A59	A599	Tricomoniasis, no especificada	Canonical
-A60	A600	Infección de genitales y trayecto urogenital debida a virus del herpes [herpes simple]	Canonical
+A60	A600	Infección de genitales y trayecto urogenital debida a virus del herpes	Canonical
+A60	A600	Infección de genitales y trayecto urogenital debida a herpes simple	Inclusion
 A60	A600	Infección debida a virus del herpes simple de tracto genital femenino	Inclusion
 A60	A600	Infección debida a virus del herpes simple de tracto genital masculino	Inclusion
 A60	A601	Infección de la piel perianal y recto por virus del herpes simple	Canonical
@@ -670,12 +675,15 @@ A66	A668	Frambesia latente	Canonical
 A66	A668	Frambesia sin manifestaciones clínicas, con serología positiva	Inclusion
 A66	A669	Frambesia, no especificada	Canonical
 A67	A670	Lesiones primarias de la pinta	Canonical
-A67	A670	Chancro de la pinta [carate]	Inclusion
-A67	A670	Chancro primario de la pinta [carate]	Inclusion
+A67	A670	Chancro de la pinta	Inclusion
+A67	A670	Chancro carate	Inclusion
+A67	A670	Chancro primario de la pinta	Inclusion
+A67	A670	Chancro primario carate	Inclusion
 A67	A670	Pápula	Inclusion
 A67	A670	Pápula primaria	Inclusion
 A67	A671	Lesiones intermedias de la pinta	Canonical
-A67	A671	Hiperqueratosis de la pinta [carate]	Inclusion
+A67	A671	Hiperqueratosis de la pinta	Inclusion
+A67	A671	Hiperqueratosis de la pinta carate	Inclusion
 A67	A671	Lesiones hipercromáticas de la pinta [carate]	Inclusion
 A67	A671	Píntides  	Inclusion
 A67	A671	Placas eritematosas de la pinta [carate]	Inclusion
@@ -15657,11 +15665,369 @@ I61	I615	Hemorragia intraencefálica, intraventricular	Canonical
 I61	I616	Hemorragia intraencefálica de localizaciones múltiples	Canonical
 I61	I618	Otras hemorragias intraencefálicas	Canonical
 I61	I619	Hemorragia intraencefálica, no especificada	Canonical
-I61	I62	Otras hemorragias intracraneales no traumáticas	Canonical
-I61	I620	Hemorragia subdural	Canonical
-I61	I620	Hemorragia subdural aguda	Inclusion
-I61	I620	Hemorragia subdural no traumática	Inclusion
-I61	I621	Hemorragia extradural no traumática	Canonical
-I61	I621	Hemorragia epidural no traumática	Inclusion
-I61	I629	Hemorragia intracraneal, no especificada	Canonical
-I61	I629	Hemorragia intracraneal no traumática, no especificada	Inclusion
+I62	I62	Otras hemorragias intracraneales no traumáticas	Canonical
+I62	I620	Hemorragia subdural	Canonical
+I62	I620	Hemorragia subdural aguda	Inclusion
+I62	I620	Hemorragia subdural no traumática	Inclusion
+I62	I621	Hemorragia extradural no traumática	Canonical
+I62	I621	Hemorragia epidural no traumática	Inclusion
+I62	I629	Hemorragia intracraneal, no especificada	Canonical
+I62	I629	Hemorragia intracraneal no traumática, no especificada	Inclusion
+I63	I63	Infarto cerebral	Canonical
+I63	I63	oclusión y estenosis de arterias cerebrales y precerebrales que ocasionan infarto cerebral	Inclusion
+I63	I630	Infarto cerebral debido a trombosis de arterias precerebrales	Canonical
+I63	I631	Infarto cerebral debido a embolia de arterias precerebrales	Canonical
+I63	I632	Infarto cerebral debido a oclusión o estenosis no especificada de arterias precerebrales	Canonical
+I63	I633	Infarto cerebral debido a trombosis de arterias cerebrales	Canonical
+I63	I634	Infarto cerebral debido a embolia de arterias cerebrales	Canonical
+I63	I635	Infarto cerebral debido a oclusión o estenosis no especificada de arterias cerebrales	Canonical
+I63	I636	Infarto cerebral debido a trombosis de venas cerebrales, no piógeno	Canonical
+I63	I638	Otros infartos cerebrales	Canonical
+I63	I639	Infarto cerebral, no especificado	Canonical
+I64	I64	Accidente vascular encefálico agudo, no especificado como hemorrágico o isquémico	Canonical
+I64	I64	Accidente cerebrovascular SAI	Inclusion
+I65	I65	Oclusión y estenosis de las arterias precerebrales sin ocasionar infarto cerebral	Canonical
+I65	I65	embolia de las arterias basilar, carótida o vertebral, sin ocasionar infarto cerebral	Inclusion
+I65	I65	estrechamiento de las arterias basilar, carótida o vertebral, sin ocasionar infarto cerebral	Inclusion
+I65	I65	Obstrucción de las arterias basilar, carótida o vertebral, sin ocasionar infarto cerebral	Inclusion
+I65	I65	obstrucción completa de las arterias basilar, carótida o vertebral, sin ocasionar infarto cerebral	Inclusion
+I65	I65	obstrucción parcial de las arterias basilar, carótida o vertebral, sin ocasionar infarto cerebral	Inclusion
+I65	I65	Trombosis de las arterias basilar, carótida o vertebral, sin ocasionar infarto cerebral	Inclusion
+I65	I650	Oclusión y estenosis de arteria vertebral	Canonical
+I65	I651	Oclusión y estenosis de arteria basilar	Canonical
+I65	I652	Oclusión y estenosis de arteria carótida	Canonical
+I65	I653	Oclusión y estenosis múltiple bilateral de arterias precerebrales	Canonical
+I65	I658	Oclusión y estenosis de otras arterias precerebrales	Canonical
+I65	I659	Oclusión y estenosis de arteria precerebral no especificada	Canonical
+I65	I659	Arteria precerebral SAI	Canonical
+I66	I66	Oclusión y estenosis de las arterias cerebrales sin ocasionar infarto cerebral	Canonical
+I66	I66	embolia de arteria cerebral media, anterior o posterior, o arterias cerebelosas, sin ocasionar infarto cerebral	Inclusion
+I66	I66	estrechamiento de arteria cerebral media, anterior o posterior, o arterias cerebelosas, sin ocasionar infarto cerebral	Inclusion
+I66	I66	Obstrucción de arteria cerebral media, anterior o posterior, o arterias cerebelosas, sin ocasionar infarto cerebral	Inclusion
+I66	I66	obstrucción completa de arteria cerebral media, anterior o posterior, o arterias cerebelosas, sin ocasionar infarto cerebral	Inclusion
+I66	I66	obstrucción parcial de arteria cerebral media, anterior o posterior, o arterias cerebelosas, sin ocasionar infarto cerebral	Inclusion
+I66	I66	Trombosis de arteria cerebral media, anterior o posterior, o arterias cerebelosas, sin ocasionar infarto cerebral	Inclusion
+I66	I660	Oclusión y estenosis de la arteria cerebral media	Canonical
+I66	I661	Oclusión y estenosis de la arteria cerebral anterior	Canonical
+I66	I662	Oclusión y estenosis de la arteria cerebral posterior	Canonical
+I66	I663	Oclusión y estenosis de arterias cerebelosas	Canonical
+I66	I664	Oclusión y estenosis múltiple bilateral de arterias cerebrales	Canonical
+I66	I668	Oclusión y estenosis de otras arterias cerebrales	Canonical
+I66	I668	Oclusión y estenosis de las arterias perforantes	Inclusion
+I68	I669	Oclusión y estenosis de arteria cerebral no especificada	Canonical
+I67	I67	Otras enfermedades cerebrovasculares	Canonical
+I67	I670	Disección de arterias cerebrales, sin ruptura	Canonical
+I67	I671	Aneurisma cerebral, sin ruptura	Canonical
+I67	I671	Aneurisma cerebral SAI	Inclusion
+I67	I671	Fístula cerebral arteriovenosa, adquirida	Inclusion
+I67	I672	Aterosclerosis cerebral	Canonical
+I67	I672	Ateroma de arterias cerebrales	Inclusion
+I67	I673	Leucoencefalopatía vascular progresiva	Canonical
+I67	I673	Enfermedad de Binswanger	Inclusion
+I67	I674	Encefalopatía hipertensiva	Canonical
+I67	I675	Enfermedad de Moyamoya	Canonical
+I67	I676	Trombosis apiógena del sistema venoso intracraneal	Inclusion
+I67	I676	Trombosis no piógena de senos venosos intracraneales	Inclusion
+I67	I676	Trombosis de senos venosos intracraneales	Inclusion
+I67	I676	Trombosis no piógena de vena cerebral	Inclusion
+I67	I676	Trombosis de vena cerebral	Inclusion
+I67	I677	Arteritis cerebral, no clasificada en otra parte	Canonical
+I67	I678	Otras enfermedades cerebrovasculares especificadas	Canonical
+I67	I678	Insuficiencia cerebrovascular aguda SAI	Inclusion
+I67	I678	Isquemia cerebral	Inclusion
+I67	I678	Isquemia cerebral crónica	Inclusion
+I67	I679	Enfermedad cerebrovascular, no especificada	Canonical
+I68	I68	Trastornos cerebrovasculares en enfermedades clasificadas en otra parte	Canonical
+I68	I680	Angiopatía cerebral amiloide	Canonical
+I68	I681	Arteritis cerebral en enfermedades infecciosas y parasitarias clasificadas en otra parte	Canonical
+I68	I681	Arteritis cerebral:	Inclusion
+I68	I681	Arteritis cerebral listeriana	Inclusion
+I68	I681	Arteritis cerebral sifilítica	Inclusion
+I68	I681	Arteritis cerebral tuberculosa	Inclusion
+I68	I682	Arteritis cerebral en otras enfermedades clasificadas en otra parte	Canonical
+I68	I682	Arteritis cerebral en lupus eritematoso sistémico	Inclusion
+I68	I688	Otros trastornos cerebrovasculares en enfermedades clasificadas en otra parte	Canonical
+I69	I69	Secuelas de enfermedad cerebrovascular	Canonical
+I69	I690	Secuelas de hemorragia subaracnoidea	Canonical
+I69	I691	Secuelas de hemorragia intraencefálica	Canonical
+I69	I692	Secuelas de otras hemorragias intracraneales no traumáticas	Canonical
+I69	I693	Secuelas de infarto cerebral	Canonical
+I69	I694	Secuelas de accidente vascular encefálico, no especificado como hemorrágico o isquémico	Canonical
+I69	I698	Secuelas de otras enfermedades cerebrovasculares y de las no especificadas	Canonical
+I70	I70	Aterosclerosis	Canonical
+I70	I70	arteriolosclerosis	Inclusion
+I70	I70	arteriosclerosis	Inclusion
+I70	I70	arteritis senil	Inclusion
+I70	I70	ateroma	Inclusion
+I70	I70	degeneración arterial	Inclusion
+I70	I70	degeneración arteriovascular	Inclusion
+I70	I70	degeneración vascular	Inclusion
+I70	I70	endarteritis deformante u obliterante	Inclusion
+I70	I70	endarteritis senil	Inclusion
+I70	I70	enfermedad vascular arteriosclerótica	Inclusion
+I70	I700	Aterosclerosis de la aorta	Canonical
+I70	I701	Aterosclerosis de la arteria renal	Canonical
+I70	I701	Riñón de Goldblatt	Inclusion
+I70	I702	Aterosclerosis de las arterias de los miembros	Canonical
+I70	I702	Esclerosis de Mönckeberg	Inclusion
+I70	I702	Esclerosis media de Mönckeberg	Inclusion
+I70	I702	Gangrena aterosclerótica	Inclusion
+I70	I708	Aterosclerosis de otras arterias	Canonical
+I70	I709	Aterosclerosis generalizada y la no especificada	Canonical
+I71	I71	Aneurisma y disección aórticos	Canonical
+I71	I710	Disección de aorta	Canonical
+I71	I710	Disección de aorta cualquier parte	Inclusion
+I71	I710	Disección de aneurisma de la aorta	Inclusion
+I71	I710	Disección de aneurisma de la aorta roto	Inclusion
+I71	I710	Disección de aneurisma de la aorta roto cualquier parte	Inclusion
+I71	I711	Ruptura de aneurisma de la aorta torácica	Canonical
+I71	I712	Aneurisma de la aorta torácica, sin mención de ruptura	Canonical
+I71	I713	Ruptura de aneurisma de la aorta abdominal	Canonical
+I71	I714	Aneurisma de la aorta abdominal, sin mención de ruptura	Canonical
+I71	I715	Ruptura de aneurisma de la aorta toracoabdominal	Inclusion
+I71	I716	Aneurisma de la aorta toracoabdominal, sin mención de ruptura	Canonical
+I71	I718	Ruptura de aneurisma aórtico, sitio no especificado	Canonical
+I71	I718	Ruptura de la aorta SAI	Inclusion
+I71	I719	Aneurisma de la aorta, sitio no especificado, sin mención de ruptura	Canonical
+I71	I719	Aneurisma de la aorta  	Inclusion
+I71	I719	Dilatación de la aorta         	Inclusion
+I71	I719	Necrosis hialina de la aorta	Inclusion
+I72	I72	Otros aneurismas	Canonical
+I72	I72	aneurisma ruptura	Inclusion
+I72	I72	aneurisma cirsoideo	Inclusion
+I72	I72	aneurisma falso	Inclusion
+I72	I720	Aneurisma de la arteria carótida	Canonical
+I72	I721	Aneurisma de arteria del miembro superior	Canonical
+I72	I722	Aneurisma de arteria renal	Canonical
+I72	I723	Aneurisma de arteria iliaca	Canonical
+I72	I724	Aneurisma de arteria del miembro inferior	Canonical
+I72	I728	Aneurisma de otras arterias especificadas	Canonical
+I72	I729	Aneurisma de sitio no especificado	Canonical
+I73	I73	Otras enfermedades vasculares periféricas	Canonical
+I73	I730	Síndrome de Raynaud	Canonical
+I73	I730	Enfermedad de Raynaud	Inclusion
+I73	I730	Fenómeno de Raynaud	Inclusion
+I73	I730	Fenómeno secundario de Raynaud	Inclusion
+I73	I730	Gangrena de Raynaud    	Inclusion
+I73	I731	Tromboangeítis obliterante	Canonical
+I73	I731	Tromboangeítis obliterante Buerger	Inclusion
+I73	I738	Otras enfermedades vasculares periféricas especificadas	Canonical
+I73	I738	Acrocianosis	Inclusion
+I73	I738	Acroparestesia tipo Schultze	Inclusion
+I73	I738	Acroparestesia simple	Inclusion
+I73	I738	Acroparestesia vasomotora	Inclusion
+I73	I738	Acroparestesia tipo Nothnagel	Inclusion
+I73	I738	Eritrocianosis	Inclusion
+I73	I738	Eritromelalgia	Inclusion
+I73	I739	Enfermedad vascular periférica, no especificada	Canonical
+I73	I739	Claudicación intermitente	Inclusion
+I73	I739	Espasmo arterial	Inclusion
+I74	I74	Embolia y trombosis arteriales	Canonical
+I74	I74	infarto embólico	Inclusion
+I74	I74	infarto trombótico	Inclusion
+I74	I74	oclusión embólica	Inclusion
+I74	I74	oclusión trombótica	Inclusion
+I74	I740	Embolia y trombosis de la aorta abdominal	Canonical
+I74	I740	Síndrome de bifurcación aórtica	Inclusion
+I74	I740	Síndrome de Leriche	Inclusion
+I74	I741	Embolia y trombosis de otras porciones y las no especificadas de la aorta	Canonical
+I74	I742	Embolia y trombosis de arterias de los miembros superiores	Canonical
+I74	I743	Embolia y trombosis de arterias de los miembros inferiores	Canonical
+I74	I744	Embolia y trombosis de arterias de los miembros, no especificadas	Canonical
+I74	I744	Embolia de arteria periférica	Inclusion
+I74	I745	Embolia y trombosis de arteria iliaca	Canonical
+I74	I748	Embolia y trombosis de otras arterias	Canonical
+I74	I749	Embolia y trombosis de arteria no especificada	Canonical
+I77	I77	Otros trastornos arteriales o arteriolares	Canonical
+I77	I770	Fístula arteriovenosa, adquirida	Canonical
+I77	I770	Aneurisma arteriovenoso, adquirido	Inclusion
+I77	I770	Aneurisma varicoso	Inclusion
+I77	I771	Estrechez arterial	Canonical
+I77	I772	Ruptura arterial	Canonical
+I77	I772	Fístula de arteria no especificada	Inclusion
+I77	I773	Displasia fibromuscular arterial	Canonical
+I77	I774	Síndrome de compresión del tronco celíaco	Canonical
+I77	I775	Necrosis arterial	Canonical
+I77	I776	Arteritis, no especificada	Canonical
+I77	I776	Aortitis SAI	Inclusion
+I77	I776	Endarteritis SAI	Inclusion
+I77	I778	Otros trastornos especificados de arterias y arteriolas	Canonical
+I77	I778	Erosión de arteria	Inclusion
+I77	I778	Úlcera de arteria	Inclusion
+I77	I779	Trastorno de arterias y arteriolas, no especificado	Canonical
+I78	I78	Enfermedades de los vasos capilares	Canonical
+I78	I780	Telangiectasia hemorrágica hereditaria	Inclusion
+I78	I780	Enfermedad de Rendu–Osler–Weber	Inclusion
+I78	I781	Nevo, no neoplásico	Canonical
+I78	I781	Nevo aráneo 	Inclusion
+I78	I781	Nevo en araña 	Inclusion
+I78	I781	Nevo estelar	Inclusion
+I78	I788	Otras enfermedades de los capilares	Canonical
+I78	I789	Enfermedad de los vasos capilares, no especificada	Canonical
+I79	I79	Trastornos de las arterias, de las arteriolas y de los vasos capilares en enfermedades clasificadas en otra parte	Canonical
+I79	I790	Aneurisma de la aorta en enfermedades clasificadas en otra parte	Canonical
+I79	I790	Aneurisma sifilítico de la aorta	Inclusion
+I79	I791	Aortitis en enfermedades clasificadas en otra parte	Canonical
+I79	I791	Aortitis sifilítica	Inclusion
+I79	I792	Angiopatía periférica en enfermedades clasificadas en otra parte	Canonical
+I79	I792	Angiopatía periférica diabética	Inclusion
+I79	I798	Otros trastornos de arterias, arteriolas y vasos capilares en enfermedades clasificadas en otra parte	Canonical
+I80	I80	Flebitis y tromboflebitis	Canonical
+I80	I80	endoflebitis	Inclusion
+I80	I80	flebitis supurativa	Inclusion
+I80	I80	inflamación de las venas	Inclusion
+I80	I80	periflebitis	Inclusion
+I80	I800	Flebitis y tromboflebitis de vasos superficiales de los miembros inferiores	Canonical
+I80	I801	Flebitis y tromboflebitis de la vena femoral	Canonical
+I80	I802	Flebitis y tromboflebitis de otros vasos profundos de los miembros inferiores	Canonical
+I80	I802	Trombosis de venas profundas SAI	Inclusion
+I80	I803	Flebitis y tromboflebitis de los miembros inferiores, no especificada	Canonical
+I80	I803	Embolia o trombosis de extremidades inferiores SAI	Inclusion
+I80	I808	Flebitis y tromboflebitis de otros sitios	Canonical
+I80	I809	Flebitis y tromboflebitis de sitio no especificado	Canonical
+I81	I81	Trombosis de la vena porta	Canonical
+I81	I81	Obstrucción porta	Inclusion
+I81	I81	Obstrucción vena porta	Inclusion
+I82	I82	Otras embolias y trombosis venosas	Canonical
+I82	I820	Síndrome de Budd–Chiari	Canonical
+I82	I821	Tromboflebitis migratoria	Canonical
+I82	I822	Embolia y trombosis de vena cava	Canonical
+I82	I823	Embolia y trombosis de vena renal	Canonical
+I82	I828	Embolia y trombosis de otras venas especificadas	Canonical
+I82	I829	Embolia y trombosis de vena no especificada	Canonical
+I82	I829	Embolia venosa SAI	Inclusion
+I82	I829	Trombosis SAI	Inclusion
+I82	I829	Trombosis vena SAI	Inclusion
+I83	I83	Venas varicosas de los miembros inferiores	Canonical
+I83	I830	Venas varicosas de los miembros inferiores con úlcera	Canonical
+I83	I830	Cualquier afección clasificada en I83.9 con úlcera o especificada como ulcerada	Inclusion
+I83	I830	Úlcera varicosa	Inclusion
+I83	I830	Úlcera varicosa extremidad inferior, cualquier parte	Inclusion
+I83	I831	Venas varicosas de los miembros inferiores con inflamación	Canonical
+I83	I831	Cualquier afección clasificada en I83.9 con inflamación o especificada como inflamada	Inclusion
+I83	I831	Dermatitis por estasis SAI	Inclusion
+I83	I832	Venas varicosas de los miembros inferiores con úlcera e inflamación	Canonical
+I83	I832	Cualquier afección clasificada en I83.9 con úlcera e inflamación	Inclusion
+I83	I839	Venas varicosas de los miembros inferiores sin úlcera ni inflamación	Canonical
+I83	I839	Flebectasia de miembro inferior o de sitio no especificado	Inclusion
+I83	I839	Flebectasia de miembro inferior cualquier parte o de sitio no especificado	Inclusion
+I83	I839	Várices de miembro inferior o de sitio no especificado	Inclusion
+I83	I839	Várices de miembro inferior cualquier parte o de sitio no especificado	Inclusion
+I83	I839	Vena osa de miembro inferior o de sitio no especificado	Inclusion
+I83	I839	Vena osa de miembro inferior cualquier parte o de sitio no especificado	Inclusion
+I84	I84	Hemorroides	Canonical
+I84	I84	hemorroides de recto	Inclusion
+I84	I84	venas varicosas de ano y recto	Inclusion
+I84	I840	Hemorroides internas trombosadas	Canonical
+I84	I841	Hemorroides internas	Canonical
+I84	I841	Hemorroides internas estranguladas       	Inclusion
+I84	I841	Hemorroides internas prolapsadas 	Inclusion
+I84	I841	Hemorroides internas sangrantes 	Inclusion
+I84	I841	Hemorroides internas ulceradas	Inclusion
+I84	I842	Hemorroides internas sin complicación	Canonical
+I84	I842	Hemorroides internas SAI	Inclusion
+I84	I843	Hemorroides externas trombosadas	Canonical
+I84	I843	Hematoma perianal	Inclusion
+I84	I843	Trombosis perianal	Inclusion
+I84	I843	Hematoma perianal no traumático	Inclusion
+I84	I844	Hemorroides externas con otras complicaciones	Canonical
+I84	I844	Hemorroides externas estranguladas 	Inclusion
+I84	I844	Hemorroides externas prolapsadas 	Inclusion
+I84	I844	Hemorroides externas sangrantes 	Inclusion
+I84	I844	Hemorroides externas ulceradas 	Inclusion
+I84	I845	Hemorroides externas sin complicación	Canonical
+I84	I845	Hemorroides externas SAI	Inclusion
+I84	I846	Prominencias cutáneas, residuo de hemorroides	Canonical
+I84	I846	Prominencias cutáneas de ano o recto	Inclusion
+I84	I847	Hemorroides trombosadas no especificadas	Canonical
+I84	I847	Hemorroides trombosadas, sin especificación entre interna o externa	Inclusion
+I84	I848	Hemorroides no especificadas, con otras complicaciones	Canonical
+I84	I848	Hemorroides, sin especificación entre interna o externa estranguladas	Inclusion
+I84	I848	Hemorroides, sin especificación entre interna o externa prolapsadas 	Inclusion
+I84	I848	Hemorroides, sin especificación entre interna o externa sangrantes 	Inclusion
+I84	I848	Hemorroides, sin especificación entre interna o externa ulceradas	Inclusion
+I84	I849	Hemorroides no especificadas, sin complicación	Canonical
+I84	I849	Hemorroides SAI	Inclusion
+I85	I85	Várices esofágicas	Canonical
+I85	I850	Várices esofágicas con hemorragia	Canonical
+I85	I859	Várices esofágicas sin hemorragia	Canonical
+I85	I859	Várices esofágicas SAI	Inclusion
+I86	I86	Várices de otros sitios	Canonical
+I86	I860	Várices sublinguales	Canonical
+I86	I861	Várices escrotales	Canonical
+I86	I861	Varicocele	Inclusion
+I86	I862	Várices pélvicas	Canonical
+I86	I863	Várices de la vulva	Canonical
+I86	I864	Várices gástricas	Canonical
+I86	I868	Várices en otros sitios especificados	Canonical
+I86	I868	Úlcera varicosa del tabique nasal	Inclusion
+I87	I87	Otros trastornos de las venas	Canonical
+I87	I870	Síndrome postflebítico	Canonical
+I87	I871	Compresión de vena	Canonical
+I87	I871	Estrechez venosa	Inclusion
+I87	I871	Síndrome de vena cava	Inclusion
+I87	I871	Síndrome de vena cava inferior	Inclusion
+I87	I871	Síndrome de vena cava superior	Inclusion
+I87	I872	Insuficiencia venosa crónica	Canonical
+I87	I872	Insuficiencia venosa periférica	Inclusion
+I87	I872	Insuficiencia venosa crónica periférica	Inclusion
+I87	I878	Otros trastornos venosos especificados	Canonical
+I87	I879	Trastorno venoso, no especificado	Canonical
+I88	I88	Linfadenitis inespecífica	Canonical
+I88	I880	Linfadenitis mesentérica inespecífica	Canonical
+I88	I880	Linfadenitis mesentérica	Inclusion
+I88	I880	Linfadenitis mesentérica aguda	Inclusion
+I88	I880	Linfadenitis mesentérica crónica	Inclusion
+I88	I881	Linfadenitis crónica, excepto la mesentérica	Canonical
+I88	I881	Adenitis crónica, cualquier ganglio linfático, excepto el mesentérico	Inclusion
+I88	I881	Linfadenitis crónica, cualquier ganglio linfático, excepto el mesentérico	Inclusion
+I88	I888	Otras linfadenitis inespecíficas	Canonical
+I88	I889	Linfadenitis inespecífica no especificada	Canonical
+I88	I889	Linfadenitis SAI	Inclusion
+I89	I89	Otros trastornos no infecciosos de los vasos y ganglios linfáticos	Canonical
+I89	I890	Linfedema, no clasificado en otra parte	Canonical
+I89	I890	Linfangiectasia	Inclusion
+I89	I891	Linfangitis	Canonical
+I89	I891	Linfangitis SAI 	Inclusion
+I89	I891	Linfangitis crónica 	Inclusion
+I89	I891	Linfangitis subaguda 	Inclusion
+I89	I898	Otros trastornos especificados no infecciosos de los vasos y ganglios linfáticos	Canonical
+I89	I898	Quilocele	Inclusion
+I89	I898	Quilocele no filárico	Inclusion
+I89	I898	Reticulosis lipomelanótica	Inclusion
+I89	I899	Trastorno no infeccioso de vasos y ganglios linfáticos, no especificado	Canonical
+I89	I899	Enfermedad de vasos linfáticos SAI	Inclusion
+I95	I95	Hipotensión	Canonical
+I95	I950	Hipotensión idiopática	Canonical
+I95	I951	Hipotensión ortostática	Canonical
+I95	I951	Hipotensión postural	Inclusion
+I95	I952	Hipotensión debida a drogas	Canonical
+I95	I958	Otros tipos de hipotensión	Canonical
+I95	I958	Hipotensión crónica	Inclusion
+I95	I959	Hipotensión, no especificada	Canonical
+I97	I97	Trastornos del sistema circulatorio consecutivos a procedimientos, no clasificados en otra parte	Canonical
+I97	I970	Síndrome de postcardiotomía	Canonical
+I97	I971	Otras alteraciones funcionales consecutivas a cirugía cardíaca	Canonical
+I97	I971	Falla cardíaca                      	Inclusion
+I97	I971	Insuficiencia cardíaca         	Inclusion
+I97	I971	Falla cardíaca posterior a cirugía cardíaca	Inclusion
+I97	I971	Falla cardíaca debida  a la presencia de prótesis cardíaca	Inclusion
+I97	I971	Insuficiencia cardíaca posterior a cirugía cardíaca	Inclusion
+I97	I971	Insuficiencia cardíaca debida  a la presencia de prótesis cardíaca	Inclusion
+I97	I972	Síndrome de linfedema postmastectomía	Canonical
+I97	I972	Elefantiasis debida a mastectomía	Inclusion
+I97	I972	Obliteración de vasos linfáticos debida a mastectomía	Inclusion
+I97	I978	Otros trastornos del sistema circulatorio consecutivos a procedimientos, no clasificados en otra parte	Canonical
+I97	I979	Trastorno no especificado del sistema circulatorio consecutivo a procedimientos	Canonical
+I98	I98	Otros trastornos del sistema circulatorio en enfermedades clasificadas en otra parte	Canonical
+I98	I980	Sífilis cardiovascular	Canonical
+I98	I980	Sífilis cardiovascular SAI	Inclusion
+I98	I980	Sífilis cardiovascular congénita, tardía	Inclusion
+I98	I981	Trastornos cardiovasculares en otras enfermedades infecciosas y parasitarias clasificadas en otra parte	Canonical
+I98	I981	Compromiso cardiovascular en la enfermedad de Chagas NCOP	Inclusion
+I98	I981	Lesiones cardiovasculares de pinta	Inclusion
+I98	I982	Várices esofágicas en enfermedades clasificadas en otra parte	Canonical
+I98	I982	Várices esofágicas en esquistosomiasis	Inclusion
+I98	I982	Várices esofágicas en trastornos hepáticos	Inclusion
+I98	I988	Otros trastornos especificados del aparato circulatorio en enfermedades clasificadas en otra parte	Canonical
+I99	I99	Otros trastornos y los no especificados del sistema circulatorio	Canonical
