@@ -122,7 +122,7 @@ results <- lapply(unique(tokenizedCerificates$id),
   arrange(id) %>%
   group_by(id) %>%
   mutate(order = row_number()) %>%
-  ungroup()
+  ungroup() 
 ```
 
 
