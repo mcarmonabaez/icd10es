@@ -6,11 +6,11 @@ library('tidyverse')
 ## -----------------------------------------------------------------------------
 library(icd10es)
 
-printInfo('B34.1', tabular = 'single')
+printInfo('S72.1', tabular = 'single')
 
-printInfo('B34.1', tabular = 'simple')
+printInfo('S72.1', tabular = 'simple')
 
-printInfo('B34.1', tabular = 'full')
+printInfo('S72.1', tabular = 'full')
 
 
 ## -----------------------------------------------------------------------------
@@ -63,7 +63,7 @@ results <- lapply(unique(tokenizedCerificates$id),
   arrange(id) %>%
   group_by(id) %>%
   mutate(order = row_number()) %>%
-  ungroup()
+  ungroup() 
 
 ## -----------------------------------------------------------------------------
 tokenizedCerificates$result <- results$disease

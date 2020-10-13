@@ -335,21 +335,26 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(icd10es)</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">printInfo</span>(<span class="st">&#39;B34.1&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;single&#39;</span>)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#&gt;   category subcategory                                                 disease</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#&gt; 1      B34        B341 infeccion debida a enterovirus de sitio no especificado</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">printInfo</span>(<span class="st">&#39;S72.1&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;single&#39;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#&gt;   category subcategory                   disease</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#&gt; 1      S72        S721 fractura pertrocanteriana</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">printInfo</span>(<span class="st">&#39;B34.1&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;simple&#39;</span>)</span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt;   category subcategory                                                 disease</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt; 1      B34        B341 infeccion debida a enterovirus de sitio no especificado</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt; 2      B34        B341                        infeccion debida a echovirus sai</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt; 3      B34        B341                  infeccion debida a virus coxsackie sai</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#&gt;        term</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#&gt; 1 Canonical</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#&gt; 2 Inclusion</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt; 3 Inclusion</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="kw">printInfo</span>(<span class="st">&#39;B34.1&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;full&#39;</span>)</span></code></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">printInfo</span>(<span class="st">&#39;S72.1&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;simple&#39;</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt;   category subcategory                     disease      term</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt; 1      S72        S721   fractura pertrocanteriana Canonical</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt; 2      S72        S721 fractura intertrocanteriana Inclusion</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt; 3      S72        S721      fractura trocanteriana Inclusion</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="kw">printInfo</span>(<span class="st">&#39;S72.1&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;full&#39;</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#&gt; -----------------------------------------------------------------------------</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt; Query entered:        S72.1</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co">#&gt; Cateogry:     S72     fractura del femur</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co">#&gt; Subcateogry:      S72.1   fractura pertrocanteriana</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#&gt; -----------------------------------------------------------------------------</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="co">#&gt; The following inclusion terms were found:</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co">#&gt;      fractura intertrocanteriana</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co">#&gt;      fractura trocanteriana</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="co">#&gt; -----------------------------------------------------------------------------</span></span></code></pre></div>
 </div>
 <div id="looking-up-a-string-in-the-catalog" class="section level2">
 <h2>Looking up a string in the catalog</h2>
@@ -473,7 +478,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb7-9"><a href="#cb7-9"></a><span class="st">  </span><span class="kw">arrange</span>(id) <span class="op">%&gt;%</span></span>
 <span id="cb7-10"><a href="#cb7-10"></a><span class="st">  </span><span class="kw">group_by</span>(id) <span class="op">%&gt;%</span></span>
 <span id="cb7-11"><a href="#cb7-11"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">order =</span> <span class="kw">row_number</span>()) <span class="op">%&gt;%</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="st">  </span><span class="kw">ungroup</span>()</span></code></pre></div>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="st">  </span><span class="kw">ungroup</span>() </span></code></pre></div>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tokenizedCerificates<span class="op">$</span>result &lt;-<span class="st"> </span>results<span class="op">$</span>disease</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="kw">print</span>(tokenizedCerificates, <span class="dt">n =</span> <span class="ot">Inf</span>)</span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="co">#&gt; # A tibble: 25 x 4</span></span>
@@ -482,7 +487,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb8-6"><a href="#cb8-6"></a><span class="co">#&gt;  1     1 hemorragia subaracnoidea            1 hemorragia subaracnoidea no espe…</span></span>
 <span id="cb8-7"><a href="#cb8-7"></a><span class="co">#&gt;  2     1 hipertension arterial sistemica     2 hipertension esencial            </span></span>
 <span id="cb8-8"><a href="#cb8-8"></a><span class="co">#&gt;  3     1 dislipidemia                        3 &lt;NA&gt;                             </span></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="co">#&gt;  4     2 infarto cerebral                    1 &lt;NA&gt;                             </span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co">#&gt;  4     2 infarto cerebral                    1 infarto cerebral no especificado </span></span>
 <span id="cb8-10"><a href="#cb8-10"></a><span class="co">#&gt;  5     2 hipertension arterial sistemica     2 hipertension esencial            </span></span>
 <span id="cb8-11"><a href="#cb8-11"></a><span class="co">#&gt;  6     2 trigliceridemia                     3 &lt;NA&gt;                             </span></span>
 <span id="cb8-12"><a href="#cb8-12"></a><span class="co">#&gt;  7     3 herida producida por proyectil…     1 &lt;NA&gt;                             </span></span>
@@ -492,7 +497,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb8-16"><a href="#cb8-16"></a><span class="co">#&gt; 11     5 evento vascular cerebral            1 &lt;NA&gt;                             </span></span>
 <span id="cb8-17"><a href="#cb8-17"></a><span class="co">#&gt; 12     5 enfermedad renal terminal           2 &lt;NA&gt;                             </span></span>
 <span id="cb8-18"><a href="#cb8-18"></a><span class="co">#&gt; 13     5 diabetes mellitus tipo 2            3 &lt;NA&gt;                             </span></span>
-<span id="cb8-19"><a href="#cb8-19"></a><span class="co">#&gt; 14     6 aneurisma cerebral                  1 &lt;NA&gt;                             </span></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="co">#&gt; 14     6 aneurisma cerebral                  1 hemorragia subaracnoidea no espe…</span></span>
 <span id="cb8-20"><a href="#cb8-20"></a><span class="co">#&gt; 15     6 encefalopatia hepatica              2 &lt;NA&gt;                             </span></span>
 <span id="cb8-21"><a href="#cb8-21"></a><span class="co">#&gt; 16     7 infarto agudo al miocardio          1 infarto agudo del miocardio      </span></span>
 <span id="cb8-22"><a href="#cb8-22"></a><span class="co">#&gt; 17     7 cardiopatia hipertensiva            2 &lt;NA&gt;                             </span></span>
