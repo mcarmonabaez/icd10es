@@ -61,7 +61,7 @@ This package is created and maintained by Mariana Carmona-Baez  and Juan Bernard
 
 Thanks to Christopher Ormsby for his input and for letting us be part of this awesome project :hospital:
 
-Thanks to [Teresa Ortiz](https://github.com/tereom) for her invaluable input :crystal_ball:
+Thanks to [Teresa Ortiz](https://github.com/tereom) for her invaluable guidance :crystal_ball:
 
 
 

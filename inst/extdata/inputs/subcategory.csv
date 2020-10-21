@@ -15539,8 +15539,8 @@ I46	I460	Paro cardíaco con resucitación exitosa	Canonical
 I46	I461	Muerte cardíaca súbita, así descrita	Canonical
 I46	I469	Paro cardíaco, no especificado	Canonical
 I47	I47	Taquicardia paroxística	Canonical
-I47	I470	I47.0      Arritmia por reentrada ventricular	Canonical
-I47	I471	I47.1      Taquicardia supraventricular	Canonical
+I47	I470	Arritmia por reentrada ventricular	Canonical
+I47	I471	Taquicardia supraventricular	Canonical
 I47	I471	Taquicardia paroxística auricular 	Inclusion
 I47	I471	Taquicardia paroxística nodal	Inclusion
 I47	I472	Taquicardia ventricular	Canonical
@@ -16031,3 +16031,751 @@ I98	I982	Várices esofágicas en esquistosomiasis	Inclusion
 I98	I982	Várices esofágicas en trastornos hepáticos	Inclusion
 I98	I988	Otros trastornos especificados del aparato circulatorio en enfermedades clasificadas en otra parte	Canonical
 I99	I99	Otros trastornos y los no especificados del sistema circulatorio	Canonical
+F00	F00	Demencia en la enfermedad de Alzheimer	Canonical
+F00	F000	Demencia en la enfermedad de Alzheimer, de comienzo temprano	Canonical
+F00	F000	Demencia en la enfermedad de Alzheimer, que comienza antes de los 65 años de edad, con deterioro de evolución relativamente rápida y con trastornos múltiples y notorios de las funciones corticales superiores.	Inclusion
+F00	F000	Demencia degenerativa primaria de tipo Alzheimer, de comienzo presenil	Inclusion
+F00	F000	Demencia presenil, de tipo Alzheimer	Inclusion
+F00	F000	Enfermedad de Alzheimer, tipo 2	Inclusion
+F00	F001	Demencia en la enfermedad de Alzheimer, de comienzo tardío	Canonical
+F00	F001	Demencia en la enfermedad de Alzheimer, cuyo comienzo se presenta después de los 65 años de edad, habitualmente al final de la séptima década de la vida, o incluso más tarde, con una progresión lenta. Su principal característica es el deterioro de la memoria.	Inclusion
+F00	F001	Demencia degenerativa primaria de tipo Alzheimer, de comienzo senil	Inclusion
+F00	F001	Demencia senil, de tipo Alzheimer	Inclusion
+F00	F001	Enfermedad de Alzheimer, tipo 1	Inclusion
+F00	F002	Demencia en la enfermedad de Alzheimer, atípica o de tipo mixto	Canonical
+F00	F002	Demencia atípica de tipo Alzheimer	Inclusion
+F00	F009	Demencia en la enfermedad de Alzheimer, no especificada	Canonical
+F01	F01	Demencia vascular	Canonical
+F01	F010	Demencia vascular de comienzo agudo	Canonical
+F01	F011	Demencia vascular por infartos múltiples	Canonical
+F01	F011	Demencia predominantemente cortical	Inclusion
+F01	F012	Demencia vascular subcortical	Canonical
+F01	F013	Demencia vascular mixta, cortical y subcortical	Canonical
+F01	F018	Otras demencias vasculares	Canonical
+F01	F019	Demencia vascular, no especificada	Canonical
+F02	F02	Demencia en otras enfermedades clasificadas en otra parte	Canonical
+F02	F020	Demencia en la enfermedad de Pick	Canonical
+F02	F021	Demencia en la enfermedad de Creutzfeldt–Jakob	Canonical
+F02	F022	Demencia en la enfermedad de Huntington	Canonical
+F02	F022	Demencia en la corea de Huntington	Inclusion
+F02	F023	Demencia en la enfermedad de Parkinson	Canonical
+F02	F023	Demencia que se desarrolla durante el curso de una enfermedad de Parkinson ya establecida	Inclusion
+F02	F023	Demencia en la parálisis agitante	Inclusion
+F02	F023	Demencia en el parkinsonismo	Inclusion
+F02	F024	Demencia en la enfermedad por virus de la inmunodeficiencia humana	Canonical
+F02	F024	Demencia en la enfermedad por VIH	Inclusion
+F02	F028	Demencia en otras enfermedades especificadas clasificadas en otra parte	Canonical
+F02	F028	Demencia en deficiencia de niacina	Inclusion
+F02	F028	Demencia en pelagra	Inclusion
+F02	F028	Demencia en deficiencia de vitamina B12	Inclusion
+F02	F028	Demencia en degeneración hepatolenticular	Inclusion
+F02	F028	Demencia en epilepsia	Inclusion
+F02	F028	Demencia en esclerosis múltiple	Inclusion
+F02	F028	Demencia en hipercalcemia	Inclusion
+F02	F028	Demencia en hipotiroidismo adquirido	Inclusion
+F02	F028	Demencia en intoxicaciones	Inclusion
+F02	F028	Demencia en lipidosis cerebral	Inclusion
+F02	F028	Demencia en lupus eritematoso sistémico	Inclusion
+F02	F028	Demencia en neurosífilis	Inclusion
+F02	F028	Demencia en poliarteritis nudosa	Inclusion
+F02	F028	Demencia en tripanosomiasis	Inclusion
+F03	F03	Demencia, no especificada	Canonical
+F03	F03	Demencia degenerativa primaria SAI	Inclusion
+F03	F03	Demencia presenil SAI	Inclusion
+F03	F03	Demencia senil SAI	Inclusion
+F03	F03	Demencia senil, tipo depresivo o tipo paranoide	Inclusion
+F03	F03	Psicosis presenil SAI	Inclusion
+F03	F03	Psicosis senil SAI	Inclusion
+F04	F04	Síndrome amnésico orgánico, no inducido por ­alcohol o por otras sustancias psicoactivas	Canonical
+F04	F04	Psicosis o síndrome de Korsakov no alcohólico	Inclusion
+F05	F05	Delirio, no inducido por alcohol o por otras ­sustancias psicoactivas	Canonical
+F05	F05	estado confusional agudo	Inclusion
+F05	F05	estado confusional no alcohólico agudo	Inclusion
+F05	F05	psicosis  infecciosa aguda	Inclusion
+F05	F05	reacción orgánica aguda	Inclusion
+F05	F05	síndrome cerebral agudo	Inclusion
+F05	F05	síndrome psico-orgánico agudo	Inclusion
+F05	F05	estado confusional subagudo	Inclusion
+F05	F05	estado confusional no alcohólico subagudo	Inclusion
+F05	F05	psicosis  infecciosa subaguda	Inclusion
+F05	F05	reacción orgánica subaguda	Inclusion
+F05	F05	síndrome cerebral subagudo	Inclusion
+F05	F05	síndrome psico-orgánico subagudo	Inclusion
+F05	F058	Otros delirios	Canonical
+F05	F058	Delirio de etiología mixta	Inclusion
+F05	F059	Delirio, no especificado	Canonical
+F06	F06	Otros trastornos mentales debidos a lesión y disfunción cerebral, y a enfermedad física	Canonical
+F06	F060	Alucinosis orgánica	Canonical
+F06	F060	Estado alucinatorio orgánico	Inclusion
+F06	F060	Estado alucinatorio orgánico no alcohólico	Inclusion
+F06	F061	Trastorno catatónico, orgánico	Canonical
+F06	F062	Trastorno delirante, orgánico	Inclusion
+F06	F062	Trastorno esquizofreniforme, orgánico	Inclusion
+F06	F063	Trastornos del humor, orgánicos	Canonical
+F06	F063	Trastornos del humor afectivos, orgánicos	Inclusion
+F06	F064	Trastorno de ansiedad, orgánico	Canonical
+F06	F065	Trastorno disociativo, orgánico	Canonical
+F06	F066	Trastorno de labilidad emocional, orgánico	Canonical
+F06	F066	Trastorno asténico, orgánico	Inclusion
+F06	F067	Trastorno cognoscitivo leve	Canonical
+F06	F068	Otros trastornos mentales especificados debidos a lesión y disfunción cerebral y a enfermedad física	Canonical
+F06	F068	Psicosis epiléptica SAI	Inclusion
+F06	F069	Trastorno mental no especificado debido a lesión y disfunción cerebral y a enfermedad física 	Canonical
+F06	F069	Síndrome cerebral orgánico SAI	Inclusion
+F06	F069	Trastorno mental orgánico SAI	Inclusion
+F07	F07	Trastornos de la personalidad y del comportamiento debidos a enfermedad, lesión o disfunción cerebral	Canonical
+F07	F070	Trastorno de la personalidad, orgánico	Canonical
+F07	F070	Personalidad seudopsicopática orgánica	Inclusion
+F07	F070	Personalidad seudorretrasada orgánica	Inclusion
+F07	F070	Síndrome del lóbulo frontal	Inclusion
+F07	F070	Síndrome de la personalidad de la epilepsia límbica	Inclusion
+F07	F070	Síndrome de postleucotomía	Inclusion
+F07	F070	Síndrome de lobotomía	Inclusion
+F07	F071	Síndrome postencefalítico	Canonical
+F07	F072	Síndrome postconcusional	Canonical
+F07	F072	Síndrome cerebral postraumático no psicótico	Inclusion
+F07	F072	Síndrome postcontusión	Inclusion
+F07	F072	Síndrome postcontusión encefalopatía	Inclusion
+F07	F078	Otros trastornos orgánicos de la personalidad y del comportamiento debidos a enfermedad, lesión y disfunción cerebrales	Canonical
+F07	F078	Trastorno afectivo orgánico del hemisferio derecho	Inclusion
+F07	F079	Trastorno orgánico de la personalidad y del comportamiento, no especificado, debido a enfermedad, lesión y disfunción cerebral	Canonical
+F07	F079	Psicosíndrome orgánico	Inclusion
+F09	F09	Trastorno mental orgánico o sintomático, no especificado	Canonical
+F09	F09	Psicosis orgánica SAI	Inclusion
+F09	F09	Psicosis sintomática SAI	Inclusion
+F10	F10	Trastornos mentales y del comportamiento ­debidos al uso de alcohol	Canonical
+F10	F100	Intoxicación aguda debida al alcochol	Canonical
+F10	F100	Embriaguez aguda en el alcoholismo	Inclusion
+F10	F100	Embriaguez SAI	Inclusion
+F10	F101	Uso nocivo del alcohol	Canonical
+F10	F102	Síndrome de dependencia al alcohol	Canonical
+F10	F102	Alcoholismo crónico	Inclusion
+F10	F102	Dipsomanía	Inclusion
+F10	F103	Estado de abstinencia inducido por alcohol	Canonical
+F10	F104	Estado de abstinencia con delirio inducido por alcohol	Canonical
+F10	F104	Delirium tremens	Inclusion
+F10	F104	Delirium tremens inducido por alcohol	Inclusion
+F10	F105	Trastorno psicótico inducido por alcohol	Canonical
+F10	F105	Alucinosis alcohólica	Inclusion
+F10	F105	Celotipia alcohólica	Inclusion
+F10	F105	Paranoia alcohólica	Inclusion
+F10	F105	Psicosis SAI alcohólica	Inclusion
+F10	F106	Síndrome amnésico inducido por alcohol	Canonical
+F10	F106	Psicosis o síndrome de Korsakov inducido por alcohol	Inclusion
+F10	F106	Trastorno amnésico inducido por alcohol	Inclusion
+F10	F108	Otros trastornos mentales y del comportamiento inducidos por alcohol	Canonical
+F10	F109	Trastorno mental y del comportamiento, no especificado inducido por alcohol	Canonical
+F11	F11	Trastornos mentales y del comportamiento ­debidos al uso de opiáceos	Canonical
+F11	F110	Intoxicación aguda debida al uso de opiáceos	Canonical
+F11	F110	“Mal viaje” debido al uso de opiáceos	Inclusion
+F11	F110	Trance y posesión en la intoxicación por opiáceos	Inclusion
+F11	F111	Uso nocivo de opiáceos	Canonical
+F11	F111	Abuso de opiáceos	Inclusion
+F11	F112	Síndrome de dependencia a opiáceos	Canonical
+F11	F112	Drogadicción debida a opiáceos	Inclusion
+F11	F113	Estado de abstinencia inducido por opiáceos	Canonical
+F11	F114	Estado de abstinencia con delirio inducido por opiáceos	Canonical
+F11	F115	Trastorno psicótico inducido por opiáceos	Canonical
+F11	F116	Síndrome amnésico inducido por opiáceos	Canonical
+F11	F116	Psicosis o síndrome de Korsakov inducido por opiáceos	Inclusion
+F11	F116	Trastorno amnésico inducido por opiáceos	Inclusion
+F11	F118	Otros trastornos mentales y del comportamiento inducidos por opiáceos	Canonical
+F11	F119	Trastorno mental y del comportamiento, no especificado inducido por opiáceos	Canonical
+F12	F12	Trastornos mentales y del comportamiento ­debidos al uso de cannabinoides	Canonical
+F12	F120	Intoxicación aguda debida al uso de cannabinoides	Canonical
+F12	F120	“Mal viaje” debido al uso de cannabinoides	Inclusion
+F12	F120	Trance y posesión en la intoxicación por cannabinoides	Inclusion
+F12	F121	Uso nocivo de cannabinoides	Canonical
+F12	F121	Abuso de cannabinoides	Inclusion
+F12	F122	Síndrome de dependencia a cannabinoides	Canonical
+F12	F122	Drogadicción debida a cannabinoides	Inclusion
+F12	F123	Estado de abstinencia inducido por cannabinoides	Canonical
+F12	F124	Estado de abstinencia con delirio inducido por cannabinoides	Canonical
+F12	F125	Trastorno psicótico inducido por cannabinoides	Canonical
+F12	F126	Síndrome amnésico inducido por cannabinoides	Canonical
+F12	F126	Psicosis o síndrome de Korsakov inducido por cannabinoides	Inclusion
+F12	F126	Trastorno amnésico inducido por cannabinoides	Inclusion
+F12	F128	Otros trastornos mentales y del comportamiento inducidos por cannabinoides	Canonical
+F12	F129	Trastorno mental y del comportamiento, no especificado inducido por cannabinoides	Canonical
+F13	F13	Trastornos mentales y del comportamiento ­debidos al uso de sedantes o hipnóticos	Canonical
+F13	F130	Intoxicación aguda debida al uso de sedantes o hipnóticos	Canonical
+F13	F130	“Mal viaje” debido al uso de sedantes o hipnóticos	Inclusion
+F13	F130	Trance y posesión en la intoxicación por sedantes o hipnóticos	Inclusion
+F13	F131	Uso nocivo de sedantes o hipnóticos	Canonical
+F13	F131	Abuso de sedantes o hipnóticos	Inclusion
+F13	F132	Síndrome de dependencia a sedantes o hipnóticos	Canonical
+F13	F132	Drogadicción debida a sedantes o hipnóticos	Inclusion
+F13	F133	Estado de abstinencia inducido por sedantes o hipnóticos	Canonical
+F13	F134	Estado de abstinencia con delirio inducido por sedantes o hipnóticos	Canonical
+F13	F135	Trastorno psicótico inducido por sedantes o hipnóticos	Canonical
+F13	F136	Síndrome amnésico inducido por sedantes o hipnóticos	Canonical
+F13	F136	Psicosis o síndrome de Korsakov inducido por sedantes o hipnóticos	Inclusion
+F13	F136	Trastorno amnésico inducido por sedantes o hipnóticos	Inclusion
+F13	F138	Otros trastornos mentales y del comportamiento inducidos por sedantes o hipnóticos	Canonical
+F13	F139	Trastorno mental y del comportamiento, no especificado inducido por sedantes o hipnóticos	Canonical
+F14	F14	Trastornos mentales y del comportamiento ­debidos al uso de cocaína	Canonical
+F14	F140	Intoxicación aguda debida al uso de cocaína	Canonical
+F14	F140	“Mal viaje” debido al uso de cocaína	Inclusion
+F14	F140	Trance y posesión en la intoxicación por cocaína	Inclusion
+F14	F141	Uso nocivo de cocaína	Canonical
+F14	F141	Abuso de cocaína	Inclusion
+F14	F142	Síndrome de dependencia a cocaína	Canonical
+F14	F142	Drogadicción debida a cocaína	Inclusion
+F14	F143	Estado de abstinencia inducido por cocaína	Canonical
+F14	F144	Estado de abstinencia con delirio inducido por cocaína	Canonical
+F14	F145	Trastorno psicótico inducido por cocaína	Canonical
+F14	F146	Síndrome amnésico inducido por cocaína	Canonical
+F14	F146	Psicosis o síndrome de Korsakov inducido por cocaína	Inclusion
+F14	F146	Trastorno amnésico inducido por cocaína	Inclusion
+F14	F148	Otros trastornos mentales y del comportamiento inducidos por cocaína	Canonical
+F14	F149	Trastorno mental y del comportamiento, no especificado inducido por cocaína	Canonical
+F15	F15	Trastornos mentales y del comportamiento ­debidos al uso de otros estimulantes, incluida la cafeína	Canonical
+F15	F150	Intoxicación aguda debida al uso de otros estimulantes, incluida la cafeína	Canonical
+F15	F150	“Mal viaje” debido al uso de otros estimulantes, incluida la cafeína	Inclusion
+F15	F150	Trance y posesión en la intoxicación por otros estimulantes, incluida la cafeína	Inclusion
+F15	F151	Uso nocivo de otros estimulantes, incluida la cafeína	Canonical
+F15	F151	Abuso de otros estimulantes, incluida la cafeína	Inclusion
+F15	F152	Síndrome de dependencia a otros estimulantes, incluida la cafeína	Canonical
+F15	F152	Drogadicción debida a otros estimulantes, incluida la cafeína	Inclusion
+F15	F153	Estado de abstinencia inducido por otros estimulantes, incluida la cafeína	Canonical
+F15	F154	Estado de abstinencia con delirio inducido por otros estimulantes, incluida la cafeína	Canonical
+F15	F155	Trastorno psicótico inducido por otros estimulantes, incluida la cafeína	Canonical
+F15	F156	Síndrome amnésico inducido por otros estimulantes, incluida la cafeína	Canonical
+F15	F156	Psicosis o síndrome de Korsakov inducido por otros estimulantes, incluida la cafeína	Inclusion
+F15	F156	Trastorno amnésico inducido por otros estimulantes, incluida la cafeína	Inclusion
+F15	F158	Otros trastornos mentales y del comportamiento inducidos por otros estimulantes, incluida la cafeína	Canonical
+F15	F159	Trastorno mental y del comportamiento, no especificado inducido por otros estimulantes, incluida la cafeína	Canonical
+F16	F16	Trastornos mentales y del comportamiento ­debidos al uso de alucinógenos	Canonical
+F16	F160	Intoxicación aguda debida al uso de alucinógenos	Canonical
+F16	F160	“Mal viaje” debido al uso de alucinógenos	Inclusion
+F16	F160	Trance y posesión en la intoxicación por alucinógenos	Inclusion
+F16	F161	Uso nocivo de alucinógenos	Canonical
+F16	F161	Abuso de alucinógenos	Inclusion
+F16	F162	Síndrome de dependencia a alucinógenos	Canonical
+F16	F162	Drogadicción debida a alucinógenos	Inclusion
+F16	F163	Estado de abstinencia inducido por alucinógenos	Canonical
+F16	F164	Estado de abstinencia con delirio inducido por alucinógenos	Canonical
+F16	F165	Trastorno psicótico inducido por alucinógenos	Canonical
+F16	F166	Síndrome amnésico inducido por alucinógenos	Canonical
+F16	F166	Psicosis o síndrome de Korsakov inducido por alucinógenos	Inclusion
+F16	F166	Trastorno amnésico inducido por alucinógenos	Inclusion
+F16	F168	Otros trastornos mentales y del comportamiento inducidos por alucinógenos	Canonical
+F16	F169	Trastorno mental y del comportamiento, no especificado inducido por alucinógenos	Canonical
+F17	F17	Trastornos mentales y del comportamiento ­debidos al uso de tabaco	Canonical
+F17	F170	Intoxicación aguda debida al uso de tabaco	Canonical
+F17	F170	“Mal viaje” debido al uso de tabaco	Inclusion
+F17	F170	Trance y posesión en la intoxicación por tabaco	Inclusion
+F17	F171	Uso nocivo de tabaco	Canonical
+F17	F171	Abuso de tabaco	Inclusion
+F17	F172	Síndrome de dependencia al tabaco	Canonical
+F17	F172	Drogadicción debida a tabaco	Inclusion
+F17	F173	Estado de abstinencia inducido por tabaco	Canonical
+F17	F174	Estado de abstinencia con delirio inducido por tabaco	Canonical
+F17	F175	Trastorno psicótico inducido por tabaco	Canonical
+F17	F176	Síndrome amnésico inducido por tabaco	Canonical
+F17	F176	Psicosis o síndrome de Korsakov inducido por tabaco	Inclusion
+F17	F176	Trastorno amnésico inducido por tabaco	Inclusion
+F17	F178	Otros trastornos mentales y del comportamiento inducidos por tabaco	Canonical
+F17	F179	Trastorno mental y del comportamiento, no especificado inducido por tabaco	Canonical
+F18	F18	Trastornos mentales y del comportamiento ­debidos al uso de disolventes volátiles	Canonical
+F18	F180	Intoxicación aguda debida al uso de disolventes volátiles	Canonical
+F18	F180	“Mal viaje” debido al uso de disolventes volátiles	Inclusion
+F18	F180	Trance y posesión en la intoxicación por disolventes volátiles	Inclusion
+F18	F181	Uso nocivo de disolventes volátiles	Canonical
+F18	F181	Abuso de disolventes volátiles	Inclusion
+F18	F182	Síndrome de dependencia a disolventes volátiles	Canonical
+F18	F182	Drogadicción debida a disolventes volátiles	Inclusion
+F18	F183	Estado de abstinencia inducido por disolventes volátiles	Canonical
+F18	F184	Estado de abstinencia con delirio inducido por disolventes volátiles	Canonical
+F18	F185	Trastorno psicótico inducido por disolventes volátiles	Canonical
+F18	F186	Síndrome amnésico inducido por disolventes volátiles	Canonical
+F18	F186	Psicosis o síndrome de Korsakov inducido por disolventes volátiles	Inclusion
+F18	F186	Trastorno amnésico inducido por disolventes volátiles	Inclusion
+F18	F188	Otros trastornos mentales y del comportamiento inducidos por disolventes volátiles	Canonical
+F18	F189	Trastorno mental y del comportamiento, no especificado inducido por disolventes volátiles	Canonical
+F19	F19	Trastornos mentales y del comportamiento ­debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas	Canonical
+F19	F19	mal uso de drogas SAI	Inclusion
+F19	F190	Intoxicación aguda debida al uso de múltiples drogas y al uso de otras sustancias psicoactivas	Canonical
+F19	F190	“Mal viaje” debido al uso de múltiples drogas y otras sustancias psicoactivas	Inclusion
+F19	F190	Trance y posesión en la intoxicación por múltiples drogas y otras sustancias psicoactivas	Inclusion
+F19	F191	Uso nocivo de múltiples drogas y otras sustancias psicoactivas	Canonical
+F19	F191	Abuso de múltiples drogas y al uso de otras sustancias psicoactivas	Inclusion
+F19	F192	Síndrome de dependencia a múltiples drogas y otras sustancias psicoactivas	Canonical
+F19	F192	Drogadicción debida a múltiples drogas y al uso de otras sustancias psicoactivas	Inclusion
+F19	F193	Estado de abstinencia inducido por múltiples drogas y al uso de otras sustancias psicoactivas	Canonical
+F19	F194	Estado de abstinencia con delirio inducido por múltiples drogas y otras sustancias psicoactivas	Canonical
+F19	F195	Trastorno psicótico inducido por múltiples drogas y otras sustancias psicoactivas	Canonical
+F19	F196	Síndrome amnésico inducido por múltiples drogas y otras sustancias psicoactivas	Canonical
+F19	F196	Psicosis o síndrome de Korsakov inducido por múltiples drogas y otras sustancias psicoactivas	Inclusion
+F19	F196	Trastorno amnésico inducido por múltiples drogas y el uso de otras sustancias psicoactivas	Inclusion
+F19	F198	Otros trastornos mentales y del comportamiento inducidos por múltiples drogas y otras sustancias psicoactivas	Canonical
+F19	F199	Trastorno mental y del comportamiento, no especificado inducido por múltiples drogas y otras sustancias psicoactivas	Canonical
+F20	F20	Esquizofrenia	Canonical
+F20	F200	Esquizofrenia paranoide	Canonical
+F20	F200	Esquizofrenia parafrénica	Inclusion
+F20	F201	Esquizofrenia hebefrénica	Canonical
+F20	F201	Esquizofrenia desorganizada	Inclusion
+F20	F201	Hebefrenia	Inclusion
+F20	F202	Esquizofrenia catatónica	Canonical
+F20	F202	Catalepsia esquizofrénica	Inclusion
+F20	F202	Catatonia esquizofrénica	Inclusion
+F20	F202	Estupor catatónico	Inclusion
+F20	F202	Flexibilidad cérea esquizofrénica	Inclusion
+F20	F203	Esquizofrenia indiferenciada	Canonical
+F20	F203	Esquizofrenia atípica	Inclusion
+F20	F204	Depresión postesquizofrénica	Canonical
+F20	F205	Esquizofrenia residual	Canonical
+F20	F205	Esquizofrenia crónica indiferenciada	Inclusion
+F20	F205	Estado esquizofrénico residual	Inclusion
+F20	F205	Restzustand	Inclusion
+F20	F205	Restzustand esquizofrénico	Inclusion
+F20	F206	Esquizofrenia simple	Canonical
+F20	F208	Otras esquizofrenias	Canonical
+F20	F208	Esquizofrenia cenestopática	Inclusion
+F20	F208	Psicosis esquizofreniforme SAI	Inclusion
+F20	F208	Trastorno esquizofreniforme SAI	Inclusion
+F20	F209	Esquizofrenia, no especificada	Canonical
+F21	F21	Trastorno esquizotípico	Canonical
+F21	F21	Esquizofrenia latente	Inclusion
+F21	F21	Esquizofrenia limítrofe	Inclusion
+F21	F21	Esquizofrenia prepsicótica	Inclusion
+F21	F21	Esquizofrenia prodrómica	Inclusion
+F21	F21	Esquizofrenia seudoneurótica	Inclusion
+F21	F21	Esquizofrenia seudopsicopática	Inclusion
+F21	F21	Reacción esquizofrénica latente	Inclusion
+F21	F21	Trastorno esquizotípico de la personalidad	Inclusion
+F22	F22	Trastornos delirantes persistentes	Canonical
+F22	F220	Trastorno delirante	Canonical
+F22	F220	Beziehungswahn sensitivo	Inclusion
+F22	F220	Estado paranoide	Inclusion
+F22	F220	Parafrenia	Inclusion
+F22	F220	Parafrenia tardía	Inclusion
+F22	F220	Paranoia	Inclusion
+F22	F220	Psicosis paranoide	Inclusion
+F22	F228	Otros trastornos delirantes persistentes	Canonical
+F22	F228	Dismorfofobia delirante	Inclusion
+F22	F228	Estado paranoide involutivo	Inclusion
+F22	F228	Paranoia querellante	Inclusion
+F22	F228	Paranoia querulans	Inclusion
+F22	F229	Trastorno delirante persistente, no especificado	Canonical
+F23	F23	Trastornos psicóticos agudos y transitorios	Canonical
+F23	F230	Trastorno psicótico agudo polimorfo, sin síntomas de esquizofrenia	Canonical
+F23	F230	Bouffée délirante sin síntomas de esquizofrenia o no especificada	Inclusion
+F23	F230	Psicosis cicloide sin síntomas de esquizofrenia o no especificada	Inclusion
+F23	F231	Trastorno psicótico agudo polimorfo, con síntomas de esquizofrenia	Canonical
+F23	F231	Bouffée délirante con síntomas de esquizofrenia	Inclusion
+F23	F231	Psicosis cicloide con síntomas de esquizofrenia	Inclusion
+F23	F232	Trastorno psicótico agudo de tipo esquizofrénico	Inclusion
+F23	F232	Trastorno psicótico agudo en el que los síntomas psicóticos son relativamente estables y justifican el diagnóstico de esquizofrenia, pero de duración inferior a un mes. Tampoco aparecen los rasgos polimorfos e inestables descritos en F23.0. Si los síntomas de esquizofrenia se mantienen, el diagnóstico debe cambiarse por el de esquizofrenia (F20.–).	Inclusion
+F23	F232	Esquizofrenia aguda	Inclusion
+F23	F232	Esquizofrenia aguda indiferenciada	Inclusion
+F23	F232	Onirofrenia	Inclusion
+F23	F232	Psicosis esquizofreniforme breve	Inclusion
+F23	F232	Reacción esquizofrénica	Inclusion
+F23	F232	Trastorno esquizofreniforme breve	Inclusion
+F23	F233	Otro trastorno psicótico agudo, con predominio de ideas delirantes	Canonical
+F23	F233	Psicosis paranoide psicógena	Inclusion
+F23	F233	Reacción paranoide	Inclusion
+F23	F238	Otros trastornos psicóticos agudos y transitorios	Canonical
+F23	F239	Trastorno psicótico agudo y transitorio, no especificado	Canonical
+F23	F239	Psicosis reactiva	Inclusion
+F23	F239	Psicosis reactiva breve SAI	Inclusion
+F24	F24	Trastorno delirante inducido	Canonical
+F24	F24	Folie à deux	Inclusion
+F24	F24	Trastorno paranoide inducido	Inclusion
+F24	F24	Trastorno psicótico inducido	Inclusion
+F25	F25	Trastornos esquizoafectivos	Canonical
+F25	F250	Trastorno esquizoafectivo de tipo maníaco	Canonical
+F25	F250	Psicosis esquizoafectiva de tipo maníaco	Inclusion
+F25	F250	Psicosis esquizofreniforme de tipo maníaco	Inclusion
+F25	F251	Trastorno esquizoafectivo de tipo depresivo	Canonical
+F25	F251	Psicosis esquizoafectiva de tipo depresivo	Inclusion
+F25	F251	Psicosis esquizofreniforme de tipo depresivo	Inclusion
+F25	F252	Trastorno esquizoafectivo de tipo mixto	Canonical
+F25	F252	Esquizofrenia cíclica	Inclusion
+F25	F252	Psicosis mixta esquizofrénica y afectiva	Inclusion
+F25	F258	Otros trastornos esquizoafectivos	Canonical
+F25	F259	Trastorno esquizoafectivo, no especificado	Canonical
+F25	F259	Psicosis esquizoafectiva SAI	Inclusion
+F28	F28	Otros trastornos psicóticos de origen no orgánico	Canonical
+F28	F28	Psicosis crónica alucinatoria	Inclusion
+F29	F29	Psicosis de origen no orgánico, no especificada	Canonical
+F29	F29	Psicosis SAI	Inclusion
+F30	F30	Episodio maníaco	Canonical
+F30	F30	episodio maníaco único en un trastorno bipolar	Inclusion
+F30	F300	Hipomanía	Canonical
+F30	F301	Manía sin síntomas psicóticos	Canonical
+F30	F302	Manía con síntomas psicóticos	Canonical
+F30	F302	Estupor maníaco	Inclusion
+F30	F302	Manía con síntomas psicóticos congruentes con el humor	Inclusion
+F30	F302	Manía con síntomas psicóticos incongruentes con el humor	Inclusion
+F30	F308	Otros episodios maníacos	Canonical
+F30	F309	Episodio maníaco, no especificado	Canonical
+F30	F309	Manía SAI	Inclusion
+F31	F31	Trastorno afectivo bipolar	Canonical
+F31	F31	enfermedad maníaco-depresiva	Inclusion
+F31	F31	psicosis maníaco-depresiva	Inclusion
+F31	F31	reacción maníaco-depresiva	Inclusion
+F31	F310	Trastorno afectivo bipolar, episodio hipomaníaco presente	Canonical
+F31	F311	Trastorno afectivo bipolar, episodio maníaco presente sin síntomas psicóticos	Canonical
+F31	F312	Trastorno afectivo bipolar, episodio maníaco presente con síntomas psicóticos	Canonical
+F31	F313	Trastorno afectivo bipolar, episodio depresivo presente leve o moderado	Canonical
+F31	F314	Trastorno afectivo bipolar, episodio depresivo grave presente sin síntomas psicóticos	Canonical
+F31	F315	Trastorno afectivo bipolar, episodio depresivo grave presente con síntomas psicóticos	Canonical
+F31	F316	Trastorno afectivo bipolar, episodio mixto presente	Canonical
+F31	F317	Trastorno afectivo bipolar, actualmente en remisión	Canonical
+F31	F318	Otros trastornos afectivos bipolares	Canonical
+F31	F318	Episodios maníacos recurrentes SAI	Inclusion
+F31	F318	Trastorno bipolar II	Inclusion
+F31	F319	Trastorno afectivo bipolar, no especificado	Canonical
+F32	F32	Episodio depresivo	Canonical
+F32	F32	episodios únicos de depresión psicógena	Inclusion
+F32	F32	episodios únicos de depresión reactiva	Inclusion
+F32	F32	episodios únicos de reacción depresiva	Inclusion
+F32	F320	Episodio depresivo leve	Canonical
+F32	F321	Episodio depresivo moderado	Canonical
+F32	F322	Episodio depresivo grave sin síntomas psicóticos	Canonical
+F32	F322	Episodio único sin síntomas psicóticos de depresión agitada	Inclusion
+F32	F322	Episodio único sin síntomas psicóticos de depresión profunda	Inclusion
+F32	F322	Episodio único sin síntomas psicóticos de depresión vital	Inclusion
+F32	F323	Episodio depresivo grave con síntomas psicóticos	Canonical
+F32	F323	Episodios únicos de depresión profunda con síntomas psicóticos	Inclusion
+F32	F323	Episodios únicos de depresión psicótica	Inclusion
+F32	F323	Episodios únicos de psicosis depresiva psicógena	Inclusion
+F32	F323	Episodios únicos de psicosis depresiva reactiva	Inclusion
+F32	F328	Otros episodios depresivos	Canonical
+F32	F328	Depresión atípica	Inclusion
+F32	F328	Episodios únicos de depresión “enmascarada” SAI	Inclusion
+F32	F329	Episodio depresivo, no especificado	Canonical
+F32	F329	Depresión SAI	Inclusion
+F32	F329	Trastorno depresivo SAI	Inclusion
+F33	F33	Trastorno depresivo recurrente	Canonical
+F33	F33	episodios recurrentes de depresión psicógena	Inclusion
+F33	F33	episodios recurrentes de depresión reactiva	Inclusion
+F33	F33	episodios recurrentes de reacción depresiva	Inclusion
+F33	F33	trastorno depresivo estacional	Inclusion
+F33	F330	Trastorno depresivo recurrente, episodio leve presente	Canonical
+F33	F331	Trastorno depresivo recurrente, episodio moderado presente	Canonical
+F33	F332	Trastorno depresivo recurrente, episodio depresivo grave presente sin síntomas psicóticos	Canonical
+F33	F332	Depresión endógena sin síntomas psicóticos	Inclusion
+F33	F332	Depresión profunda recurrente sin síntomas psicóticos	Inclusion
+F33	F332	Depresión vital recurrente sin síntomas psicóticos	Inclusion
+F33	F332	Psicosis maníaco-depresiva de tipo depresivo sin síntomas psicóticos	Inclusion
+F33	F333	Trastorno depresivo recurrente, episodio depresivo grave presente, con síntomas psicóticos	Canonical
+F33	F333	Depresión endógena con síntomas psicóticos	Inclusion
+F33	F333	Episodios recurrentes graves de depresión profunda con síntomas psicóticos	Inclusion
+F33	F333	Episodios recurrentes graves de depresión psicótica	Inclusion
+F33	F333	Episodios recurrentes graves de psicosis depresiva psicógena	Inclusion
+F33	F333	Episodios recurrentes graves de psicosis depresiva reactiva	Inclusion
+F33	F333	Psicosis maníaco-depresiva de tipo depresivo con síntomas psicóticos	Inclusion
+F33	F334	Trastorno depresivo recurrente actualmente en remisión	Canonical
+F33	F338	Otros trastornos depresivos recurrentes	Canonical
+F33	F339	Trastorno depresivo recurrente, no especificado	Canonical
+F33	F339	Depresión monopolar SAI	Inclusion
+F34	F34	Trastornos del humor persistentes	Canonical
+F34	F34	Trastornos afectivos persistentes	Inclusion
+F34	F340	Ciclotimia	Canonical
+F34	F340	Personalidad cicloide	Inclusion
+F34	F340	Personalidad ciclotímica	Inclusion
+F34	F340	Trastorno afectivo de la personalidad	Inclusion
+F34	F341	Distimia	Canonical
+F34	F341	Depresión ansiosa persistente	Inclusion
+F34	F341	Depresión neurótica	Inclusion
+F34	F341	Neurosis depresiva	Inclusion
+F34	F341	Trastorno depresivo de la personalidad	Inclusion
+F34	F348	Otros trastornos del humor persistentes	Canonical
+F34	F348	Otros trastornos afectivos persistentes	Inclusion
+F34	F349	Trastorno persistente del humor, no especificado	Canonical
+F34	F349	Trastorno persistente afectivo, no especificado	Inclusion
+F38	F38	Otros trastornos del humor	Canonical
+F38	F38	Otros trastornos afectivos	Inclusion
+F38	F380	Otros trastornos del humor, aislados	Canonical
+F38	F380	Otros trastornos afectivos, aislados	Inclusion
+F38	F380	Episodio afectivo mixto	Inclusion
+F38	F381	Otros trastornos del humor, recurrentes	Canonical
+F38	F381	Otros trastornos afectivos, recurrentes	Inclusion
+F38	F381	Episodios depresivos recurrentes breves	Inclusion
+F38	F388	Otros trastornos del humor, especificados	Canonical
+F38	F388	Otros trastornos del humor afectivos, especificados	Inclusion
+F39	F39	Trastorno del humor, no especificado	Canonical
+F39	F39	Trastorno afectivo, no especificado	Inclusion
+F39	F39	Psicosis afectiva SAI	Inclusion
+F40	F40	Trastornos fóbicos de ansiedad	Canonical
+F40	F400	Agorafobia	Canonical
+F40	F400	Agorafobia sin historia de trastornos de pánico	Inclusion
+F40	F400	Trastorno de pánico con agorafobia	Inclusion
+F40	F401	Fobias sociales	Canonical
+F40	F401	Antropofobia	Inclusion
+F40	F401	Neurosis social	Inclusion
+F40	F402	Fobias específicas	Canonical
+F40	F402	Fobias específicas aisladas	Inclusion
+F40	F402	Acrofobia	Inclusion
+F40	F402	Claustrofobia	Inclusion
+F40	F402	Fobia a los animales	Inclusion
+F40	F402	Fobia simple	Inclusion
+F40	F408	Otros trastornos fóbicos de ansiedad	Canonical
+F40	F409	Trastorno fóbico de ansiedad, no especificado	Canonical
+F40	F409	Estado fóbico SAI	Inclusion
+F40	F409	Fobia SAI	Inclusion
+F41	F41	Otros trastornos de ansiedad	Canonical
+F41	F410	Trastorno de pánico	Canonical
+F41	F410	ansiedad paroxística episódica	Inclusion
+F41	F410	Ataque de pánico	Inclusion
+F41	F410	Estado de pánico	Inclusion
+F41	F411	Trastorno de ansiedad generalizada	Canonical
+F41	F411	Estado de ansiedad          	Inclusion
+F41	F411	Neurosis de ansiedad	Inclusion
+F41	F411	Reacción de ansiedad	Inclusion
+F41	F412	Trastorno mixto de ansiedad y depresión	Canonical
+F41	F412	Depresión de ansiedad	Inclusion
+F41	F412	Depresión de ansiedad leve	Inclusion
+F41	F412	Depresión de ansiedad no persistente	Inclusion
+F41	F413	Otros trastornos de ansiedad mixtos	Canonical
+F41	F418	Otros trastornos de ansiedad especificados	Canonical
+F41	F418	Histeria de ansiedad	Inclusion
+F41	F419	Trastorno de ansiedad, no especificado	Canonical
+F41	F419	Ansiedad SAI	Inclusion
+F42	F42	Trastorno obsesivo-compulsivo	Canonical
+F42	F42	neurosis anancástica	Inclusion
+F42	F42	neurosis obsesivo-compulsiva	Inclusion
+F42	F420	Predominio de pensamientos o rumiaciones obsesivas	Canonical
+F42	F421	Predominio de actos compulsivos	Canonical
+F42	F421	Predominio de rituales obsesivos	Inclusion
+F42	F422	Actos e ideas obsesivas mixtos	Canonical
+F42	F428	Otros trastornos obsesivo-compulsivos	Canonical
+F42	F429	Trastorno obsesivo-compulsivo, no especificado	Canonical
+F43	F43	Reacción al estrés grave y trastornos de adaptación	Canonical
+F43	F430	Reacción al estrés agudo	Canonical
+F43		Trastorno transitorio que se desarrolla en una persona que no tiene ningún otro trastorno mental aparente, en respuesta a un estrés físico y mental excepcional y que habitualmente remite en un lapso de horas o de días. En la aparición y en la gravedad de las reacciones agudas de estrés desempeñan un papel la vulnerabilidad individual y la capacidad de adaptación de la persona. Los síntomas configuran un cuadro típicamente cambiante y mezclado que comprende un estado inicial de “aturdimiento”, con cierta constricción del campo de la conciencia y con estrechamiento de la atención, incapacidad para captar estímulos y desorientación. Este estado puede ser seguido tanto de un aislamiento ulterior de la situación circundante (incluso hasta el grado de un estupor disociativo, F44.2), como de agitación e hiperactividad (reacción de fuga). Con frecuencia hay signos autonómicos de pánico grave ansioso (taquicardia, sudor, rubor). Habitualmente los síntomas aparecen minutos después del impacto del estímulo o suceso estresante, y desaparecen en el lapso de dos o tres días (y a menudo, en horas). Puede haber amnesia total o parcial del episodio (F44.0). Si los síntomas persisten, debe considerarse un cambio de diagnóstico.	
+F43	F430	Choque psíquico	Inclusion
+F43	F430	Estado de crisis	Inclusion
+F43	F430	Fatiga de combate	Inclusion
+F43	F430	Reacción aguda al estrés	Inclusion
+F43	F430	Reacción de crisis aguda	Inclusion
+F43	F431	Trastorno de estrés postraumático	Canonical
+F43	F431	Neurosis traumática	Inclusion
+F43	F432	Trastornos de adaptación	Canonical
+F43	F432	Choque cultural	Inclusion
+F43	F432	Hospitalismo en niños	Inclusion
+F43	F432	Reacción de duelo	Inclusion
+F43	F438	Otras reacciones al estrés grave	Canonical
+F43	F439	Reacción al estrés grave, no especificada	Canonical
+F44	F44	Trastornos disociativos	Canonical
+F44	F44	Trastornos de conversión	Inclusion
+F44	F44	histeria	Inclusion
+F44	F44	histeria de conversión	Inclusion
+F44	F44	psicosis histérica	Inclusion
+F44	F44	reacción de conversión	Inclusion
+F44	F440	Amnesia disociativa	Canonical
+F44	F441	Fuga disociativa	Canonical
+F44	F442	Estupor disociativo	Canonical
+F44	F443	Trastornos de trance y de posesión	Canonical
+F44	F444	Trastornos disociativos del movimiento	Canonical
+F44	F444	Afonía psicógena	Inclusion
+F44	F444	Disfonía psicógena	Inclusion
+F44	F445	Convulsiones disociativas	Canonical
+F44	F446	Anestesia disociativa y pérdida sensorial	Canonical
+F44	F446	Sordera de origen psicógeno	Inclusion
+F44	F447	Trastornos disociativos mixtos	Canonical
+F44	F447	Trastornos mixtos y de conversión	Inclusion
+F44	F448	Otros trastornos disociativos	Canonical
+F44	F448	Otros trastornos de conversión	Inclusion
+F44	F448	Confusión psicógena	Inclusion
+F44	F448	Estado crepuscular psicógeno	Inclusion
+F44	F448	Personalidad múltiple	Inclusion
+F44	F448	Síndrome de Ganser	Inclusion
+F44	F449	Trastorno disociativo, no especificado	Canonical
+F44	F449	Trastorno de conversión, no especificado	Inclusion
+F45	F45	Trastornos somatomorfos	Canonical
+F45	F450	Trastorno de somatización	Canonical
+F45	F450	Trastorno de Briquet	Inclusion
+F45	F450	Trastorno psicosomático múltiple	Inclusion
+F45	F451	Trastorno somatomorfo indiferenciado	Canonical
+F45	F451	Trastorno psicosomático indiferenciado	Inclusion
+F45	F452	Trastorno hipocondríaco	Canonical
+F45	F452	Dismorfofobia	Inclusion
+F45	F452	Dismorfofobia sin delirios	Inclusion
+F45	F452	Hipocondría	Inclusion
+F45	F452	Neurosis hipocondríaca	Inclusion
+F45	F452	Nosofobia	Inclusion
+F45	F452	Trastorno dismórfico corporal	Inclusion
+F45	F453	Disfunción autonómica somatomorfa	Canonical
+F45	F453	Astenia neurocirculatoria	Inclusion
+F45	F453	Formas psicógenas de aerofagia	Inclusion
+F45	F453	Formas psicógenas de diarrea	Inclusion
+F45	F453	Formas psicógenas de dispepsia	Inclusion
+F45	F453	Formas psicógenas de disuria	Inclusion
+F45	F453	Formas psicógenas de flatulencia	Inclusion
+F45	F453	Formas psicógenas de hiperventilación	Inclusion
+F45	F453	Formas psicógenas de hipo	Inclusion
+F45	F453	Formas psicógenas de pilorospasmo	Inclusion
+F45	F453	Formas psicógenas de polaquiuria	Inclusion
+F45	F453	Formas psicógenas de síndrome de colon irritable	Inclusion
+F45	F453	Formas psicógenas de tos	Inclusion
+F45	F453	Neurosis cardíaca	Inclusion
+F45	F453	Neurosis gástrica	Inclusion
+F45	F453	Síndrome de Da Costa	Inclusion
+F45	F454	Trastorno de dolor persistente somatomorfo	Canonical
+F45	F454	Cefalea psicógena	Inclusion
+F45	F454	Dolor de espalda psicógeno	Inclusion
+F45	F454	Psicalgia	Inclusion
+F45	F454	Trastorno doloroso somatomorfo	Inclusion
+F45	F458	Otros trastornos somatomorfos	Canonical
+F45	F458	Disfagia psicógena, incluido el “globus hystericus”	Inclusion
+F45	F458	Dismenorrea psicógena	Inclusion
+F45	F458	Prurito psicógeno	Inclusion
+F45	F458	Rechinamiento de dientes	Inclusion
+F45	F458	Tortícolis	Inclusion
+F45	F459	Trastorno somatomorfo, no especificado	Canonical
+F45	F459	Trastorno psicosomático SAI	Inclusion
+F48	F48	Otros trastornos neuróticos	Canonical
+F48	F480	Neurastenia	Canonical
+F48	F480	Síndrome de fatiga	Inclusion
+F48	F481	Síndrome de despersonalización y desvinculación de la realidad	Canonical
+F48	F488	Otros trastornos neuróticos especificados	Canonical
+F48	F488	Neurosis ocupacional, incluido el calambre del escritor	Inclusion
+F48	F488	Neurosis psicasténica	Inclusion
+F48	F488	Psicastenia	Inclusion
+F48	F488	Síncope psicógeno	Inclusion
+F48	F488	Síndrome de Dhat	Inclusion
+F48	F489	Trastorno neurótico, no especificado	Canonical
+F48	F489	Neurosis SAI	Inclusion
+F50	F50	Trastornos de la ingestión de alimentos	Canonical
+F50	F500	Anorexia nerviosa	Canonical
+F50	F501	Anorexia nerviosa atípica	Canonical
+F50	F502	Bulimia nerviosa	Canonical
+F50	F502	Bulimia SAI	Inclusion
+F50	F502	Hiperorexia nerviosa	Inclusion
+F50	F503	Bulimia nerviosa atípica	Canonical
+F50	F504	Hiperfagia asociada con otras alteraciones psicológicas	Canonical
+F50	F504	Hiperingestión de alimentos debida a acontecimientos angustiantes, tales como duelos, accidentes, nacimientos, etc.	Inclusion
+F50	F504	Hiperfagia psicógena	Inclusion
+F50	F505	Vómitos asociados con otras alteraciones psicológicas	Canonical
+F50	F505	Vómito psicógeno	Inclusion
+F50	F508	Otros trastornos de la ingestión de alimentos	Canonical
+F50	F508	Pérdida de origen psicógeno del apetito	Inclusion
+F50	F508	Pica en adultos	Inclusion
+F50	F509	Trastorno de la ingestión de alimentos, no especificado	Canonical
+F51	F51	Trastornos no orgánicos del sueño	Canonical
+F51	F510	Insomnio no orgánico	Canonical
+F51	F511	Hipersomnio no orgánico	Canonical
+F51	F512	Trastorno no orgánico del ciclo sueño-vigilia	Canonical
+F51	F512	Inversión psicógena del ritmo circadiano	Inclusion
+F51	F512	Inversión psicógena del ritmo del sueño	Inclusion
+F51	F512	Inversión psicógena del ritmo nictameral	Inclusion
+F51	F513	Sonambulismo	Canonical
+F51	F514	Terrores del sueño	Canonical
+F51	F514	terrores nocturnos	Inclusion
+F51	F515	Pesadillas	Inclusion
+F51	F515	Trastorno de ansiedad del sueño	Canonical
+F51	F518	Otros trastornos no orgánicos del sueño	Canonical
+F51	F519	Trastorno no orgánico del sueño, no especificado	Canonical
+F51	F519	Trastorno emocional del sueño SAI	Inclusion
+F52	F52	Disfunción sexual no ocasionada por trastorno ni enfermedad orgánicos	Canonical
+F52	F520	Falta o pérdida del deseo sexual	Canonical
+F52	F520	Frigidez	Inclusion
+F52	F520	Trastorno hipoactivo del deseo sexual	Inclusion
+F52	F521	Aversión al sexo y falta de goce sexual	Canonical
+F52	F521	Anhedonia	Inclusion
+F52	F521	Anhedonia sexual	Inclusion
+F52	F522	Falla de la respuesta genital	Canonical
+F52	F522	Impotencia psicógena	Inclusion
+F52	F522	Trastorno de la erección masculina	Inclusion
+F52	F522	Trastorno de la estimulación sexual femenina	Inclusion
+F52	F523	Disfunción orgásmica	Canonical
+F52	F523	Anorgasmia psicógena	Inclusion
+F52	F523	Orgasmo inhibido	Inclusion
+F52	F523	Orgasmo inhibido femenino	Inclusion
+F52	F523	Orgasmo inhibido masculino	Inclusion
+F52	F524	Eyaculación precoz	Canonical
+F52	F525	Vaginismo no orgánico	Canonical
+F52	F525	Vaginismo psicógeno	Inclusion
+F52	F526	Dispareunia no orgánica	Canonical
+F52	F526	Dispareunia psicógena	Inclusion
+F52	F527	Impulso sexual excesivo	Canonical
+F52	F527	Ninfomanía	Inclusion
+F52	F527	Satiriasis	Inclusion
+F52	F528	Otras disfunciones sexuales, no ocasionadas por trastorno ni por enfermedad orgánicos	Canonical
+F52	F529	Disfunción sexual no ocasionada por trastorno ni por enfermedad orgánicos, no especificada	Canonical
+F53	F53	Trastornos mentales y del comportamiento asociados con el puerperio, no clasificados en otra parte	Canonical
+F53	F530	Trastornos mentales y del comportamiento leves, asociados con el puerperio, no clasificados en otra parte	Canonical
+F53	F530	Depresión postnatal SAI	Inclusion
+F53	F530	Depresión postparto SAI	Inclusion
+F53	F531	Trastornos mentales y del comportamiento graves, asociados con el puerperio, no clasificados en otra parte	Canonical
+F53	F531	Psicosis puerperal SAI	Inclusion
+F53	F538	Otros trastornos mentales y del comportamiento asociados con el puerperio, no clasificados en otra parte	Canonical
+F53	F539	Trastorno mental puerperal, no especificado	Canonical
+F54	F54	Factores psicológicos y del comportamiento asociados con trastornos o enfermedades clasificados en otra parte	Canonical
+F55	F55	Abuso de sustancias que no producen dependencia	Canonical
+F55	F55	Abuso de antiácidos	Inclusion
+F55	F55	Abuso de esteroides u hormonas	Inclusion
+F55	F55	Abuso de hierbas o remedios autóctonos	Inclusion
+F55	F55	Abuso de vitaminas	Inclusion
+F55	F55	Hábito por laxantes	Inclusion
+F59	F59	Síndromes del comportamiento asociados con alteraciones fisiológicas y factores físicos, no especificados	Canonical
+F59	F59	Disfunción fisiológica psicógena SAI	Inclusion
+F60	F60	Trastornos específicos de la personalidad	Canonical
+F60	F600	Trastorno paranoide de la personalidad	Canonical
+F60	F600	Personalidad expansivo-paranoide	Inclusion
+F60	F600	Personalidad fanática	Inclusion
+F60	F600	Personalidad paranoide	Inclusion
+F60	F600	Personalidad querellante	Inclusion
+F60	F600	Personalidad sensitivo-paranoide	Inclusion
+F60	F601	Trastorno esquizoide de la personalidad	Canonical
+F60	F602	Trastorno asocial de la personalidad	Canonical
+F60	F602	Personalidad amoral	Inclusion
+F60	F602	Personalidad antisocial	Inclusion
+F60	F602	Personalidad asocial	Inclusion
+F60	F602	Personalidad psicopática	Inclusion
+F60	F602	Personalidad sociopática	Inclusion
+F60	F603	Trastorno de la personalidad emocionalmente inestable	Canonical
+F60	F603	Personalidad agresiva	Inclusion
+F60	F603	Personalidad explosiva	Inclusion
+F60	F603	Personalidad limítrofe	Inclusion
+F60	F604	Trastorno histriónico de la personalidad	Canonical
+F60	F604	Personalidad histérica	Inclusion
+F60	F604	Personalidad psicoinfantil	Inclusion
+F60	F605	Trastorno anancástico de la personalidad	Canonical
+F60	F605	Personalidad compulsiva	Inclusion
+F60	F605	Personalidad obsesiva	Inclusion
+F60	F605	Personalidad obsesivo-compulsiva	Inclusion
+F60	F606	Trastorno de la personalidad ansiosa	Canonical
+F60	F606	Trastorno de la personalidad ansiosa evasiva	Inclusion
+F60	F606	Trastorno de la personalidad ansiosa elusiva	Inclusion
+F60	F607	Trastorno de la personalidad dependiente	Canonical
+F60	F607	Personalidad asténica	Inclusion
+F60	F607	Personalidad inadecuada	Inclusion
+F60	F607	Personalidad pasiva	Inclusion
+F60	F607	Personalidad derrotista	Inclusion
+F60	F608	Otros trastornos específicos de la personalidad	Canonical
+F60	F608	Personalidad excéntrica	Inclusion
+F60	F608	Personalidad inmadura	Inclusion
+F60	F608	Personalidad narcisista	Inclusion
+F60	F608	Personalidad pasivo-agresiva	Inclusion
+F60	F608	Personalidad psiconeurótica	Inclusion
+F60	F608	Personalidad tipo “inestable”	Inclusion
+F60	F609	Trastorno de la personalidad, no especificado	Canonical
+F60	F609	Neurosis del carácter SAI	Inclusion
+F60	F609	Personalidad patológica SAI	Inclusion
+F61	F61	Trastornos mixtos y otros trastornos de la personalidad	Canonical
+F62	F62	Cambios perdurables de la personalidad, no atribuibles a lesión o a enfermedad cerebral	Canonical
+F62	F620	Cambio perdurable de la personalidad después de una experiencia catastrófica	Canonical
+F62	F620	Cambio de la personalidad consecutivo a cautividad prolongada con posibilidad inminente de ser asesinado	Inclusion
+F62	F620	Cambio de la personalidad consecutivo a desastres	Inclusion
+F62	F620	Cambio de la personalidad consecutivo a experiencias en campo de concentración	Inclusion
+F62	F620	Cambio de la personalidad consecutivo a exposición prolongada a situaciones de amenaza para la vida, tales como la posibilidad de ser víctima del terrorismo	Inclusion
+F62	F620	Cambio de la personalidad consecutivo a tortura	Inclusion
+F62	F621	Cambio perdurable de la personalidad consecutivo a una enfermedad psiquiátrica	Canonical
+F62	F628	Otros cambios perdurables de la personalidad	Canonical
+F62	F628	Síndrome de personalidad en el dolor crónico	Inclusion
+F62	F629	Cambio perdurable de la personalidad, no especificado	Canonical
+F63	F63	Trastornos de los hábitos y de los impulsos	Canonical
+F63	F630	Juego patológico	Canonical
+F63	F630	Juego compulsivo	Inclusion
+F63	F631	Piromanía	Canonical
+F63	F632	Hurto patológico	Canonical
+F63	F632	cleptomanía	Inclusion
+F63	F633	Tricotilomanía	Canonical
+F63	F638	Otros trastornos de los hábitos y de los impulsos	Canonical
+F63	F638	Trastorno explosivo intermitente	Inclusion
+F63	F639	Trastorno de los hábitos y de los impulsos, no especificado	Canonical

@@ -25,7 +25,7 @@ TO DO:
       ° tumores secundarios/metastasis **aun no
    * COVID
    * NAC
-- Tokenizar actas / Mantener orden de los padecimientos
+- ~~Tokenizar actas / Mantener orden de los padecimientos~~
 - Probar quitando stopwords desde el inicio
 
 - Hacer la _roxygenización_
