@@ -60,4 +60,5 @@ Estructura del reporte
 Preguntas:
 - Cetoacidosis diabética / pie diabético
 - Cáncer cervicouterino
+- choque septico
 
