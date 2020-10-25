@@ -85,11 +85,12 @@ auxiliar <- read.csv('temp/catalogo_covid_revKeo.csv') %>%
          term = 'Auxiliar') %>%
   select(category:term)
 
-muestra <- tokenizeCertificates(actas[c(1:44,46:100),])
+muestra <- tokenizeCertificates(actas) %>%
+  filter(cause != '', !id %in% c(45,283,298), id <= 302)
 
 ICDLookUp('fibrilacion auricular')
-          # useExternal = TRUE,
-          # externalCatalog = bind_rows(subcategories, auxiliar))
+ICDLookUp('pancreatitis cronica')
+ICDLookUp('cancer hepatico')
 
 
 resultados <- lapply(unique(muestra$id),
@@ -113,10 +114,10 @@ resultados3 <- resultados %>%
 muestra$res <- resultados3$disease
 
 1-sum(is.na(muestra$res))/nrow(muestra)
+muestra %>% count(is.na(res))
 
+viejo <- read.csv('temp/tot_orden_2020.csv') %>%
+  filter(!id_acta %in% c(45,283,298), id_acta <= 302)
 
-muestra %>%
-  bind_cols(resultados2$disease) %>% View
-  # unnest(res) %>%
-  print(n=100)
-
+1-sum(viejo$sin_match == '')/nrow(viejo)
+viejo %>% count(sin_match == '')
