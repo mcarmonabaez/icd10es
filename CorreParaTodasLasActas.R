@@ -31,27 +31,6 @@ saveRDS(actas2, 'temp/actas/todas.RDS')
 #          term = 'Auxiliar') %>%
 #   select(category:term)
 
-# resultados <- lapply(unique(actas3$folio),
-#                      function(x) {
-#                        if(x %% 100 == 0)
-#                          print(x)
-#                        subset <- filter(actas3, folio == x)
-#                        lapply(subset$cause, ICDLookUp)
-#                      })
-
-resultados <- lapply(unique(actas2$folio),
-                     function(x) {
-                       if(x %% 100 == 0)
-                         print(x)
-                       subset <- filter(actas2, folio == x)
-                       tryCatch({
-                         lapply(subset$cause, ICDLookUp)
-                         # lapply('hola', printInfo)
-                       }, error=function(e){
-                         data.frame(category = 'error', subcategory = NA_character_, disease = NA_character_)
-                       })
-                     })
-
 padecimientos <- actas2 %>% select(cause) %>%
   unique %>%
   arrange(cause) %>%
@@ -75,24 +54,25 @@ beepr::beep(2)
 saveRDS(resultados, 'temp/actas/todasResultados.RDS')
 
 resultados3 <- resultados %>%
-  bind_rows(.id = 'id') %>%
-  # filter(duplicated(id)) %>%
-  mutate(id = as.numeric(id)) %>%
-  arrange(id) %>%
-  group_by(id) %>%
+  bind_rows(.id = 'idRun') %>%
+  filter(!duplicated(idRun)) %>%
+  mutate(idRun = as.numeric(idRun)) %>%
+  arrange(idRun) %>%
+  group_by(idRun) %>%
   mutate(order = row_number()) %>%
-  ungroup()
+  ungroup() %>%
+  select(-idRun)
 
-actas2$res <- resultados3$disease
+padecimientos$disease <- resultados3$disease
 
-# 1-sum(is.na(actas$res))/nrow(actas)
-# actas %>% count(is.na(res))
+total <- actas2 %>%
+  left_join(select(padecimientos, -id))
 
 
-actas %>%
+total %>%
   group_by(id) %>%
   summarise(numPadecimientos = n(),
-            completos = sum(!is.na(res), na.rm = T),
+            completos = sum(!is.na(disease), na.rm = T),
             logrado = ifelse(numPadecimientos == completos, 'completo',
                              ifelse(completos == 0, 'vacio',
                                     'parcial'))) %>%
@@ -100,6 +80,56 @@ actas %>%
   count(logrado) %>%
   mutate(p = n / sum(n))
 
+# Análisis sobrantes ------------------------------------------------------
+
+### Sólo vacíos
+vacios <- total %>%
+  group_by(id) %>%
+  filter(sum(is.na(disease)) == max(row_number())) %>%
+  ungroup()
+
+vacios %>%
+  count(cause) %>%
+  arrange(-n) %>%
+  mutate(p = n/sum(n)) %>% View
+
+vacios$id %>% unique %>% length
+actas$id %>% unique %>% length
+
+### Sólo parciales
+parciales <- total %>%
+  group_by(id) %>%
+  filter(sum(is.na(disease)) < max(row_number()),
+         sum(is.na(disease)) > 0) %>%
+  ungroup()
+
+parciales %>%
+  filter(is.na(disease)) %>%
+  count(cause) %>%
+  arrange(-n) %>%
+  mutate(p = n/sum(n))
+
+parciales$id %>% unique %>% length
+actas$id %>% unique %>% length
+
+### Juntos
+faltantes <- bind_rows(vacios, parciales) %>%
+  filter(is.na(disease)) %>%
+  count(cause) %>%
+  arrange(-n) %>%
+  mutate(p = n/sum(n))
+
+faltantes %>%
+  filter(p >= 0.001) %>% View
+  pull(p) %>%
+  sum()
+
+faltantes %>%
+  filter(grepl('coronav|cov', cause)) %>%
+  pull(p) %>%
+  sum()
+
+# Resultados viejos -------------------------------------------------------
 
 viejo <- read.csv('temp/tot_orden_2020.csv') %>%
   filter(id_acta <= 300)
@@ -114,6 +144,8 @@ conteoViejo <- viejo %>%
             logrado = ifelse(numPadecimientos == completos, 'completo', 'parcial')) %>%
   ungroup() %>%
   count(logrado, numHuerfanos = numHuerfanos == 0)
+
+
 
 conteoViejo %>%
   tibble::add_row(logrado = 'vacio', numHuerfanos = FALSE, n = n_distinct(actas$id) - sum(conteoViejo$n)) %>%
