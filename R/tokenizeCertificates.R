@@ -14,7 +14,8 @@ tokenizeCertificates <- function(df) {
   # str_remove_all(paste0(', ', casos, collapse = '|'), ',')
 
   df %>%
-    mutate(cause = str_replace_all(tolower(cause), ', no espec', ' no espec'),
+    mutate(cause = str_replace_all(tolower(cause), '- ', ', '),
+           cause = str_replace_all(cause, ', no espec', ' no espec'),
            cause = str_replace_all(cause, '\\.', ',')) %>%
     unnest_tokens(cause, cause, token = 'regex', pattern = ",") %>%
     group_by(id) %>%

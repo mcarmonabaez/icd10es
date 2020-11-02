@@ -40,12 +40,20 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
 
     if(tabular == 'single') {
 
-      query <- query %>%
+      query2 <- query %>%
         filter(term == 'Canonical') %>%
         mutate(subcategory = NA) %>%
         select(category, subcategory, disease)
 
-      return(query)
+      if(nrow(query2) == 0) {
+        query2 <- query %>%
+          filter(term == 'Inclusion') %>%
+          mutate(subcategory = NA) %>%
+          select(category, subcategory, disease) %>%
+          slice(1)
+      }
+
+      return(query2)
     }
 
     if(tabular == 'simple') return(query)
@@ -98,8 +106,13 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
       filter(term == 'Canonical') %>% pull(disease)
 
     if(tabular == 'single') {
-      if(nrow(query) == 0)
-        query <- data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_)
+      if(nrow(query) == 0) {
+        query <- query %>%
+          filter(term == 'Inclusion') %>%
+          slice(1)
+      }
+      # if(nrow(query) == 0)
+      #   query <- data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_)
       return(query %>% filter(term == 'Canonical') %>% select(-term))
     }
 

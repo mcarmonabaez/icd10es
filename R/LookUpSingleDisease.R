@@ -1,7 +1,6 @@
 #' Look up disease in ICD10 catalog
 #'
 #' @param pattern A string of the name of the disease to look up.
-#' @param nMatches A number indicating the number of matches to return in case of more than one coincidence.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
 #' @param tabular A string that can take values 'single', 'simple', or full'.
 #' @param catalog A data frame containing the catalog where the search will be made.
@@ -14,7 +13,7 @@
 #' @importFrom rlang quo_expr
 #' @importFrom rlang !!
 
-catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
+catalogLookUp <- function(pattern, jwBound = 0.9,
                           catalog, searchVar = 'disease') {
 
   if(!searchVar %in% names(catalog)) {
@@ -64,7 +63,7 @@ catalogLookUp <- function(pattern, nMatches = 1, jwBound = 0.9,
                             subcategory = catalog$subcategory,
                             stringsAsFactors = FALSE)[!is.na(diseaseToPattern), ]
     if(nrow(dfDisease) == 1) return(dfDisease$subcategory) ## regresar la subcategoria 'no especificado'
-    if(nrow(dfDisease) > 0 ) return(diseaseToPattern) ## revisar si es una sola categoria o mas de una
+    if(nrow(dfDisease) > 1 ) return(residualMatch(pattern, dfDisease, jwBound, tabular = tabular)) ## revisar si es una sola categoria o mas de una
   }
 
   if(residualDisease == TRUE) {
@@ -115,11 +114,14 @@ residualMatch <- function(pattern, dfDisease, jwBound, tabular) {
       return(dfDisease$subcategory[indNotSpecified[1]])
     } else {
       indNotSpecified <- which(!is.na(str_match(dfDisease$disease, 'no especificad')))
-      return(dfDisease$subcategory[indNotSpecified])
+      if(length(indNotSpecified) > 0)
+        return(dfDisease$subcategory[indNotSpecified])
+      else
+        return(names(nCat))
     }
   } else {
     dfDisease$metric <- stringsim(dfDisease$disease, paste0(pattern, ' sai'),
-                                   method = 'jw', p = 0)
+                                  method = 'jw', p = 0)
 
     jwMatch <- dfDisease[dfDisease$metric > jwBound, ] %>%
       arrange(desc(metric))
@@ -129,7 +131,7 @@ residualMatch <- function(pattern, dfDisease, jwBound, tabular) {
     } else {
 
       dfDisease$metric <- stringsim(dfDisease$disease, paste0(pattern, ' no especific'),
-                                               method = 'jw', p = 0)
+                                    method = 'jw', p = 0)
 
       jwMatch <- dfDisease[dfDisease$metric > jwBound, ] %>%
         arrange(desc(metric))

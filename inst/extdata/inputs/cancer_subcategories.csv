@@ -641,3 +641,141 @@ C96;C962;sarcoma mastocitos;Inclusion
 C96;C963;linfoma histiocitico verdadero;Canonical
 C96;C967;especificados tejido linfatico hematopoyetico tejidos afines;Canonical
 C96;C969;tejido linfatico hematopoyetico tejidos afines especificacion;Canonical
+C00;C00;tumor maligno del labio;Canonical
+C01;C01;tumor maligno de la base de la lengua;Canonical
+C01;C01;cara dorsal de la base de la lengua;Inclusion
+C01;C01;raiz de la lengua sai;Inclusion
+C01;C01;tercio posterior de la lengua;Inclusion
+C02;C02;tumor maligno de otras partes y de las no especificadas de la lengua;Canonical
+C03;C03;tumor maligno de la encia;Canonical
+C03;C03;mucosa del reborde alveolar;Inclusion
+C03;C03;gingiva;Inclusion
+C04;C04;tumor maligno del piso de la boca;Canonical
+C05;C05;tumor maligno del paladar;Canonical
+C06;C06;tumor maligno de otras partes y de las no especificadas de la boca;Canonical
+C07;C07;tumor maligno de la glandula parotida;Canonical
+C08;C08;tumor maligno de otras glandulas salivales mayores y de las no especificadas;Canonical
+C09;C09;tumor maligno de la amigdala;Canonical
+C10;C10;tumor maligno de la orofaringe;Canonical
+C11;C11;tumor maligno de la nasofaringe;Canonical
+C12;C12;tumor maligno del seno piriforme;Canonical
+C12;C12;fosa piriforme;Inclusion
+C13;C13;tumor maligno de la hipofaringe;Canonical
+C14;C14;tumor maligno de otros sitios y de los mal definidos del labio de la cavidad bucal y de la faringe;Canonical
+C15;C15;tumor maligno del esofago;Canonical
+C16;C16;tumor maligno del estomago;Canonical
+C17;C17;tumor maligno del intestino delgado;Canonical
+C18;C18;tumor maligno del colon;Canonical
+C19;C19;tumor maligno de la union rectosigmoidea;Canonical
+C19;C19;colon y recto;Inclusion
+C19;C19;colon rectosigmoideo;Inclusion
+C20;C20;tumor maligno del recto;Canonical
+C20;C20;ampolla rectal;Inclusion
+C21;C21;tumor maligno del ano y del conducto anal;Canonical
+C22;C22;tumor maligno del higado y de las vias biliares intrahepaticas;Canonical
+C23;C23;tumor maligno de la vesicula biliar;Canonical
+C24;C24;tumor maligno de otras partes y de las no especificadas de las vias biliares;Canonical
+C25;C25;tumor maligno del pancreas;Canonical
+C26;C26;tumor maligno de otros sitios y de los mal definidos de los organos digestivos;Canonical
+C30;C30;tumor maligno de las fosas nasales y del oido medio;Canonical
+C31;C31;tumor maligno de los senos paranasales;Canonical
+C32;C32;tumor maligno de la laringe;Canonical
+C33;C33;tumor maligno de la traquea;Canonical
+C34;C34;tumor maligno de los bronquios y del pulmon;Canonical
+C37;C37;tumor maligno del timo;Canonical
+C38;C38;tumor maligno del corazon del mediastino y de la pleura;Canonical
+C39;C39;tumor maligno de otros sitios y de los mal definidos del sistema respiratorio y de los organos intratoracicos;Canonical
+C40;C40;tumor maligno de los huesos y de los cartilagos articulares de los miembros;Canonical
+C41;C41;tumor maligno de los huesos y de los cartilagos articulares de otros sitios y de sitios no especificados;Canonical
+C43;C43;melanoma maligno de la piel;Canonical
+C44;C44;otros tumores malignos de la piel;Canonical
+C44;C44;tumor maligno de glandulas sebaceas;Inclusion
+C44;C44;tumor maligno de glandulas sudoriparas;Inclusion
+C45;C45;mesotelioma;Canonical
+C45;C45;los tipos morfologicos clasificables en m905 con codigo de comportamiento 3;Inclusion
+C46;C46;sarcoma de kaposi;Canonical
+C46;C46;los tipos morfologicos clasificables en m9140 con codigo de comportamiento 3;Inclusion
+C47;C47;tumor maligno de los nervios perifericos y del sistema nervioso autonomo;Canonical
+C47;C47;nervios y ganglios simpaticos y parasimpaticos;Inclusion
+C48;C48;tumor maligno del peritoneo y del retroperitoneo;Canonical
+C49;C49;tumor maligno de otros tejidos conjuntivos y de tejidos blandos;Canonical
+C49;C49;bolsa sinovial bursa;Inclusion
+C49;C49;cartilago;Inclusion
+C49;C49;fascia;Inclusion
+C49;C49;ligamento excepto el uterino;Inclusion
+C49;C49;membrana sinovial;Inclusion
+C49;C49;musculo;Inclusion
+C49;C49;tejido graso;Inclusion
+C49;C49;tendon aponeurosis;Inclusion
+C49;C49;vaso linfatico;Inclusion
+C49;C49;vaso sanguineo;Inclusion
+C50;C50;tumor maligno de la mama;Canonical
+C50;C50;tejido conjuntivo de la mama;Inclusion
+C51;C51;tumor maligno de la vulva;Canonical
+C52;C52;tumor maligno de la vagina;Canonical
+C53;C53;tumor maligno del cuello del utero;Canonical
+C54;C54;tumor maligno del cuerpo del utero;Canonical
+C55;C55;tumor maligno del utero parte no especificada;Canonical
+C56;C56;tumor maligno del ovario;Canonical
+C57;C57;tumor maligno de otros organos genitales femeninos y de los no especificados;Canonical
+C58;C58;tumor maligno de la placenta;Canonical
+C58;C58;coriocarcinoma sai;Inclusion
+C58;C58;corionepitelioma sa;Inclusion
+C60;C60;tumor maligno del pene;Canonical
+C61;C61;tumor maligno de la prostata;Canonical
+C62;C62;tumor maligno del testiculo;Canonical
+C63;C63;tumor maligno de otros organos genitales masculinos y de los no especificados;Canonical
+C64;C64;tumor maligno del rinon excepto de la pelvis renal;Canonical
+C65;C65;tumor maligno de la pelvis renal;Canonical
+C65;C65;calices renales;Inclusion
+C65;C65;union pelviureteral;Inclusion
+C66;C66;tumor maligno del ureter;Canonical
+C67;C67;tumor maligno de la vejiga urinaria;Canonical
+C68;C68;tumor maligno de otros organos urinarios y de los no especificados;Canonical
+C69;C69;tumor maligno del ojo y sus anexos;Canonical
+C70;C70;tumor maligno de las meninges;Canonical
+C71;C71;tumor maligno del encefalo;Canonical
+C72;C72;tumor maligno de la medula espinal de los nervios craneales y de otras partes del sistema nervioso central;Canonical
+C73;C73;tumor maligno de la glandula tiroides;Canonical
+C74;C74;tumor maligno de la glandula suprarrenal;Canonical
+C75;C75;tumor maligno de otras glandulas endocrinas y de estructuras afines;Canonical
+C76;C76;tumor maligno de otros sitios y de sitios mal definidos;Canonical
+C77;C77;tumor maligno secundario y el no especificado de los ganglios linfaticos;Canonical
+C78;C78;tumor maligno secundario de los organos respiratorios y digestivos;Canonical
+C79;C79;tumor maligno secundario de otros sitios;Canonical
+C80;C80;tumor maligno de sitios no especificados;Canonical
+C80;C80;cancer tumor maligno sai sitio no especificado primario;Inclusion
+C80;C80;cancer tumor maligno generalizado sitio no especificado primario;Inclusion
+C80;C80;cancer tumor maligno multiple sitio no especificado primario;Inclusion
+C80;C80;carcinoma sitio no especificado primario;Inclusion
+C80;C80;carcinomatosis sitio no especificado primario;Inclusion
+C80;C80;malignidad sitio no especificado primario;Inclusion
+C80;C80;neoplasia maligna sitio no especificado primario;Inclusion
+C80;C80;cancer tumor maligno sai secundario;Inclusion
+C80;C80;cancer tumor maligno generalizado secundario;Inclusion
+C80;C80;cancer tumor maligno multiple secundario;Inclusion
+C80;C80;carcinoma secundario;Inclusion
+C80;C80;carcinomatosis secundario;Inclusion
+C80;C80;malignidad secundario;Inclusion
+C80;C80;neoplasia maligna secundario;Inclusion
+C81;C81;enfermedad de hodgkin;Canonical
+C81;C81;los tipos morfologicos clasificables en m965m966 con codigo de comportamiento 3;Inclusion
+C82;C82;linfoma no hodgkin folicular nodular;Canonical
+C82;C82;linfomas foliculares no hodgkin con o sin areas difusas tipos morfologicos clasificables en m969 con codigo de comportamiento;Inclusion
+C83;C83;linfoma no hodgkin difuso;Canonical
+C84;C84;linfoma de celulas t periferico y cutaneo;Canonical
+C84;C84;los tipos morfologicos clasificables en m970 con codigo de comportamiento 3;Inclusion
+C85;C85;linfoma no hodgkin de otro tipo y el no especificado;Canonical
+C85;C85;los tipos morfologicos clasificables en m9590m9592 m9594 m971 con codigo de comportamiento 3;Inclusion
+C88;C88;enfermedades inmunoproliferativas malignas;Canonical
+C90;C90;mieloma multiple y tumores malignos de celulas plasmaticas;Canonical
+C91;C91;leucemia linfoide;Canonical
+C92;C92;leucemia mieloide;Canonical
+C92;C92;leucemia granulocitica;Inclusion
+C92;C92;leucemia mielogena;Inclusion
+C93;C93;leucemia monocitica;Canonical
+C93;C93;leucemia monocitoide;Inclusion
+C94;C94;otras leucemias de tipo celular especificado;Canonical
+C95;C95;leucemia de celulas de tipo no especificado;Canonical
+C96;C96;otros tumores malignos y los no especificados del tejido linfatico de los organos hematopoyeticos y de tejidos afines;Canonical
+C97;C97;tumores malignos primarios de sitios multiples independientes;Canonical

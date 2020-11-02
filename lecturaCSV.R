@@ -5,7 +5,8 @@ catJuan <- readxl::read_excel('inst/extdata/cie10_completo JUAN.xlsx', sheet = 2
          subcategory = ifelse(subcategory == '', NA, subcategory),
          category = zoo::na.locf(category),
          subcategory = zoo::na.locf(subcategory),
-         disease = cleanString(disease))
+         disease = cleanString(disease)) %>%
+  filter(!grepl('uso emergente', disease))
 
 subcategory <- read.csv('inst/extdata/inputs/subcategory.csv',
                           stringsAsFactors = F, sep = '\t') %>%
@@ -28,6 +29,10 @@ cancer_subcategories <- read.csv('inst/extdata/inputs/cancer_subcategories.csv',
                                  stringsAsFactors = F, sep = ';') %>%
   mutate(disease = cleanString(disease))
 
+covid_subcategories <- read.csv('inst/extdata/inputs/covid_subcategories.csv',
+                                   stringsAsFactors = F, sep = '\t') %>%
+  mutate(disease = cleanString(disease))
+
 categories <- read.csv('inst/extdata/inputs/categories.csv', stringsAsFactors = F, sep = ';') %>%
   select(category:term) %>%
   mutate(categoryTitle = cleanString(categoryTitle),
@@ -36,32 +41,43 @@ categories <- read.csv('inst/extdata/inputs/categories.csv', stringsAsFactors = 
 
 stopwords_regex = paste(tm::stopwords('es')[- which(tm::stopwords('es') == 'no')], collapse = '\\b|\\b')
 
-auxiliar <- read.csv('temp/catalogo_covid_revKeo.csv') %>%
+auxiliar <- read.csv('inst/extdata/inputs/catalogo_covid_revKeo.csv') %>%
   mutate(category = str_sub(Clave, 1, 3),
          subcategory = Clave,
          disease = nombre_aux,
-         term = 'Auxiliar') %>%
-  select(category:term)
+         term = 'Inclusion',
+         disease = cleanString(disease)) %>%
+  select(category:term) %>%
+  bind_rows(covid_subcategories)
 
 subcategories <- bind_rows(subcategory, categories, auxiliar, catJuan) %>%
-  unique() %>% arrange(subcategory)
+  unique() %>% arrange(subcategory) %>%
 
 listos <- subcategories %>%
-  filter(term != 'Canonical') %>%
+  filter(term == 'Canonical') %>%
   pull(subcategory) %>%
   unique()
 
+length(listos)
+listos[grepl('K72', listos)]
+
 imss <- read.csv('inst/extdata/inputs/IMSS.csv',
                  stringsAsFactors = F, sep = '\t') %>%
-  # filter(!subcategory %in% listos) %>%
-  mutate(subcategory = str_remove_all(subcategory, 'X'),
-         disease = cleanString(disease))
+  mutate(subcategory = str_remove_all(subcategory, 'X$'),
+         disease = cleanString(disease)) %>%
+  filter(!subcategory %in% listos)
 
-subcategories <- bind_rows(subcategories, imss) %>% unique() %>% arrange(subcategory)
+imss
+
+subcategories <- bind_rows(subcategories, imss) %>%
+  unique() %>%
+  arrange(subcategory) %>%
+  mutate(subcategory = str_remove_all(subcategory, 'X$')) %>%
+  unique()
 
 subcategories %>%
   count(subcategory, term) %>%
-  spread(term, n, 0) %>%
+  spread(term, n, fill = 0) %>%
   filter(Canonical != 1)
 
 subcategories %>%
@@ -77,47 +93,4 @@ roxygen2::roxygenise()
 
 
 ## tokenizar actas
-actas <- read.csv('temp/ejemplo_actas.csv', stringsAsFactors = FALSE, sep = ';')
-auxiliar <- read.csv('temp/catalogo_covid_revKeo.csv') %>%
-  mutate(category = str_sub(Clave, 1, 3),
-         subcategory = Clave,
-         disease = nombre_aux,
-         term = 'Auxiliar') %>%
-  select(category:term)
 
-muestra <- tokenizeCertificates(actas) %>%
-  filter(cause != '', !id %in% c(45,283,298), id <= 302)
-
-ICDLookUp('fibrilacion auricular')
-ICDLookUp('pancreatitis cronica')
-ICDLookUp('cancer hepatico')
-
-
-resultados <- lapply(unique(muestra$id),
-                     function(x) {
-                       print(x)
-                       subset <- filter(muestra, id == x)
-                       lapply(subset$cause, ICDLookUp)
-                              # useExternal = TRUE,
-                              # externalCatalog = bind_rows(subcategories, auxiliar))
-                     })
-
-resultados3 <- resultados %>%
-  bind_rows(.id = 'id',) %>%
-  filter(!duplicated(id)) %>%
-  mutate(id = as.numeric(id)) %>%
-  arrange(id) %>%
-  group_by(id) %>%
-  mutate(order = row_number()) %>%
-  ungroup()
-
-muestra$res <- resultados3$disease
-
-1-sum(is.na(muestra$res))/nrow(muestra)
-muestra %>% count(is.na(res))
-
-viejo <- read.csv('temp/tot_orden_2020.csv') %>%
-  filter(!id_acta %in% c(45,283,298), id_acta <= 302)
-
-1-sum(viejo$sin_match == '')/nrow(viejo)
-viejo %>% count(sin_match == '')

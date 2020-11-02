@@ -7079,7 +7079,6 @@ R56	R568	Acceso (convulsivo) SAI	Inclusion
 R56	R568	Ataque SAI	Inclusion
 R57	R570	CHOQUE CARDIOGÉNICO	Canonical
 R57	R571	CHOQUE HIPOVOLÉMICO	Canonical
-R57	R572	CHOQUE SÉPTICO	Canonical
 R57	R578	OTRAS FORMAS DE CHOQUE	Canonical
 R57	R578	Choque endotóxico	Inclusion
 R57	R579	CHOQUE, NO ESPECIFICADO	Canonical
@@ -16010,10 +16009,8 @@ I95	I959	Hipotensión, no especificada	Canonical
 I97	I97	Trastornos del sistema circulatorio consecutivos a procedimientos, no clasificados en otra parte	Canonical
 I97	I970	Síndrome de postcardiotomía	Canonical
 I97	I971	Otras alteraciones funcionales consecutivas a cirugía cardíaca	Canonical
-I97	I971	Falla cardíaca                      	Inclusion
-I97	I971	Insuficiencia cardíaca         	Inclusion
 I97	I971	Falla cardíaca posterior a cirugía cardíaca	Inclusion
-I97	I971	Falla cardíaca debida  a la presencia de prótesis cardíaca	Inclusion
+I97	I971	Falla cardíaca debida a la presencia de prótesis cardíaca	Inclusion
 I97	I971	Insuficiencia cardíaca posterior a cirugía cardíaca	Inclusion
 I97	I971	Insuficiencia cardíaca debida  a la presencia de prótesis cardíaca	Inclusion
 I97	I972	Síndrome de linfedema postmastectomía	Canonical
@@ -17193,4 +17190,211 @@ E86	E86	Hipovolemia	Inclusion
 E87	E87	Otros trastornos de los líquidos, de los electrólitos y del equilibrio ácido-básico	Canonical
 E88	E88	Otros trastornos metabólicos	Canonical
 E89	E89	Trastornos endocrinos y metabólicos consecutivos a procedimientos, no clasificados en otra parte	Canonical
-E90	E90	 Trastornos nutricionales y metabólicos en enfermedades clasificadas en otra parte	Canonical
+E90	E90	Trastornos nutricionales y metabólicos en enfermedades clasificadas en otra parte	Canonical
+F64	F64	Trastornos de la identidad de género	Canonical
+F64	F640	Transexualismo	Canonical
+F64	F641	Transvestismo de rol dual	Canonical
+F64	F641	Trastorno de la identidad de género en la adolescencia, o en la edad adulta, de tipo no transexual	Inclusion
+F64	F642	Trastorno de la identidad de género en la niñez	Canonical
+F64	F648	Otros trastornos de la identidad de género	Canonical
+F64	F649	Trastorno de la identidad de género, no especificado	Canonical
+F64	F649	Trastorno del rol del género SAI	Inclusion
+F65	F65	Trastornos de la preferencia sexual	Canonical
+F65	F650	Fetichismo	Canonical
+F65	F651	Transvestismo fetichista	Canonical
+F65	F651	Fetichismo transvestista	Inclusion
+F65	F652	Exhibicionismo	Canonical
+F65	F653	Voyeurismo	Canonical
+F65	F654	Pedofilia	Canonical
+F65	F655	Sadomasoquismo	Canonical
+F65	F655	Masoquismo	Inclusion
+F65	F655	Sadismo	Inclusion
+F65	F656	Trastornos múltiples de la preferencia sexual	Canonical
+F65	F658	Otros trastornos de la preferencia sexual	Canonical
+F65	F658	Froteurismo	Inclusion
+F65	F658	Necrofilia	Inclusion
+F65	F659	Trastorno de la preferencia sexual, no especificado	Canonical
+F65	F659	Desviación sexual SAI	Inclusion
+F66	F66	Trastornos psicológicos y del comportamiento asociados con el desarrollo y con la orientación sexuales	Canonical
+F66	F660	Trastorno de la maduración sexual	Canonical
+F66	F661	Orientación sexual egodistónica	Canonical
+F66	F662	Trastorno de la relación sexual	Canonical
+F66	F668	Otros trastornos del desarrollo psicosexual	Canonical
+F66	F669	Trastorno del desarrollo psicosexual, no especificado	Canonical
+F68	F68	Otros trastornos de la personalidad y del comportamiento en adultos	Canonical
+F68	F680	Elaboración de síntomas físicos por causas psicológicas	Canonical
+F68	F681	Producción intencional o simulación de síntomas o de incapacidades, tanto físicas como psicológicas [trastorno facticio]	Canonical
+F68	F681	Paciente peregrinador	Inclusion
+F68	F681	Síndrome de Münchhausen	Inclusion
+F68	F681	Síndrome del visitante de hospitales	Inclusion
+F68	F688	Otros trastornos especificados de la personalidad y del comportamiento en adultos	Canonical
+F68	F688	Trastorno del carácter SAI	Inclusion
+F68	F688	Trastorno de relación SAI	Inclusion
+F69	F69	Trastorno de la personalidad y del comportamiento en adultos, no especificado	Canonical
+F70	F70	Retraso mental leve	Canonical
+F71	F71	Retraso mental moderado	Canonical
+F72	F72	Retraso mental grave	Canonical
+F73	F73	Retraso mental profundo	Canonical
+F78	F78	Otros tipos de retraso mental	Canonical
+F79	F79	Retraso mental, no especificado	Canonical
+F80	F80	Trastornos específicos del desarrollo del habla y del lenguaje	Canonical
+F80	F800	Trastorno específico de la pronunciación	Canonical
+F80	F800	Dislalia	Inclusion
+F80	F800	Lambdacismo	Inclusion
+F80	F800	lalación	Inclusion
+F80	F800	Trastorno del desarrollo fonológico	Inclusion
+F80	F800	Trastorno del desarrollo de la pronunciación	Inclusion
+F80	F800	Trastorno funcional de la pronunciación	Inclusion
+F80	F801	Trastorno del lenguaje expresivo	Canonical
+F80	F801	Disfasia o afasia del desarrollo, de tipo expresivo	Inclusion
+F80	F802	Trastorno de la recepción del lenguaje	Canonical
+F80	F802	Afasia del desarrollo, de Wernicke	Inclusion
+F80	F802	Disfasia o afasia del desarrollo, de tipo receptivo	Inclusion
+F80	F802	Falta de percepción auditiva, congénita	Inclusion
+F80	F802	Sordera a las palabras	Inclusion
+F80	F803	Afasia adquirida con epilepsia	Canonical
+F80	F803	síndrome de Landau-Kleffner	Inclusion
+F80	F808	Otros trastornos del desarrollo del habla y del lenguaje	Canonical
+F80	F808	Ceceo	Inclusion
+F80	F809	Trastorno del desarrollo del habla y del lenguaje no especificado	Canonical
+F80	F809	Trastorno del lenguaje SAI	Inclusion
+F81	F81	Trastornos específicos del desarrollo de las habilidades escolares	Canonical
+F81	F810	Trastorno específico de la lectura	Canonical
+F81	F810	Dislexia del desarrollo	Inclusion
+F81	F810	Lectura “hacia atrás”	Inclusion
+F81	F810	Retraso específico de la lectura	Inclusion
+F81	F811	Trastorno específico del deletreo	Canonical
+F81	F811	Trastorno específico de la ortografía	Inclusion
+F81	F811	Retraso específico de la ortografía	Inclusion
+F81	F812	Trastorno específico de las habilidades aritméticas	Canonical
+F81	F812	Acalculia del desarrollo	Inclusion
+F81	F812	Síndrome del desarrollo de Gerstmann	Inclusion
+F81	F812	Trastorno aritmético del desarrollo	Inclusion
+F81	F812	Trastorno del aprendizaje aritmético del desarrollo	Inclusion
+F81	F813	Trastorno mixto de las habilidades escolares	Canonical
+F81	F818	Otros trastornos del desarrollo de las habilidades escolares	Canonical
+F81	F818	Trastorno del desarrollo expresivo de la escritura	Inclusion
+F81	F819	Trastorno del desarrollo de las habilidades escolares, no especificado	Canonical
+F81	F819	Incapacidad para adquirir conocimientos SAI	Inclusion
+F81	F819	Incapacidad para el aprendizaje SAI	Inclusion
+F81	F819	Trastorno del aprendizaje SAI	Inclusion
+F82	F82	Trastorno específico del desarrollo de la función motriz	Canonical
+F82	F82	Dispraxia del desarrollo	Inclusion
+F82	F82	Síndrome del niño torpe	Inclusion
+F82	F82	Trastorno del desarrollo de la coordinación	Inclusion
+F83	F83	Trastornos específicos mixtos del desarrollo	Canonical
+F84	F84	Trastornos generalizados del desarrollo	Canonical
+F84	F840	Autismo en la niñez	Canonical
+F84	F840	Autismo infantil	Inclusion
+F84	F840	Psicosis infantil	Inclusion
+F84	F840	Síndrome de Kanner	Inclusion
+F84	F840	Trastorno autístico	Inclusion
+F84	F841	Autismo atípico	Canonical
+F84	F841	Psicosis atípica de la niñez	Inclusion
+F84	F841	Retraso mental con rasgos autísticos	Inclusion
+F84	F842	Síndrome de Rett	Canonical
+F84	F843	Otro trastorno desintegrativo de la niñez	Canonical
+F84	F843	Demencia infantil	Inclusion
+F84	F843	Psicosis desintegrativa	Inclusion
+F84	F843	Psicosis simbiótica	Inclusion
+F84	F843	Síndrome de Heller	Inclusion
+F84	F844	Trastorno hiperactivo asociado con retraso mental y movimientos estereotipados	Canonical
+F84	F845	Síndrome de Asperger	Canonical
+F84	F845	Psicopatía autística	Inclusion
+F84	F845	Trastorno esquizoide de la niñez	Inclusion
+F84	F848	Otros trastornos generalizados del desarrollo	Canonical
+F84	F849	Trastorno generalizado del desarrollo no especificado	Canonical
+F88	F88	Otros trastornos del desarrollo psicológico	Canonical
+F88	F88	Agnosia del desarrollo	Inclusion
+F89	F89	Trastorno del desarrollo psicológico, no especificado	Canonical
+F89	F89	Trastorno del desarrollo SAI	Inclusion
+F90	F90	Trastornos hipercinéticos	Canonical
+F90	F900	Perturbación de la actividad y de la atención	Canonical
+F90	F900	Trastorno o síndrome deficitario de la atención con hiperactividad	Inclusion
+F90	F900	Trastorno hipercinético con déficit de la atención	Inclusion
+F90	F901	Trastorno hipercinético de la conducta	Canonical
+F90	F901	Trastorno hipercinético asociado con trastorno de la conducta	Inclusion
+F90	F908	Otros trastornos hipercinéticos	Canonical
+F90	F909	Trastorno hipercinético, no especificado	Canonical
+F90	F909	Reacción hipercinética de la niñez o de la adolescencia SAI	Inclusion
+F90	F909	Síndrome hipercinético SAI	Inclusion
+F91	F91	Trastornos de la conducta	Canonical
+F91	F910	Trastorno de la conducta limitado al contexto familiar	Canonical
+F91	F911	Trastorno de la conducta insociable	Canonical
+F91	F911	Trastorno agresivo insociable	Inclusion
+F91	F911	Trastorno de la conducta, del tipo solitario agresivo	Inclusion
+F91	F912	Trastorno de la conducta sociable	Canonical
+F91	F912	Ausencia escolar	Inclusion
+F91	F912	Delincuencia en grupo	Inclusion
+F91	F912	Delitos en el contexto de la pertenencia a una pandilla	Inclusion
+F91	F912	Robo en compañía de otros	Inclusion
+F91	F912	Trastorno de la conducta, del tipo grupal	Inclusion
+F91	F913	Trastorno opositor desafiante	Canonical
+F91	F918	Otros trastornos de la conducta	Canonical
+F91	F919	Trastorno de la conducta, no especificado	Canonical
+F91	F919	Trastorno del comportamiento en la niñez SAI	Inclusion
+F91	F919	Trastorno de la conducta en la niñez SAI	Inclusion
+F92	F92	Trastornos mixtos de la conducta y de las emociones	Canonical
+F92	F920	Trastorno depresivo de la conducta	Canonical
+F92	F928	Otros trastornos mixtos de la conducta y de las emociones	Canonical
+F92	F929	Trastorno mixto de la conducta y de las emociones, no especificado	Canonical
+F93	F93	Trastornos emocionales de comienzo específico en la niñez	Canonical
+F93	F930	Trastorno de ansiedad de separación en la niñez	Canonical
+F93	F931	Trastorno de ansiedad fóbica en la niñez	Canonical
+F93	F932	Trastorno de ansiedad social en la niñez	Canonical
+F93	F932	Trastorno evasivo de la niñez o de la adolescencia	Inclusion
+F93	F933	Trastorno de rivalidad entre hermanos	Canonical
+F93	F933	Celos de los hermanos	Inclusion
+F93	F938	Otros trastornos emocionales en la niñez	Canonical
+F93	F938	Trastorno de identidad	Inclusion
+F93	F938	Trastorno hiperansioso	Inclusion
+F93	F939	Trastorno emocional en la niñez, no especificado	Canonical
+F94	F94	Trastornos del comportamiento social de comienzo específico en la niñez y en la adolescencia	Canonical
+F94	F940	Mutismo electivo	Canonical
+F94	F940	Mutismo selectivo	Inclusion
+F94	F941	 Trastorno de vinculación reactiva en la niñez	Canonical
+F94	F942	Trastorno de vinculación desinhibida en la niñez	Canonical
+F94	F942	Psicopatía por falta de afecto	Inclusion
+F94	F942	Síndrome institucional	Inclusion
+F94	F948	Otros trastornos del comportamiento social en la niñez	Canonical
+F94	F949	Trastorno del comportamiento social en la niñez, no especificado	Canonical
+F95	F95	Trastornos por tics	Canonical
+F95	F950	Trastorno por tic transitorio	Canonical
+F95	F951	Trastorno por tic motor o vocal crónico	Canonical
+F95	F952	Trastorno por tics motores y vocales múltiples combinados	Canonical
+F95	F952	Trastorno de la Tourette	Inclusion
+F95	F958	Otros trastornos por tics	Canonical
+F95	F959	Trastorno por tic, no especificado	Canonical
+F95	F959	Tic SAI	Inclusion
+F98	F98	Otros trastornos emocionales y del comportamiento que aparecen habitualmente en la niñez y en la adolescencia	Canonical
+F98	F980	Enuresis no orgánica	Canonical
+F98	F980	Enuresis de origen no orgánico	Inclusion
+F98	F980	Enuresis funcional	Inclusion
+F98	F980	Enuresis psicógena	Inclusion
+F98	F980	Incontinencia urinaria de origen no orgánico	Inclusion
+F98	F980	Enuresis primaria de origen no orgánico	Inclusion
+F98	F980	Enuresis primaria funcional	Inclusion
+F98	F980	Enuresis primaria psicógena	Inclusion
+F98	F980	Enuresis secundaria de origen no orgánico	Inclusion
+F98	F980	Enuresis secundaria funcional	Inclusion
+F98	F980	Enuresis secundaria psicógena	Inclusion
+F98	F981	Encopresis no orgánica	Canonical
+F98	F981	Encopresis funcional	Inclusion
+F98	F981	Encopresis psicógena	Inclusion
+F98	F981	Incontinencia fecal de origen no orgánico	Inclusion
+F98	F982	Trastorno de la ingestión alimentaria en la infancia y la niñez	Canonical
+F98	F982	Trastorno de la rumiación en la infancia	Inclusion
+F98	F983	Pica en la infancia y la niñez	Canonical
+F98	F984	Trastornos de los movimientos estereotipados	Canonical
+F98	F985	Tartamudez	Canonical
+F98	F985	espasmofemia	Inclusion
+F98	F986	Farfulleo	Canonical
+F98	F988	Otros trastornos emocionales y del comportamiento que aparecen habitualmente en la niñez y en la adolescencia	Canonical
+F98	F988	Hurgueteo de la nariz	Inclusion
+F98	F988	Masturbación excesiva	Inclusion
+F98	F988	Onicofagia	Inclusion
+F98	F988	Succión del pulgar	Inclusion
+F98	F988	Trastorno deficitario de la atención sin hiperactividad	Inclusion
+F98	F989	Trastornos no especificados, emocionales y del comportamiento, que aparecen habitualmente en la niñez y en la adolescencia	Canonical
+F99	F99	Trastorno mental, no especificado	Canonical
+F99	F99	Enfermedad mental SAI	Inclusion

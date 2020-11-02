@@ -62,3 +62,7 @@ Preguntas:
 - Cáncer cervicouterino
 - choque septico
 
+
+Revisar: 
+- desequilibrio hidroelectrolitico
+

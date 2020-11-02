@@ -1,0 +1,43 @@
+No,Clave,Nombre,nombre_aux
+14447,B23,"Enfermedad por virus de la inmunodeficiencia humana [VIH], resultante en otras afecciones",virus de inmunodeficiencia humana
+14533,C95,Leucemia de celulas de tipo no especificado,leucemia
+14538,D56,Talasaemia,tasemia
+14462,E78,Trastornos del metabolismo de las lipoproteínas y otras lipidemias,dislipidemia
+14463,E78,Trastornos del metabolismo de las lipoproteínas y otras lipidemias,trigliceridemia
+14464,E840,Fibrosis quística con manifestaciones pulmonares,fibrosis pulmonar idiopatica
+14534,E871,Hiposmolaridad e hiponatremia,natremia
+14465,E875,Hiperpotasemia,hiperkalemia
+14539,E875,Hiperpotasemia,kalemia
+14516,E881,"Lipodistrofia, no clasificada en otra parte",sindrome metabolico
+14518,I11,Enfermedad cardiaca hipertensiva,cardiopatia hipertensiva
+14468,I21,Infarto agudo del miocardio,infarto agudo al miocardio
+14520,I219,"Infarto agudo del miocardio, sin otra especificacion",infarto agudo de miocardio
+14469,I24,Otras enfermedades isquémicas agudas del corazón,cardiopatia isquemica
+14517,I248,Otras formas de enfermedad isquemica aguda del corazon,sindrome coronario agudo
+14470,I270,Hipertensión pulmonar primaria,hipertension pulmonar
+14471,I272,Otras hipertensiones pulmonares secundarias,hipertension pulmonar secundaria
+14528,I499,"Arritmia cardiaca, no especificada",arritmia
+14524,I509,"Insuficiencia cardiaca, no especificada",disfuncion ventricular aguda
+14514,I639,"Infarto cerebral, no especificado",evento vascular cerebral
+14523,I639,"Infarto cerebral, no especificado",enfermedad vascular cerebral
+14526,I639,"Infarto cerebral, no especificado",evento vascular cerebral isquemico
+14472,J18,"Neumonía, organismo no especificado",Neumonía adquirida en la comunidad
+14473,J18,"Neumonía, organismo no especificado",NAC
+14474,J18,"Neumonía, organismo no especificado",Neumonía Basal
+14535,J18,"Neumonia, organismo no especificado",neomonia
+14446,K72,"Insuficiencia hepática, no clasificada en otra parte",insuficiencia hepatica
+14521,K72,"Insuficiencia hepatica, no clasificada en otra parte",encefalopatia hepatica
+14522,K922,"Hemorragia gastrointestinal, no especificada",sangrado de tubo digestivo alto
+14530,M13,Otras artritis,artritis
+14477,N179,"Insuficiencia renal aguda, no especificada",lesion renal aguda
+14478,N18,Insuficiencia renal crónica,insuficiencia renal cronica
+14479,N390,"Infección de vías urinarias, sitio no especificado",infeccion de vias urinarias
+14525,R001,"Bradicardia, no especificada",bradicardia
+14480,R060,Disnea,insuficiencia respiratoria atipica
+14511,R392,Uremia extrarrenal,sindrome uremico
+14536,R64,Caquexia,caquekia
+14519,R739,"Hiperglicemia, no especificada",glucemia
+14531,R739,"Hiperglicemia, no especificada",glicemia
+14540,R739,"Hiperglicemia, no especificada",glucenia
+14541,R739,"Hiperglicemia, no especificada",clucemia
+14543,R739,"Hiperglicemia, no especificada",glusemia
