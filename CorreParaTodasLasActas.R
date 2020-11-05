@@ -15,13 +15,15 @@ actas <- map2_df(files, years, ~leer(.x, .y)) %>%
   filter(!grepl('NOMBRE', cause, useBytes = T)) %>%
   unite(id, c('id', 'year'), sep = '_')
 
+actas <- actas[1:300,]
+
 actas2 <- actas %>%
   tokenizeCertificates() %>%
   filter(cause != '') %>%
   rownames_to_column('folio') %>%
   mutate(folio = as.numeric(folio))
 
-saveRDS(actas2, 'temp/actas/todas.RDS')
+# saveRDS(actas2, 'temp/actas/todas.RDS')
 
 
 # auxiliar <- read.csv('temp/catalogo_covid_revKeo.csv') %>%
@@ -37,21 +39,23 @@ padecimientos <- actas2 %>% select(cause) %>%
   rownames_to_column('id') %>%
   mutate(id = as.numeric(id))
 
-resultados <- lapply(unique(padecimientos$id),
-                     function(x) {
-                       if(x %% 100 == 0)
-                         print(x)
-                       subset <- filter(padecimientos, id == x)
-                       tryCatch({
-                         lapply(subset$cause, ICDLookUp)
-                       }, error=function(e){
-                         data.frame(category = 'error', subcategory = NA_character_, disease = NA_character_)
-                       })
-                     })
+# resultados <- lapply(unique(padecimientos$id),
+#                      function(x) {
+#                        if(x %% 100 == 0)
+#                          print(x)
+#                        subset <- filter(padecimientos, id == x)
+#                        tryCatch({
+#                          lapply(subset$cause, ICDLookUp)
+#                        }, error=function(e){
+#                          data.frame(category = 'error', subcategory = NA_character_, disease = NA_character_)
+#                        })
+#                      })
+#
+# beepr::beep(2)
+#
+# saveRDS(resultados, 'temp/actas/todasResultados.RDS')
 
-beepr::beep(2)
-
-saveRDS(resultados, 'temp/actas/todasResultados.RDS')
+resultados <- readRDS('temp/actas/todasResultados.RDS')
 
 resultados3 <- resultados %>%
   bind_rows(.id = 'idRun') %>%
@@ -78,6 +82,10 @@ total %>%
                                     'parcial'))) %>%
   ungroup() %>%
   count(logrado) %>%
+  mutate(p = n / sum(n))
+
+total %>%
+  count(is.na(disease)) %>%
   mutate(p = n / sum(n))
 
 # Análisis sobrantes ------------------------------------------------------
@@ -120,12 +128,12 @@ faltantes <- bind_rows(vacios, parciales) %>%
   mutate(p = n/sum(n))
 
 faltantes %>%
-  filter(p >= 0.001) %>% View
+  filter(p >= 0.001) %>%
   pull(p) %>%
   sum()
 
 faltantes %>%
-  filter(grepl('coronav|cov', cause)) %>%
+  filter(grepl('coronav|cov', cause)) %>%View
   pull(p) %>%
   sum()
 
