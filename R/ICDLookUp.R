@@ -1,7 +1,6 @@
 #' Main function for looking up a given pattern.
 #'
 #' @param pattern A string of the name of the disease to look up.
-#' @param nMatches A number indicating the number of matches to return in case of more than one coincidence.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
 #' @param tabular A string that can take values 'single', 'simple', or full'.
 #' @param useExternal A logical that is TRUE when the user inputs their own catalog to search in.
@@ -14,13 +13,13 @@
 #' @import stringr
 #' @import tibble
 #'
-ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular = 'single',
+ICDLookUp <- function(pattern, jwBound = 0.9, tabular = 'single',
                       useExternal = FALSE, externalCatalog = NULL, searchVar = 'disease') {
 
   pattern <- cleanString(pattern)
 
   if(useExternal) {
-    return(printInfo(catalogLookUp(pattern, nMatches, jwBound, externalCatalog, searchVar), tabular = tabular))
+    return(printInfo(catalogLookUp(pattern, jwBound, externalCatalog, searchVar), tabular = tabular))
   }
 
   #Look for particular diseases
@@ -39,21 +38,19 @@ ICDLookUp <- function(pattern, nMatches = 1, jwBound = 0.9, tabular = 'single',
   flagSpecialCase <- unique(dfSpecialCase$group)
 
   # if(length(flagSpecialCase) > 1) stop('Looks like your query has more than one disease listed. \nTry refining your query.')
-  if(length(flagSpecialCase) > 1) return(data.frame(category = NA_character_, subcategory = NA_character_, disease = NA_character_))
+  if(length(flagSpecialCase) > 1) return(data.frame(category = NA_character_,
+                                                    subcategory = NA_character_, disease = NA_character_))
 
   if(length(flagSpecialCase) == 1) {
     matchICD <- switch(flagSpecialCase,
                        # neumonia = 'holi',
-                       diabetes = catalogLookUp(pattern, nMatches, jwBound, diabetes_subcategories),
-                       cancer = catalogLookUp(cleanCancer(pattern), nMatches, jwBound, cancer_subcategories))
+                       diabetes = catalogLookUp(pattern, jwBound, diabetes_subcategories),
+                       cancer = catalogLookUp(cleanCancer(pattern), jwBound, cancer_subcategories))
 
     return(printInfo(matchICD, tabular = tabular))
   }
 
-  if(length(flagSpecialCase) == 0) subCoincidence <- catalogLookUp(pattern, nMatches, jwBound, subcategories)
-
-  # if(tabular == 'full')
-  #   return(invisible(subCoincidence))
+  if(length(flagSpecialCase) == 0) subCoincidence <- catalogLookUp(pattern, jwBound, subcategories)
 
   return(printInfo(subCoincidence, tabular = tabular))
 

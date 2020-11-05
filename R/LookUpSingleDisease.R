@@ -2,7 +2,6 @@
 #'
 #' @param pattern A string of the name of the disease to look up.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
-#' @param tabular A string that can take values 'single', 'simple', or full'.
 #' @param catalog A data frame containing the catalog where the search will be made.
 #' @param searchVar A string containing the variable within the catalog where the search will be made.
 #'
@@ -63,7 +62,7 @@ catalogLookUp <- function(pattern, jwBound = 0.9,
                             subcategory = catalog$subcategory,
                             stringsAsFactors = FALSE)[!is.na(diseaseToPattern), ]
     if(nrow(dfDisease) == 1) return(dfDisease$subcategory) ## regresar la subcategoria 'no especificado'
-    if(nrow(dfDisease) > 1 ) return(residualMatch(pattern, dfDisease, jwBound, tabular = tabular)) ## revisar si es una sola categoria o mas de una
+    if(nrow(dfDisease) > 1 ) return(residualMatch(pattern, dfDisease, jwBound)) ## revisar si es una sola categoria o mas de una
   }
 
   if(residualDisease == TRUE) {
@@ -74,7 +73,7 @@ catalogLookUp <- function(pattern, jwBound = 0.9,
                             stringsAsFactors = FALSE)[!is.na(patternToDisease), ]
 
     if(length(unique(dfDisease$subcategory)) == 1) return(unique(dfDisease$subcategory)) ## regresar la subcategoria
-    if(length(unique(dfDisease$subcategory)) > 1) return(residualMatch(pattern, dfDisease, jwBound, tabular = tabular))
+    if(length(unique(dfDisease$subcategory)) > 1) return(residualMatch(pattern, dfDisease, jwBound))
   }
 
   if(residualDisease + residualPattern == 0) {
@@ -98,13 +97,12 @@ catalogLookUp <- function(pattern, jwBound = 0.9,
 #' @param pattern A string of the name of the disease to look up.
 #' @param dfDisease A data frame containing all the matched diseases.
 #' @param jwBound A real number between 0 and 1 that determines de lower bound for Jaro-Winkler distance.
-#' @param tabular A string that can take values 'single', 'simple', or full'.
 #'
 #' @return A data frame with the information about the matches found for the disease.
 #'
 #' @importFrom stringdist stringsim
 #'
-residualMatch <- function(pattern, dfDisease, jwBound, tabular) {
+residualMatch <- function(pattern, dfDisease, jwBound) {
   #Check if there's more than one category
   nCat <- sort(table(substr(dfDisease$subcategory[which(dfDisease$term == 'Canonical')], 1, 3)))
 

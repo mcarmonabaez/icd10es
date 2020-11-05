@@ -30,6 +30,54 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+<style type="text/css">
+a.anchor-section {margin-left: 10px; visibility: hidden; color: inherit;}
+a.anchor-section::before {content: '#';}
+.hasAnchor:hover a.anchor-section {visibility: visible;}
+</style>
+<script>// Anchor sections v1.0 written by Atsushi Yasumoto on Oct 3rd, 2020.
+document.addEventListener('DOMContentLoaded', function() {
+  // Do nothing if AnchorJS is used
+  if (typeof window.anchors === 'object' && anchors.hasOwnProperty('hasAnchorJSLink')) {
+    return;
+  }
+
+  const h = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+  // Do nothing if sections are already anchored
+  if (Array.from(h).some(x => x.classList.contains('hasAnchor'))) {
+    return null;
+  }
+
+  // Use section id when pandoc runs with --section-divs
+  const section_id = function(x) {
+    return ((x.classList.contains('section') || (x.tagName === 'SECTION'))
+            ? x.id : '');
+  };
+
+  // Add anchors
+  h.forEach(function(x) {
+    const id = x.id || section_id(x.parentElement);
+    if (id === '') {
+      return null;
+    }
+    let anchor = document.createElement('a');
+    anchor.href = '#' + id;
+    anchor.classList = ['anchor-section'];
+    x.classList.add('hasAnchor');
+    x.appendChild(anchor);
+  });
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -383,31 +431,30 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <h2>Using an external catalog</h2>
 <p>It can happen that the user wants to look up strings in a different, specialized catalog. This could be for example when using an auxiliary catalog which has alternative names of some diseases due to regional variations (like when a country or a country’s province historically calls a disease in a special way).</p>
 <p>This can be done by making the <code>ICDLookUp</code> parameter <code>useExternal = TRUE</code>, and by giving a dataframe to <code>externalCatalog</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>auxCatalog &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv&#39;</span>,</span>
-<span id="cb4-2"><a href="#cb4-2"></a>                       <span class="dt">sep =</span> <span class="st">&#39;;&#39;</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">ICDLookUp</span>(<span class="st">&#39;Diabetes tipo i con coma&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;simple&#39;</span>,</span>
-<span id="cb4-4"><a href="#cb4-4"></a>          <span class="dt">useExternal =</span> <span class="ot">TRUE</span>, <span class="dt">externalCatalog =</span> auxCatalog)</span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt;   category subcategory</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; 1      E10        E100</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; 2      E10        E100</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; 3      E10        E100</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; 4      E10        E100</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; 5      E10        E100</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">#&gt; 6      E10        E100</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="co">#&gt;                                                                           disease</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="co">#&gt; 1                                  diabetes mellitus insulinodependiente con coma</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a><span class="co">#&gt; 2                        diabetes mellitus insulinodependiente con coma diabetico</span></span>
-<span id="cb4-15"><a href="#cb4-15"></a><span class="co">#&gt; 3 diabetes mellitus insulinodependiente con coma diabetico con o sin cetoacidosis</span></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="co">#&gt; 4           diabetes mellitus insulinodependiente con coma diabetico hiperosmolar</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a><span class="co">#&gt; 5          diabetes mellitus insulinodependiente con coma diabetico hipoglicemico</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a><span class="co">#&gt; 6     diabetes mellitus insulinodependiente con coma diabetico hiperglicemico sai</span></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="co">#&gt;        term</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a><span class="co">#&gt; 1 Canonical</span></span>
-<span id="cb4-21"><a href="#cb4-21"></a><span class="co">#&gt; 2 Inclusion</span></span>
-<span id="cb4-22"><a href="#cb4-22"></a><span class="co">#&gt; 3 Inclusion</span></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="co">#&gt; 4 Inclusion</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#&gt; 5 Inclusion</span></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="co">#&gt; 6 Inclusion</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>auxCatalog &lt;-<span class="st"> </span><span class="kw">read.delim</span>(<span class="st">&#39;https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv&#39;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">ICDLookUp</span>(<span class="st">&#39;Diabetes tipo i con coma&#39;</span>, <span class="dt">tabular =</span> <span class="st">&#39;simple&#39;</span>,</span>
+<span id="cb4-3"><a href="#cb4-3"></a>          <span class="dt">useExternal =</span> <span class="ot">TRUE</span>, <span class="dt">externalCatalog =</span> auxCatalog)</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt;   category subcategory</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt; 1      E10        E100</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; 2      E10        E100</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; 3      E10        E100</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; 4      E10        E100</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; 5      E10        E100</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; 6      E10        E100</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">#&gt;                                                                           disease</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="co">#&gt; 1                                  diabetes mellitus insulinodependiente con coma</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="co">#&gt; 2                        diabetes mellitus insulinodependiente con coma diabetico</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="co">#&gt; 3 diabetes mellitus insulinodependiente con coma diabetico con o sin cetoacidosis</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="co">#&gt; 4           diabetes mellitus insulinodependiente con coma diabetico hiperosmolar</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="co">#&gt; 5          diabetes mellitus insulinodependiente con coma diabetico hipoglicemico</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="co">#&gt; 6     diabetes mellitus insulinodependiente con coma diabetico hiperglicemico sai</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="co">#&gt;        term</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="co">#&gt; 1 Canonical</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="co">#&gt; 2 Inclusion</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="co">#&gt; 3 Inclusion</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="co">#&gt; 4 Inclusion</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="co">#&gt; 5 Inclusion</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#&gt; 6 Inclusion</span></span></code></pre></div>
 </div>
 <div id="looking-up-entries-within-death-certificates" class="section level2">
 <h2>Looking up entries within death certificates</h2>
@@ -482,33 +529,33 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tokenizedCerificates<span class="op">$</span>result &lt;-<span class="st"> </span>results<span class="op">$</span>disease</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="kw">print</span>(tokenizedCerificates, <span class="dt">n =</span> <span class="ot">Inf</span>)</span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="co">#&gt; # A tibble: 25 x 4</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co">#&gt;       id cause                           order result                           </span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;                           &lt;int&gt; &lt;chr&gt;                            </span></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="co">#&gt;  1     1 hemorragia subaracnoidea            1 hemorragia subaracnoidea no espe…</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="co">#&gt;  2     1 hipertension arterial sistemica     2 hipertension esencial            </span></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="co">#&gt;  3     1 dislipidemia                        3 &lt;NA&gt;                             </span></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="co">#&gt;  4     2 infarto cerebral                    1 infarto cerebral no especificado </span></span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="co">#&gt;  5     2 hipertension arterial sistemica     2 hipertension esencial            </span></span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="co">#&gt;  6     2 trigliceridemia                     3 &lt;NA&gt;                             </span></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="co">#&gt;  7     3 herida producida por proyectil…     1 &lt;NA&gt;                             </span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="co">#&gt;  8     4 choque hipovolemico                 1 choque hipovolemico              </span></span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="co">#&gt;  9     4 diarrea cronica                     2 &lt;NA&gt;                             </span></span>
-<span id="cb8-15"><a href="#cb8-15"></a><span class="co">#&gt; 10     4 infeccion por virus de inmunod…     3 &lt;NA&gt;                             </span></span>
-<span id="cb8-16"><a href="#cb8-16"></a><span class="co">#&gt; 11     5 evento vascular cerebral            1 &lt;NA&gt;                             </span></span>
-<span id="cb8-17"><a href="#cb8-17"></a><span class="co">#&gt; 12     5 enfermedad renal terminal           2 &lt;NA&gt;                             </span></span>
-<span id="cb8-18"><a href="#cb8-18"></a><span class="co">#&gt; 13     5 diabetes mellitus tipo 2            3 &lt;NA&gt;                             </span></span>
-<span id="cb8-19"><a href="#cb8-19"></a><span class="co">#&gt; 14     6 aneurisma cerebral                  1 hemorragia subaracnoidea no espe…</span></span>
-<span id="cb8-20"><a href="#cb8-20"></a><span class="co">#&gt; 15     6 encefalopatia hepatica              2 &lt;NA&gt;                             </span></span>
-<span id="cb8-21"><a href="#cb8-21"></a><span class="co">#&gt; 16     7 infarto agudo al miocardio          1 infarto agudo del miocardio      </span></span>
-<span id="cb8-22"><a href="#cb8-22"></a><span class="co">#&gt; 17     7 cardiopatia hipertensiva            2 &lt;NA&gt;                             </span></span>
-<span id="cb8-23"><a href="#cb8-23"></a><span class="co">#&gt; 18     7 hipertension arterial sistemica     3 hipertension esencial            </span></span>
-<span id="cb8-24"><a href="#cb8-24"></a><span class="co">#&gt; 19     8 meningioma                          1 tumor benigno de las meninges pa…</span></span>
-<span id="cb8-25"><a href="#cb8-25"></a><span class="co">#&gt; 20     8 hipertension arterial sistemica     2 hipertension esencial            </span></span>
-<span id="cb8-26"><a href="#cb8-26"></a><span class="co">#&gt; 21     9 encefalopatia hepatica              1 &lt;NA&gt;                             </span></span>
-<span id="cb8-27"><a href="#cb8-27"></a><span class="co">#&gt; 22     9 cirrosis hepatica                   2 &lt;NA&gt;                             </span></span>
-<span id="cb8-28"><a href="#cb8-28"></a><span class="co">#&gt; 23     9 alcoholismo cronico                 3 examen de pesquisa especial para…</span></span>
-<span id="cb8-29"><a href="#cb8-29"></a><span class="co">#&gt; 24    10 infarto agudo al miocardio          1 infarto agudo del miocardio      </span></span>
-<span id="cb8-30"><a href="#cb8-30"></a><span class="co">#&gt; 25    10 diabetes mellitus tipo ii           2 &lt;NA&gt;</span></span></code></pre></div>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">#&gt;       id cause                          order result                            </span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;                          &lt;int&gt; &lt;chr&gt;                             </span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="co">#&gt;  1     1 hemorragia subaracnoidea           1 hemorragia subaracnoidea no espec…</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co">#&gt;  2     1 hipertension arterial sistemi…     2 hipertension esencial             </span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co">#&gt;  3     1 dislipidemia                       3 trastornos del metabolismo de las…</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co">#&gt;  4     2 infarto cerebral                   1 infarto cerebral no especificado  </span></span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="co">#&gt;  5     2 hipertension arterial sistemi…     2 hipertension esencial             </span></span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="co">#&gt;  6     2 trigliceridemia                    3 trastornos del metabolismo de las…</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="co">#&gt;  7     3 herida producida por proyecti…     1 &lt;NA&gt;                              </span></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="co">#&gt;  8     4 choque hipovolemico                1 choque hipovolemico               </span></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="co">#&gt;  9     4 diarrea cronica                    2 &lt;NA&gt;                              </span></span>
+<span id="cb8-15"><a href="#cb8-15"></a><span class="co">#&gt; 10     4 infeccion por virus de inmuno…     3 enfermedad por virus de la inmuno…</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="co">#&gt; 11     5 evento vascular cerebral           1 infarto cerebral no especificado  </span></span>
+<span id="cb8-17"><a href="#cb8-17"></a><span class="co">#&gt; 12     5 enfermedad renal terminal          2 &lt;NA&gt;                              </span></span>
+<span id="cb8-18"><a href="#cb8-18"></a><span class="co">#&gt; 13     5 diabetes mellitus tipo 2           3 diabetes mellitus no insulinodepe…</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="co">#&gt; 14     6 aneurisma cerebral                 1 hemorragia subaracnoidea no espec…</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a><span class="co">#&gt; 15     6 encefalopatia hepatica             2 insuficiencia hepatica no clasifi…</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a><span class="co">#&gt; 16     7 infarto agudo al miocardio         1 infarto agudo del miocardio       </span></span>
+<span id="cb8-22"><a href="#cb8-22"></a><span class="co">#&gt; 17     7 cardiopatia hipertensiva           2 enfermedad cardiaca hipertensiva  </span></span>
+<span id="cb8-23"><a href="#cb8-23"></a><span class="co">#&gt; 18     7 hipertension arterial sistemi…     3 hipertension esencial             </span></span>
+<span id="cb8-24"><a href="#cb8-24"></a><span class="co">#&gt; 19     8 meningioma                         1 tumor benigno de las meninges par…</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a><span class="co">#&gt; 20     8 hipertension arterial sistemi…     2 hipertension esencial             </span></span>
+<span id="cb8-26"><a href="#cb8-26"></a><span class="co">#&gt; 21     9 encefalopatia hepatica             1 insuficiencia hepatica no clasifi…</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a><span class="co">#&gt; 22     9 cirrosis hepatica                  2 cirrosis hepatica alcoholica      </span></span>
+<span id="cb8-28"><a href="#cb8-28"></a><span class="co">#&gt; 23     9 alcoholismo cronico                3 sindrome de dependencia al alcohol</span></span>
+<span id="cb8-29"><a href="#cb8-29"></a><span class="co">#&gt; 24    10 infarto agudo al miocardio         1 infarto agudo del miocardio       </span></span>
+<span id="cb8-30"><a href="#cb8-30"></a><span class="co">#&gt; 25    10 diabetes mellitus tipo ii          2 diabetes mellitus no insulinodepe…</span></span></code></pre></div>
 </div>
 
 

@@ -73,8 +73,7 @@ It can happen that the user wants to look up strings in a different, specialized
 This can be done by making the `ICDLookUp` parameter `useExternal = TRUE`, and by giving a dataframe to `externalCatalog`:
 
 ```{r}
-auxCatalog <- read.csv('https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv',
-                       sep = ';')
+auxCatalog <- read.delim('https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv')
 ICDLookUp('Diabetes tipo i con coma', tabular = 'simple',
           useExternal = TRUE, externalCatalog = auxCatalog)
 

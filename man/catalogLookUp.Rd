@@ -14,8 +14,6 @@ catalogLookUp(pattern, jwBound = 0.9, catalog, searchVar = "disease")
 \item{catalog}{A data frame containing the catalog where the search will be made.}
 
 \item{searchVar}{A string containing the variable within the catalog where the search will be made.}
-
-\item{tabular}{A string that can take values 'single', 'simple', or full'.}
 }
 \value{
 A data frame with the information about the matches found for the disease.
