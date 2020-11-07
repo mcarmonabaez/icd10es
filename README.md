@@ -32,6 +32,26 @@ devtools::install_github("mcarmonabaez/icd10es")
 
 ### Printing information of a CIE-10 entry
 
+## Printing information of a CIE-10 entry
+Let's start with a simple task: say you wish to know what the entry 'A00.0' in the catalog contains.
+The function `printInfo` can help with that. Changing the value of the parameter `tabular` you
+can decide whether you want to 
+
+- get only the canonical term in table form, 
+
+- get the canonical and all inclusion terms (if they exist) also in table form, 
+
+- print in all associated information in the console for quick inquiries.
+
+```{r}
+library(icd10es)
+printInfo('S72.1', tabular = 'single')
+printInfo('S72.1', tabular = 'simple')
+printInfo('S72.1', tabular = 'full')
+```
+
+
+
 
 ### Looking up a string in the catalog
 

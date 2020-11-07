@@ -31,7 +31,7 @@ Let's start with a simple task: say you wish to know what the entry 'A00.0' in t
 
 - get the canonical and all inclusion terms (if they exist) also in table form, 
 
-- print in all associated information in the console for quick enquiries.
+- print in all associated information in the console for quick inquiries.
 
 ```{r}
 library(icd10es)
