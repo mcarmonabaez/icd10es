@@ -71,7 +71,7 @@ printInfo <- function(string, inclusionTerms = TRUE, exclusionTerms = TRUE, tabu
 
         fprintf(paste('-----------------------------------------------------------------------------',
                       'Query entered: \t\t %s',
-                      'Cateogry:\t\t %s \t %s',
+                      'Category:\t\t %s \t %s',
                       # ¿Queremos imprimir la lista de subcategorías?
                       '-----------------------------------------------------------------------------',
                       ifelse(hasInclusion, 'The following inclusion terms were found:', 'No inclusion terms were found.'),

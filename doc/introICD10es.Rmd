@@ -16,7 +16,7 @@ options(tibble.print_min = 4, tibble.print_max = 4)
 library('tidyverse')
 ```
 
-`icd10es` is a tool for Spanish-speaking Bioinformatics specialist who have to deal with classifying written descriptions of diseases, symptoms, and injuries, among other health-related issues, in the 10th edition of the International Statistical Classification of Diseases and Related Health Problems (ICD-10 for short), referred to as CIE-10 in Spanish. This package offers the following functionalities:
+`icd10es` is a tool for Spanish-speaking Bioinformatics specialists who have to deal with classifying written descriptions of diseases, symptoms, and injuries, among other health-related issues, in the 10th edition of the International Statistical Classification of Diseases and Related Health Problems (ICD-10 for short), referred to as CIE-10 in Spanish. This package offers the following functionalities:
 
 - Taking a disease code as a query to find within the CIE-10 and printing its associated information, like the _canonical_ name of the disease, or whether it has _inclusion terms_ (alternative names).
 
