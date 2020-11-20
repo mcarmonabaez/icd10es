@@ -1,0 +1,191 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  eval = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(knitr)
+library(dplyr)
+library(tibble)
+```
+
+# icd10es - A user-friendly R package for disease clasification in Spanish 🇲🇽
+
+---
+
+## Table of Contents
+
+- [Package description](#description)
+- [Installing icd10es](#installing)
+- [Features at a glance](#features-at-a-glance)
+  - [Printing information of a CIE-10 entry](#printing-info)
+  - [Looking up a string in the catalog](#icdlookup)
+  - [Using an external catalog](#external)
+  - [Looking up entries within death certificates](#death-certificates)
+- [License](#license)
+- [Credits](#credits)
+- [Thanks](#thanks)
+
+## Package description 😷
+
+`icd10es` is an R package created for Spanish-speaking Bioinformatics specialists 👩‍⚕️ who have to deal with classifying written descriptions of diseases, symptoms, and injuries, among other health-related issues, in the 10th edition of the International Statistical Classification of Diseases and Related Health Problems (ICD-10 for short), referred to as CIE-10 in Spanish. ⚕️
+
+## Installing icd10es 
+
+```{r, eval =FALSE, message=FALSE, warning =FALSE}
+devtools::install_github("mcarmonabaez/icd10es")
+```
+
+*Congratulations!* Now you can use this package! 🎉
+
+## Features at a glance
+
+### Printing information of a CIE-10 entry
+
+
+Let's start with a simple task: say you wish to know what the entry 'A00.0' in the catalog contains.
+The function `printInfo` can help with that. Changing the value of the parameter `tabular` you
+can decide whether you want to 
+
+- get only the canonical term in table form, 
+
+- get the canonical and all inclusion terms (if they exist) also in table form, 
+
+- print in all associated information in the console for quick inquiries.
+
+```{r}
+library(icd10es)
+printInfo('S72.1', tabular = 'single')
+printInfo('S72.1', tabular = 'simple')
+printInfo('S72.1', tabular = 'full')
+```
+
+
+
+
+### Looking up a string in the catalog 🔎
+
+The main function of `icd10es` consists in entering a string which is expected to match some entry in the CIE-10 and finding said entry, all via the `ICDLookUp` function. The string does not have to be identical to the entry: herein lies the usefulness of the package.
+
+The function first tries to find an __exact__ match in the catalog, but often it occurs that the string either has a typo of some kind (e.g. writing 'pnuemonia' instead of 'pneumonia) or uses a more colloquial way of referring to the disease or symptom and is not its 'full name'. When this happens, the function tries fuzzy matching using the Jaro-Winkler similarity metric. 
+
+For example, in the CIE-10, all cancers are referred to in a more formal way, such as 'tumor maligno del colon' instead of 'cancer de colon' (in English: 'malignant neoplasm of colon' instead of 'colon cancer'). `ICDLookUp` would give the following output:
+
+```{r}
+ICDLookUp('cancer de colon', tabular = 'simple')
+```
+Note how the `tabular` parameter is inherited to `printInfo`.
+
+When doing fuzzy matching, one can be more or less strict. 
+This is reflected in the `jwBound` parameter of `ICDLookUp`: the Jaro-Winkler
+similarity goes from 0 (no similarity) to 1 (exact match), and the default value of
+`jwBound` is 0.9. That is, only entries with a similarity to the entered string equal
+or higher than 0.9 will be considered. But if one finds that the function didn't find a
+result, one can try lowering the bound:
+
+```{r}
+ICDLookUp('sindrome dandie-waker', jwBound = 0.9, tabular = 'simple')
+ICDLookUp('sindrome dandie-waker', jwBound = 0.8, tabular = 'simple')
+```
+
+
+### Using an external catalog
+
+It can happen that the user wants to look up strings in a different,
+specialized catalog. This could be for example when using an auxiliary catalog
+which has alternative names of some diseases due to regional variations
+(like when a country or a country's province historically calls a disease in a special way).
+
+This can be done by making the `ICDLookUp` parameter `useExternal = TRUE`,
+and by giving a `dataframe` to `externalCatalog`:
+
+```{r}
+auxCatalog <- read.delim('https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv')
+ICDLookUp('Diabetes tipo i con coma', tabular = 'simple',
+          useExternal = TRUE, externalCatalog = auxCatalog)
+```
+
+### Looking up entries within death certificates 🧪
+
+It is very common to be in possession of longer texts that describe a series of
+diseases and symptoms which could be matched to the CIE-10. Some examples
+include death certificates or medical records. There, a physician may list some or all
+comorbidities a person presents when having a medical checkup or when passing away.
+One may then wish to match all listed health-related problems with the CIE-10.
+
+```{r}
+exampleCerificates <-
+  tibble::tribble(~id, ~cause,
+                  1, 'HEMORRAGIA SUBARACNOIDEA. HIPERTENSION ARTERIAL SISTEMICA. DISLIPIDEMIA.',
+                  2, 'INFARTO CEREBRAL, HIPERTENSION ARTERIAL SISTEMICA, TRIGLICERIDEMIA.',
+                  3, 'HERIDA PRODUCIDA POR PROYECTIL DE ARMA DE FUEGO PENETRANTE DE TORAX.',
+                  4, 'CHOQUE HIPOVOLEMICO, DIARREA CRONICA, INFECCION POR VIRUS DE INMUNODEFICIENCIA HUMANA.',
+                  5, 'EVENTO VASCULAR CEREBRAL, ENFERMEDAD RENAL TERMINAL, DIABETES MELLITUS TIPO 2.',
+                  6, 'ANEURISMA CEREBRAL, ENCEFALOPATIA HEPATICA.',
+                  7, 'INFARTO AGUDO AL MIOCARDIO, CARDIOPATIA HIPERTENSIVA, HIPERTENSION ARTERIAL SISTEMICA',
+                  8, 'MENINGIOMA, HIPERTENSION ARTERIAL SISTEMICA.',
+                  9, 'ENCEFALOPATIA HEPATICA, CIRROSIS HEPATICA, ALCOHOLISMO CRONICO',
+                  10, 'INFARTO AGUDO AL MIOCARDIO, DIABETES MELLITUS TIPO II.'
+  )
+exampleCerificates
+```
+First, one would have to _tokenize_ each entry in the certificate, creating a long
+`dataframe` in the following way using `tokenizeCertificates`:
+
+```{r}
+tokenizedCerificates <- tokenizeCertificates(exampleCerificates)
+print(tokenizedCerificates, n = Inf)
+```
+
+One can then proceed to use `ICDLookUp` to try to find an entry in the catalog 
+for each of the entries in the certificate:
+```{r message=FALSE, warning=FALSE, results='hide'}
+results <- lapply(unique(tokenizedCerificates$id),
+                     function(x) {
+                       print(x)
+                       subset <- dplyr::filter(tokenizedCerificates, id == x)
+                       lapply(subset$cause, ICDLookUp)
+                     }) %>%
+  bind_rows(.id = 'id',) %>%
+  mutate(id = as.numeric(id)) %>%
+  arrange(id) %>%
+  group_by(id) %>%
+  mutate(order = row_number()) %>%
+  ungroup() 
+```
+
+
+```{r}
+tokenizedCerificates$result <- results$disease
+print(tokenizedCerificates, n = Inf)
+```
+
+## License
+
+This package is made available under the MIT License.
+
+## Credits
+
+This package is created and maintained by Mariana Carmona-Baez and Juan Bernardo Martínez Parente-Castañeda. 🐞
+
+*We're open to suggestions, feel free to message us on mcarmonabaez@gmail.com and jbmpc@outlook.com.*
+*Pull requests are also welcome!* 🔀
+
+
+## Thanks
+
+Thanks to Christopher Ormsby for his input and for letting us be part of this awesome project :hospital:
+
+Thanks to [Teresa Ortiz](https://github.com/tereom) for her invaluable guidance :crystal_ball:
+
+
+
+

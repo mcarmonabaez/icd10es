@@ -9,7 +9,8 @@ TO DO:
 - Casos especiales:
    * NAC
 
-Trabajo futuro
+Trabajo futuro:
+
   * Input del usuario para agrandar el catálogo
   * Flags del catálogo del IMSS
   * Términos de exclusión
@@ -18,9 +19,9 @@ Trabajo futuro
   * Tumores secundarios/metastasis **aun no
 
 
-Estructura del reporte
+Estructura del reporte:
 
-- Intro: Contexto, describir la organización
+- ~~Intro: Contexto, describir la organización~~
 - ~~Problemática (en el dominio)~~
 - ~~¿Qué existe actualemente?~~
 - ~~Describir baseline (lo que hicimos en junio) --> Lo que se hacía antes de que le entráramos?~~
@@ -39,5 +40,6 @@ Preguntas:
 
 
 Revisar: 
+
 - desequilibrio hidroelectrolitico
 

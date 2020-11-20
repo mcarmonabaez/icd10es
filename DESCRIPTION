@@ -1,5 +1,5 @@
 Package: icd10es
-Title: What the Package Does (One Line, Title Case)
+Title: Classification of diseases, symptoms, injuries, and other health-related issues
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Juan Bernardo",
@@ -10,15 +10,14 @@ Authors@R:
            family = "Carmona-Baez",
            role = c("aut"),
            email = "mcarmonabaez@gmail.com"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: R package for Spanish-speaking Bioinformatics specialists who have to deal with classifying written descriptions of diseases, symptoms, and injuries, among other health-related issues, in the 10th edition of the International Statistical Classification of Diseases and Related Health Problems (ICD-10 for short), referred to as CIE-10 in Spanish.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
-    R (>= 2.10)
+    R (>= 4.0.1)
 Imports: magrittr, tidyr, dplyr, stringr, stringi, stringdist, pracma, rlang
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
