@@ -32,7 +32,9 @@ ICDLookUp <- function(pattern, jwBound = 0.9, tabular = 'single',
                           'tumores malignos', 'cancer',
                           'leucemia', 'cancer',
                           'melanoma', 'cancer'
-                          )## esto se va a ir a data interna
+                          )
+
+  # TODO: store special cases as internal data
 
   dfSpecialCase <- specialCases[!is.na(str_match(pattern, specialCases$pattern)),]
   flagSpecialCase <- unique(dfSpecialCase$group)
@@ -43,7 +45,6 @@ ICDLookUp <- function(pattern, jwBound = 0.9, tabular = 'single',
 
   if(length(flagSpecialCase) == 1) {
     matchICD <- switch(flagSpecialCase,
-                       # neumonia = 'holi',
                        diabetes = catalogLookUp(pattern, jwBound, diabetes_subcategories),
                        cancer = catalogLookUp(cleanCancer(pattern), jwBound, cancer_subcategories))
 
