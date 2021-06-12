@@ -18,6 +18,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
     R (>= 4.0.1)
-Imports: magrittr, tidyr, dplyr, stringr, stringi, stringdist, pracma, rlang
+Imports: magrittr, tidyr, dplyr, stringr, stringi, stringdist, pracma, rlang, tibble, tidytext
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
