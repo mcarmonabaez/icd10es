@@ -13,10 +13,10 @@ vignette: >
 ```{r, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(collapse = T, comment = "#>")
 options(tibble.print_min = 4, tibble.print_max = 4)
-library('tidyverse')
+library('magrittr')
 ```
 
-`icd10es` is a tool for Spanish-speaking Bioinformatics specialists who have to deal with classifying written descriptions of diseases, symptoms, and injuries, among other health-related issues, in the 10th edition of the International Statistical Classification of Diseases and Related Health Problems (ICD-10 for short), referred to as CIE-10 in Spanish. This package offers the following functionalities:
+`icd10es` is a tool for Spanish-speaking Bioinformatics specialist who have to deal with classifying written descriptions of diseases, symptoms, and injuries, among other health-related issues, in the 10th edition of the International Statistical Classification of Diseases and Related Health Problems (ICD-10 for short), referred to as CIE-10 in Spanish. This package offers the following functionalities:
 
 - Taking a disease code as a query to find within the CIE-10 and printing its associated information, like the _canonical_ name of the disease, or whether it has _inclusion terms_ (alternative names).
 
@@ -31,7 +31,7 @@ Let's start with a simple task: say you wish to know what the entry 'A00.0' in t
 
 - get the canonical and all inclusion terms (if they exist) also in table form, 
 
-- print in all associated information in the console for quick inquiries.
+- print in all associated information in the console for quick enquiries.
 
 ```{r}
 library(icd10es)
@@ -73,7 +73,8 @@ It can happen that the user wants to look up strings in a different, specialized
 This can be done by making the `ICDLookUp` parameter `useExternal = TRUE`, and by giving a dataframe to `externalCatalog`:
 
 ```{r}
-auxCatalog <- read.delim('https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv')
+auxCatalog <- read.csv('https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv',
+                       sep = '\t')
 ICDLookUp('Diabetes tipo i con coma', tabular = 'simple',
           useExternal = TRUE, externalCatalog = auxCatalog)
 
@@ -116,12 +117,12 @@ results <- lapply(unique(tokenizedCerificates$id),
                        subset <- dplyr::filter(tokenizedCerificates, id == x)
                        lapply(subset$cause, ICDLookUp)
                      }) %>%
-  bind_rows(.id = 'id',) %>%
-  mutate(id = as.numeric(id)) %>%
-  arrange(id) %>%
-  group_by(id) %>%
-  mutate(order = row_number()) %>%
-  ungroup() 
+  dplyr::bind_rows(.id = 'id',) %>%
+  dplyr::mutate(id = as.numeric(id)) %>%
+  dplyr::arrange(id) %>%
+  dplyr::group_by(id) %>%
+  dplyr::mutate(order = dplyr::row_number()) %>%
+  dplyr::ungroup() 
 ```
 
 

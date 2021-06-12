@@ -1,7 +1,7 @@
 ## ---- echo = FALSE, message = FALSE-------------------------------------------
 knitr::opts_chunk$set(collapse = T, comment = "#>")
 options(tibble.print_min = 4, tibble.print_max = 4)
-library('tidyverse')
+library('magrittr')
 
 ## -----------------------------------------------------------------------------
 library(icd10es)
@@ -24,7 +24,7 @@ ICDLookUp('sindrome dandie-waker', jwBound = 0.8, tabular = 'simple')
 
 ## -----------------------------------------------------------------------------
 auxCatalog <- read.csv('https://raw.githubusercontent.com/mcarmonabaez/icd10es/master/inst/extdata/inputs/diabetes_subcategories.csv',
-                       sep = ';')
+                       sep = '\t')
 ICDLookUp('Diabetes tipo i con coma', tabular = 'simple',
           useExternal = TRUE, externalCatalog = auxCatalog)
 
@@ -58,12 +58,12 @@ results <- lapply(unique(tokenizedCerificates$id),
                        subset <- dplyr::filter(tokenizedCerificates, id == x)
                        lapply(subset$cause, ICDLookUp)
                      }) %>%
-  bind_rows(.id = 'id',) %>%
-  mutate(id = as.numeric(id)) %>%
-  arrange(id) %>%
-  group_by(id) %>%
-  mutate(order = row_number()) %>%
-  ungroup() 
+  dplyr::bind_rows(.id = 'id',) %>%
+  dplyr::mutate(id = as.numeric(id)) %>%
+  dplyr::arrange(id) %>%
+  dplyr::group_by(id) %>%
+  dplyr::mutate(order = dplyr::row_number()) %>%
+  dplyr::ungroup() 
 
 ## -----------------------------------------------------------------------------
 tokenizedCerificates$result <- results$disease
